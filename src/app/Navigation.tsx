@@ -45,7 +45,11 @@ export default function Navigation() {
             </div>
             <div className="flex items-center space-x-2">
               <button
-                aria-label={theme === "dark" ? t("default.light_mode") : t("default.dark_mode")}
+                aria-label={
+                  theme === "dark"
+                    ? t("default.light_mode")
+                    : t("default.dark_mode")
+                }
                 onClick={toggleTheme}
                 className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
               >
@@ -54,7 +58,7 @@ export default function Navigation() {
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="rounded px-3 py-1 bg-background text-foreground hover:bg-accent hover:text-background focus:outline focus:ring"
               >
                 {locale === "en" ? "DA" : "EN"}
               </button>
@@ -64,7 +68,11 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             <div className="md:hidden flex items-center space-x-2">
               <button
-                aria-label={theme === "dark" ? t("default.light_mode") : t("default.dark_mode")}
+                aria-label={
+                  theme === "dark"
+                    ? t("default.light_mode")
+                    : t("default.dark_mode")
+                }
                 onClick={toggleTheme}
                 className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
               >
@@ -78,9 +86,6 @@ export default function Navigation() {
                 {locale === "en" ? "DA" : "EN"}
               </button>
             </div>
-            {/*  <Button variant="nordic" size="sm">
-              {t("nav.getHosted")}
-            </Button> */}
           </div>
         </div>
       </div>
