@@ -3,8 +3,10 @@
 import {
   createContext,
   ReactNode,
+  useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from "react";
 
@@ -19,12 +21,13 @@ interface I18nContextProps {
 
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
-function getNested(obj: Record<string, unknown>, path: string): unknown {
-  return path.split(".").reduce((o: unknown, k: string) => {
-    return (o && typeof o === 'object' && o !== null && k in o) 
-      ? (o as Record<string, unknown>)[k] 
+function getNested(obj: unknown, path: string): string | undefined {
+  const result = path.split(".").reduce((o: unknown, k: string) => {
+    return o && typeof o === "object" && k in o
+      ? (o as Record<string, unknown>)[k]
       : undefined;
   }, obj);
+  return typeof result === "string" ? result : undefined;
 }
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
@@ -37,15 +40,21 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       .then((data) => setTranslations(data));
   }, [locale]);
 
-  const t = (key: string) => {
-    const value = getNested(translations, key);
-    return typeof value === 'string' ? value : key;
-  };
+  const t = useCallback(
+    (key: string) => {
+      const value = getNested(translations, key);
+      return value || key;
+    },
+    [translations]
+  );
+
+  const contextValue = useMemo(
+    () => ({ locale, setLocale, t }),
+    [locale, setLocale, t]
+  );
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t }}>
-      {children}
-    </I18nContext.Provider>
+    <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>
   );
 };
 
