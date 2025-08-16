@@ -7,6 +7,14 @@
     "dark_mode": "Dark Mode",
     "light_mode": "Light Mode"
   },
+  "nav": {
+    "home": "Home",
+    "current_projects": "Current Projects",
+    "previous_projects": "Previous Projects",
+    "about_us": "About Us",
+    "contact": "Contact",
+    "get_hosted": "Get Hosted"
+  },
   "landing": {
     "title": "Guardian of LARP Realms",
     "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",

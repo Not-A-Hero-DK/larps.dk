@@ -1,3 +1,5 @@
+"use client";
+
 import {
   createContext,
   ReactNode,
@@ -17,8 +19,9 @@ interface I18nContextProps {
 
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
-function getNested(obj: any, path: string) {
-  return path.split(".").reduce((o, k) => (o ? o[k] : undefined), obj);
+function getNested(obj: Translations, path: string): string | undefined {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return path.split(".").reduce((o: any, k: string) => (o ? o[k] : undefined), obj);
 }
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
@@ -28,7 +31,10 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     fetch(`/locales/${locale}.json`)
       .then((res) => res.json())
-      .then((data) => setTranslations(data));
+      .then((data) => setTranslations(data))
+      .catch((error) => {
+        console.error('Failed to load translations:', error);
+      });
   }, [locale]);
 
   const t = (key: string) => {
