@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "../lib/i18n";
 import { useTheme } from "../lib/theme";
+import GlobeIcon from "../components/icons/GlobeIcon";
 
 export default function Navigation() {
   const { locale, setLocale, t } = useI18n();
@@ -51,16 +52,19 @@ export default function Navigation() {
                     : t("default.dark_mode")
                 }
                 onClick={toggleTheme}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="rounded-lg px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-neutral-600"
               >
                 {theme === "dark" ? "☀️" : "🌙"}
               </button>
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="rounded px-3 py-1 bg-background text-foreground hover:bg-accent hover:text-background focus:outline focus:ring"
+                className="flex items-center space-x-2 rounded-lg px-3 py-2 bg-accent/10 text-accent hover:bg-accent hover:text-white border border-accent/20 hover:border-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent/50"
               >
-                {locale === "en" ? "DA" : "EN"}
+                <GlobeIcon size={16} />
+                <span className="text-sm font-medium">
+                  {locale === "en" ? "DA" : "EN"}
+                </span>
               </button>
             </div>
           </div>
@@ -74,16 +78,19 @@ export default function Navigation() {
                     : t("default.dark_mode")
                 }
                 onClick={toggleTheme}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="rounded-lg px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-neutral-600"
               >
                 {theme === "dark" ? "☀️" : "🌙"}
               </button>
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="flex items-center space-x-2 rounded-lg px-3 py-2 bg-accent/10 text-accent hover:bg-accent hover:text-white border border-accent/20 hover:border-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent/50"
               >
-                {locale === "en" ? "DA" : "EN"}
+                <GlobeIcon size={16} />
+                <span className="text-sm font-medium">
+                  {locale === "en" ? "DA" : "EN"}
+                </span>
               </button>
             </div>
           </div>
