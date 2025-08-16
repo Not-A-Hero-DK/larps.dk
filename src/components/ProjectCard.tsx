@@ -118,7 +118,7 @@ export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
 
       {/* Visit button (only for current projects) */}
       {project.status === "upcoming" && project.projectUrl && (
-        <button className="w-full border border-yellow-500 text-yellow-400 hover:cursor-pointer hover:bg-yellow-500 hover:text-black transition-colors py-2 px-4 rounded-lg font-medium">
+        <button className="w-full border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-colors py-2 px-4 rounded-lg font-medium">
           <svg
             className="w-4 h-4 inline mr-2"
             fill="none"

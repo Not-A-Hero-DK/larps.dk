@@ -52,14 +52,14 @@ export default function Navigation() {
                     : t("default.dark_mode")
                 }
                 onClick={toggleTheme}
-                className="rounded-lg text-sm font-medium px-2 py-1 bg-neutral-800 hover:cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
+                className="rounded-lg text-sm font-medium px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200"
               >
                 {theme === "dark" ? "☀️" : "🌙"}
               </button>
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="flex items-center text-accent space-x-1 rounded-lg px-2 py-1 bg-neutral-800 hover:cursor-pointer hover:bg-neutral-700 transition-colors duration-200"
+                className="flex items-center text-accent space-x-1 rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200"
               >
                 <GlobeIcon size={16} />
                 <span className="text-sm font-medium">
@@ -78,14 +78,14 @@ export default function Navigation() {
                     : t("default.dark_mode")
                 }
                 onClick={toggleTheme}
-                className="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 hover:cursor-pointer text-white transition-colors duration-200"
+                className="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200"
               >
                 {theme === "dark" ? "☀️" : "🌙"}
               </button>
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="flex items-center space-x-2 rounded-lg px-2 py-1 bg-neutral-800 bg-accent/10 text-accent hover:cursor-pointer hover:bg-accent hover:text-white border border-accent/20 hover:border-accent transition-all duration-200"
+                className="flex items-center space-x-2 rounded-lg px-2 py-1 bg-neutral-800 bg-accent/10 text-accent hover:bg-accent hover:text-white border border-accent/20 hover:border-accent transition-all duration-200"
               >
                 <GlobeIcon size={16} />
                 <span className="text-sm font-medium">

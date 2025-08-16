@@ -25,6 +25,10 @@ body {
   font-family: var(--font-sans);
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .text-accent {
   color: hsl(var(--accent));
 }
