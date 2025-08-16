@@ -1,0 +1,16 @@
+{
+  "default": {
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "language": "English",
+    "switch_language": "Switch to Danish",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode"
+  },
+  "landing": {
+    "title": "Guardian of LARP Realms",
+    "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
+    "request_hosting": "Request Hosting",
+    "view_projects": "View Projects"
+  }
+}

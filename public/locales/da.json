@@ -1,0 +1,16 @@
+{
+  "default": {
+    "cancel": "Afbryd",
+    "submit": "Send",
+    "language": "Dansk",
+    "switch_language": "Skift til Engelsk",
+    "dark_mode": "Mørk tilstand",
+    "light_mode": "Lys tilstand"
+  },
+  "landing": {
+    "title": "Vogter af LARP Riger",
+    "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",
+    "request_hosting": "Anmod om Hosting",
+    "view_projects": "Se Projekter"
+  }
+}
