@@ -12,5 +12,20 @@
     "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",
     "request_hosting": "Anmod om Hosting",
     "view_projects": "Se Projekter"
+  },
+  "projects": {
+    "current_title": "Nuværende Projekter",
+    "current_subtitle": "Kommende LARP-eventyr der i øjeblikket hostes på Heimdal Portal. Deltag i disse legendariske oplevelser eller bliv inspireret til din egen saga.",
+    "previous_title": "Tidligere Projekter",
+    "previous_subtitle": "Legendariske eventyr der allerede er afsluttede. Disse sagaer lever videre i deres deltageres minder og inspirerer fremtidige fortællinger.",
+    "upcoming": "Kommende",
+    "completed": "Afsluttet",
+    "participants": "deltagere",
+    "organized_by": "Organiseret af:",
+    "visit_project_site": "Besøg Projekt Side",
+    "archive_title": "Arkiv af Legender",
+    "archive_subtitle": "Hver afsluttet LARP tilføjer til det rige væv af nordisk historiefortælling. Disse eventyr har formet vores fællesskab og fortsætter med at inspirere nye fortællinger.",
+    "total_adventures": "Samlede Eventyr Hostet:",
+    "total_participants": "Samlede Deltagere:"
   }
 }
