@@ -129,22 +129,22 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-neutral-800/30 rounded-lg p-12 border border-accent/20">
             <h3 className="text-3xl font-bold mb-6">
-              Ready to Join the Realm?
+              {t("about.cta_title")}
             </h3>
             <p className="text-lg text-neutral-400 mb-8 leading-relaxed">
-              Whether you&apos;re organizing your first LARP or you&apos;re a seasoned storyteller, we&apos;re here to help your digital presence become as legendary as your adventures.
+              {t("about.cta_description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-accent text-white hover:bg-accent/90 transition-colors duration-300 h-11 rounded-md px-8">
-                📧 Get in Touch
+                {t("about.cta_get_in_touch")}
               </button>
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-muted/20 border border-accent/30 text-accent hover:bg-accent/10 hover:border-accent hover:shadow-glow transition-all duration-300 h-11 rounded-md px-8">
-                🏆 View Examples
+                {t("about.cta_view_examples")}
               </button>
             </div>
             <p className="text-neutral-400 mt-6 text-sm">
-              Contact us: hosting@larps.dk<br />
-              Join our community and help us guard the digital realm together.
+              {t("about.cta_contact")}<br />
+              {t("about.cta_join")}
             </p>
           </div>
         </div>
