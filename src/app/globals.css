@@ -7,22 +7,26 @@
 /* Dark theme (default) */
 :root,
 [data-theme="dark"] {
-  --background: #0f172a;
-  --foreground: #f1f5f9;
-  --border: #334155;
+  --background: 215 25% 8%;
+  --foreground: 197 100% 95%;
+  --border: 215 25% 20%;
 }
 
 /* Light theme */
 [data-theme="light"] {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --border: #e2e8f0;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --border: 0 0% 80%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: var(--font-sans);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .text-accent {
@@ -38,13 +42,13 @@ body {
 }
 
 .bg-background {
-  background-color: var(--background);
+  background-color: hsl(var(--background) / 0.95);
 }
 
 .text-foreground {
-  color: var(--foreground);
+  color: hsl(var(--foreground));
 }
 
 .border-border {
-  border-color: var(--border);
+  border-color: hsl(var(--border));
 }

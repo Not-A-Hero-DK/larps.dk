@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import GlobeIcon from "../components/icons/GlobeIcon";
 import { useI18n } from "../lib/i18n";
 import { useTheme } from "../lib/theme";
 
@@ -51,16 +52,19 @@ export default function Navigation() {
                     : t("default.dark_mode")
                 }
                 onClick={toggleTheme}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="rounded-lg text-sm font-medium px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200"
               >
                 {theme === "dark" ? "☀️" : "🌙"}
               </button>
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="rounded px-3 py-1 bg-background text-foreground hover:bg-accent hover:text-background focus:outline focus:ring"
+                className="flex items-center text-accent space-x-1 rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200"
               >
-                {locale === "en" ? "DA" : "EN"}
+                <GlobeIcon size={16} />
+                <span className="text-sm font-medium">
+                  {locale === "en" ? "DA" : "EN"}
+                </span>
               </button>
             </div>
           </div>
@@ -74,16 +78,19 @@ export default function Navigation() {
                     : t("default.dark_mode")
                 }
                 onClick={toggleTheme}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200"
               >
                 {theme === "dark" ? "☀️" : "🌙"}
               </button>
               <button
                 aria-label={t("default.switch_language")}
                 onClick={handleLanguageSwitch}
-                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+                className="flex items-center space-x-2 rounded-lg px-2 py-1 bg-neutral-800 text-accent hover:bg-accent hover:text-white border border-accent/20 hover:border-accent transition-all duration-200"
               >
-                {locale === "en" ? "DA" : "EN"}
+                <GlobeIcon size={16} />
+                <span className="text-sm font-medium">
+                  {locale === "en" ? "DA" : "EN"}
+                </span>
               </button>
             </div>
           </div>
