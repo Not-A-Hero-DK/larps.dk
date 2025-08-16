@@ -3,7 +3,10 @@ interface GlobeIconProps {
   size?: number;
 }
 
-export default function GlobeIcon({ className = "", size = 16 }: GlobeIconProps) {
+export default function GlobeIcon({
+  className = "",
+  size = 16,
+}: Readonly<GlobeIconProps>) {
   return (
     <svg
       width={size}
