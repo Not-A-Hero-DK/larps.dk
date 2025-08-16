@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f172a;
-  --foreground: #f1f5f9;
   --accent: 43 100% 58%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f1f5f9;
-  }
+/* Dark theme (default) */
+:root,
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --border: #334155;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --border: #e2e8f0;
 }
 
 body {
@@ -32,5 +38,13 @@ body {
 }
 
 .bg-background {
-  background-color: hsl(var(--background));
+  background-color: var(--background);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.border-border {
+  border-color: var(--border);
 }

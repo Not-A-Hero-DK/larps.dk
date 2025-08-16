@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { I18nProvider } from "../lib/i18n";
+import { ThemeProvider } from "../lib/theme";
 import "./globals.css";
 import Navigation from "./Navigation";
 
@@ -15,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <I18nProvider>
-          <Navigation />
-          {children}
-        </I18nProvider>
+        <ThemeProvider>
+          <I18nProvider>
+            <Navigation />
+            {children}
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
