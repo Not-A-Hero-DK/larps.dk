@@ -22,14 +22,18 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/request-hosting"
+              href="#"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg flex items-center justify-center"
+              onClick={(e) => e.preventDefault()}
             >
               {t("landing.request_hosting")}
             </Link>
             <Link
-              href="/projects"
-              className="border-2 border-slate-400 hover:border-slate-300 text-slate-300 hover:text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg flex items-center justify-center"
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              aria-disabled="true"
+              title="Coming soon"
+              className="border-2 border-slate-400 text-slate-400 cursor-not-allowed font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg flex items-center justify-center"
             >
               {t("landing.view_projects")}
             </Link>
