@@ -7,10 +7,33 @@
     "dark_mode": "Dark Mode",
     "light_mode": "Light Mode"
   },
+  "nav": {
+    "home": "Home",
+    "current": "Current Projects",
+    "previous": "Previous Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "getHosted": "Get Hosted"
+  },
   "landing": {
     "title": "Guardian of LARP Realms",
     "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
     "request_hosting": "Request Hosting",
     "view_projects": "View Projects"
+  },
+  "projects": {
+    "current_title": "Current Projects",
+    "current_subtitle": "Upcoming LARP adventures currently hosted on Heimdal Portal. Join these legendary experiences or get inspired for your own saga.",
+    "previous_title": "Previous Projects",
+    "previous_subtitle": "Legendary adventures that have already concluded. These sagas live on in the memories of their participants and inspire future tales.",
+    "upcoming": "Upcoming",
+    "completed": "Completed",
+    "participants": "participants",
+    "organized_by": "Organized by:",
+    "visit_project_site": "Visit Project Site",
+    "archive_title": "Archive of Legends",
+    "archive_subtitle": "Each completed LARP adds to the rich tapestry of Nordic storytelling. These adventures have shaped our community and continue to inspire new tales.",
+    "total_adventures": "Total Adventures Hosted:",
+    "total_participants": "Total Participants:"
   }
 }
