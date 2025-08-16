@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useI18n } from "../lib/i18n";
+import { useTheme } from "../lib/theme";
 
 export default function Navigation() {
   const { locale, setLocale, t } = useI18n();
+  const { theme, toggleTheme } = useTheme();
 
-  const handleSwitch = () => {
+  const handleLanguageSwitch = () => {
     setLocale(locale === "en" ? "da" : "en");
   };
 
@@ -41,28 +43,49 @@ export default function Navigation() {
                 </Link>
               ))}
             </div>
-            <button
-              aria-label={t("default.switch_language")}
-              onClick={handleSwitch}
-              className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
-            >
-              {locale === "en" ? "DA" : "EN"}
-            </button>
+            <div className="flex items-center space-x-2">
+              <button
+                aria-label={
+                  theme === "dark"
+                    ? t("default.light_mode")
+                    : t("default.dark_mode")
+                }
+                onClick={toggleTheme}
+                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
+              <button
+                aria-label={t("default.switch_language")}
+                onClick={handleLanguageSwitch}
+                className="rounded px-3 py-1 bg-background text-foreground hover:bg-accent hover:text-background focus:outline focus:ring"
+              >
+                {locale === "en" ? "DA" : "EN"}
+              </button>
+            </div>
           </div>
 
           <div className="flex items-center space-x-4">
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center space-x-2">
+              <button
+                aria-label={
+                  theme === "dark"
+                    ? t("default.light_mode")
+                    : t("default.dark_mode")
+                }
+                onClick={toggleTheme}
+                className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
               <button
                 aria-label={t("default.switch_language")}
-                onClick={handleSwitch}
+                onClick={handleLanguageSwitch}
                 className="rounded px-3 py-1 bg-neutral-800 hover:bg-neutral-700 focus:outline focus:ring"
               >
                 {locale === "en" ? "DA" : "EN"}
               </button>
             </div>
-            {/*  <Button variant="nordic" size="sm">
-              {t("nav.getHosted")}
-            </Button> */}
           </div>
         </div>
       </div>

@@ -16,7 +16,6 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen text-white overflow-hidden">
-      {/* Nordic Hero Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div>
           <div
@@ -67,7 +66,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Current Projects Section */}
       <section className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -86,8 +84,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Previous Projects Section */}
       <section className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -106,8 +102,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Archive Statistics */}
       <section className="py-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
@@ -116,7 +110,6 @@ export default function Home() {
               {t("projects.archive_title")}
             </h3>
           </div>
-
           <p className="text-lg text-neutral-400 mb-12 leading-relaxed">
             {t("projects.archive_subtitle")}
           </p>
