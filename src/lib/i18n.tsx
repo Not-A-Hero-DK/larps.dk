@@ -1,3 +1,5 @@
+"use client";
+
 import {
   createContext,
   ReactNode,
@@ -7,7 +9,7 @@ import {
 } from "react";
 
 export type Locale = "en" | "da";
-export type Translations = Record<string, any>;
+export type Translations = Record<string, unknown>;
 
 interface I18nContextProps {
   locale: Locale;
@@ -17,8 +19,10 @@ interface I18nContextProps {
 
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
-function getNested(obj: any, path: string) {
-  return path.split(".").reduce((o, k) => (o ? o[k] : undefined), obj);
+function getNested(obj: Translations, path: string): string | undefined {
+  return path.split(".").reduce((o: unknown, k: string) => 
+    (o && typeof o === 'object' && k in o) ? (o as Record<string, unknown>)[k] : undefined, obj
+  ) as string | undefined;
 }
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
