@@ -3,8 +3,10 @@
 import {
   createContext,
   ReactNode,
+  useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from "react";
 
@@ -38,15 +40,21 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       .then((data) => setTranslations(data));
   }, [locale]);
 
-  const t = (key: string) => {
-    const value = getNested(translations, key);
-    return value || key;
-  };
+  const t = useCallback(
+    (key: string) => {
+      const value = getNested(translations, key);
+      return value || key;
+    },
+    [translations]
+  );
+
+  const contextValue = useMemo(
+    () => ({ locale, setLocale, t }),
+    [locale, setLocale, t]
+  );
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t }}>
-      {children}
-    </I18nContext.Provider>
+    <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>
   );
 };
 
