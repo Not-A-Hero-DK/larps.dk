@@ -7,10 +7,68 @@
     "dark_mode": "Mørk tilstand",
     "light_mode": "Lys tilstand"
   },
+  "navigation": {
+    "home": "Hjem",
+    "contact": "Kontakt"
+  },
   "landing": {
     "title": "Vogter af LARP Riger",
     "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",
     "request_hosting": "Anmod om Hosting",
     "view_projects": "Se Projekter"
+  },
+  "contact": {
+    "title": "Kontakt Os",
+    "subtitle": "Klar til at bringe dit LARP til det digitale rige? Kontakt os.",
+    "form": {
+      "title": "Send Besked",
+      "description": "Fortæl os om dit LARP, og vi hjælper dig med at komme i gang med gratis hosting.",
+      "fields": {
+        "name": {
+          "label": "Dit Navn",
+          "placeholder": "Indtast dit fulde navn",
+          "required": "Navn er påkrævet"
+        },
+        "email": {
+          "label": "Din Email",
+          "placeholder": "Indtast din email-adresse",
+          "required": "Email er påkrævet",
+          "invalid": "Indtast venligst en gyldig email-adresse"
+        },
+        "larpName": {
+          "label": "LARP Navn",
+          "placeholder": "Indtast dit LARP navn",
+          "required": "LARP navn er påkrævet"
+        },
+        "description": {
+          "label": "Fortæl os om dit LARP",
+          "placeholder": "Fortæl os om dit LARP, hvornår det finder sted, forventet antal deltagere og eventuelle særlige krav...",
+          "required": "Beskrivelse er påkrævet"
+        }
+      },
+      "submit": "Send Besked",
+      "submitting": "Sender...",
+      "success": "Besked sendt succesfuldt!",
+      "error": "Kunne ikke sende besked. Prøv igen."
+    },
+    "info": {
+      "direct": {
+        "title": "Direkte Kontakt",
+        "email": "Email",
+        "emailAddress": "hosting@larps.dk",
+        "responseTime": "Svartid",
+        "responseTimeValue": "Normalt inden for 24-48 timer"
+      },
+      "requirements": {
+        "title": "Hvad Vi Har Brug For",
+        "items": {
+          "0": "Dit LARP navn og grundlæggende information",
+          "1": "Foretrukket subdomæne (ditnavn.larps.dk)",
+          "2": "Forventet antal deltagere",
+          "3": "Eventuelle særlige hosting-krav",
+          "4": "Indhold du gerne vil inkludere"
+        }
+      }
+    }
   }
 }

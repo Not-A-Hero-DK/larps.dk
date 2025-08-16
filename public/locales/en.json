@@ -7,10 +7,68 @@
     "dark_mode": "Dark Mode",
     "light_mode": "Light Mode"
   },
+  "navigation": {
+    "home": "Home",
+    "contact": "Contact"
+  },
   "landing": {
     "title": "Guardian of LARP Realms",
     "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
     "request_hosting": "Request Hosting",
     "view_projects": "View Projects"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to bring your LARP to the digital realm? Get in touch with us.",
+    "form": {
+      "title": "Send Message",
+      "description": "Tell us about your LARP and we'll help you get started with free hosting.",
+      "fields": {
+        "name": {
+          "label": "Your Name",
+          "placeholder": "Enter your full name",
+          "required": "Name is required"
+        },
+        "email": {
+          "label": "Your Email",
+          "placeholder": "Enter your email address",
+          "required": "Email is required",
+          "invalid": "Please enter a valid email address"
+        },
+        "larpName": {
+          "label": "LARP Name",
+          "placeholder": "Enter your LARP name",
+          "required": "LARP name is required"
+        },
+        "description": {
+          "label": "Tell us about your LARP",
+          "placeholder": "Tell us about your LARP, when it's happening, expected number of participants, and any special requirements...",
+          "required": "Description is required"
+        }
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "direct": {
+        "title": "Direct Contact",
+        "email": "Email",
+        "emailAddress": "hosting@larps.dk",
+        "responseTime": "Response Time",
+        "responseTimeValue": "Usually within 24-48 hours"
+      },
+      "requirements": {
+        "title": "What We Need",
+        "items": {
+          "0": "Your LARP name and basic information",
+          "1": "Preferred subdomain (yourname.larps.dk)",
+          "2": "Expected number of participants",
+          "3": "Any special hosting requirements",
+          "4": "Content you'd like to include"
+        }
+      }
+    }
   }
 }
