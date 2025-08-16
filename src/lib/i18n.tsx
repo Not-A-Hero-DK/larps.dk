@@ -20,12 +20,12 @@ interface I18nContextProps {
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
 function getNested(obj: unknown, path: string): string | undefined {
-  return path.split(".").reduce((o: unknown, k: string) => {
-    if (o && typeof o === 'object' && k in o) {
-      return (o as Record<string, unknown>)[k];
-    }
-    return undefined;
-  }, obj) as string | undefined;
+  const result = path.split(".").reduce((o: unknown, k: string) => {
+    return o && typeof o === "object" && k in o
+      ? (o as Record<string, unknown>)[k]
+      : undefined;
+  }, obj);
+  return typeof result === "string" ? result : undefined;
 }
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
