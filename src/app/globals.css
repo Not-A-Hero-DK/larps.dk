@@ -3,13 +3,7 @@
 :root {
   --background: #0f172a;
   --foreground: #f1f5f9;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --accent: 43 100% 58%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,4 +17,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.text-accent {
+  color: hsl(var(--accent));
+}
+
+.border-accent {
+  border-color: hsl(var(--accent));
+}
+
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
 }

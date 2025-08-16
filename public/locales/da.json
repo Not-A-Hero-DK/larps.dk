@@ -7,6 +7,14 @@
     "dark_mode": "Mørk tilstand",
     "light_mode": "Lys tilstand"
   },
+  "nav": {
+    "home": "Hjem",
+    "current": "Nuværende Projekter",
+    "previous": "Tidligere Projekter",
+    "about": "Om Os",
+    "contact": "Kontakt",
+    "getHosted": "Få Hosting"
+  },
   "landing": {
     "title": "Vogter af LARP Riger",
     "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",

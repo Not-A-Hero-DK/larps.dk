@@ -15,7 +15,59 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-neutral-900 text-white">
+    <div className="relative min-h-screen text-white overflow-hidden">
+      {/* Nordic Hero Background */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url(/hero-nordic.jpg)",
+            }}
+            aria-hidden="true"
+          >
+            <div
+              className="absolute inset-0 bg-gradient-hero opacity-90"
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, hsl(215 25% 8%) 0%, hsl(215 35% 15%) 50%, hsl(215 25% 8%) 100%)",
+              }}
+            />
+          </div>
+        </div>
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
+            {t("landing.title")}
+          </h1>
+
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            {t("landing.subtitle")}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-nordic text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300 font-semibold h-11 rounded-md px-8"
+              onClick={(e) => e.preventDefault()}
+            >
+              {t("landing.request_hosting")}
+            </Link>
+            <Link
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-muted/20 border border-accent/30 text-accent hover:bg-accent/10 hover:border-accent hover:shadow-glow transition-all duration-300 h-11 rounded-md px-8"
+            >
+              {t("landing.view_projects")}
+            </Link>
+          </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </section>
+      {/* Current Projects Section */}
       <section className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -35,7 +87,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-8 bg-neutral-800">
+      {/* Previous Projects Section */}
+      <section className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -53,6 +106,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Archive Statistics */}
       <section className="py-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
@@ -65,7 +120,6 @@ export default function Home() {
           <p className="text-lg text-neutral-400 mb-12 leading-relaxed">
             {t("projects.archive_subtitle")}
           </p>
-
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-yellow-400 mb-2">
@@ -87,37 +141,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
-        {t("landing.title")}
-      </h1>
-
-      <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-        {t("landing.subtitle")}
-      </p>
-
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Link
-          href="#"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg flex items-center justify-center"
-          onClick={(e) => e.preventDefault()}
-        >
-          {t("landing.request_hosting")}
-        </Link>
-        <Link
-          href="#"
-          onClick={(e) => e.preventDefault()}
-          aria-disabled="true"
-          title="Coming soon"
-          className="border-2 border-slate-400 text-slate-400 cursor-not-allowed font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg flex items-center justify-center"
-        >
-          {t("landing.view_projects")}
-        </Link>
-      </div>
-
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-6 border-2 border-slate-400 rounded-full animate-pulse"></div>
-      </div>
     </div>
   );
 }
