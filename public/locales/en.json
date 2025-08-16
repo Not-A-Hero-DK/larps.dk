@@ -7,10 +7,41 @@
     "dark_mode": "Dark Mode",
     "light_mode": "Light Mode"
   },
+  "navigation": {
+    "about": "About Us"
+  },
   "landing": {
     "title": "Guardian of LARP Realms",
     "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
     "request_hosting": "Request Hosting",
     "view_projects": "View Projects"
+  },
+  "about": {
+    "title": "About Heimdal Portal",
+    "subtitle": "Guardian of the digital bridge between LARP organizers and their communities",
+    "mission": {
+      "title": "Our Mission",
+      "description1": "Just as Heimdal guards the rainbow bridge Bifröst in Norse mythology, we serve as the guardian of the digital realm for LARP communities worldwide. Our mission is simple: remove the barriers that prevent amazing stories from reaching their audiences.",
+      "description2": "Too many brilliant LARP organizers hesitate to share their creations online due to technical complexity or hosting costs. We bridge that gap, providing free, professional web hosting so you can focus on what you do best: creating unforgettable experiences.",
+      "description3": "Every LARP deserves a digital home where participants can gather, prepare, and reminisce. We make that possible, one subdomain at a time."
+    },
+    "offer": {
+      "title": "What We Offer",
+      "hosting": "Free hosting with zero hidden costs",
+      "subdomains": "Professional subdomains on larps.dk",
+      "templates": "Beautiful website templates",
+      "support": "Technical support from fellow LARPers",
+      "ssl": "SSL certificates and security",
+      "community": "Community showcase and networking"
+    },
+    "team": {
+      "title": "Who We Are",
+      "description": "We are a passionate collective of LARP enthusiasts, web developers, and storytellers who understand the unique needs of the LARP community. Having organized, participated in, and supported countless LARPs ourselves, we know the challenges you face. From managing player communications to showcasing your creative vision, we've been there. Our technical expertise combined with our deep understanding of the LARP community's unique needs allows us to provide this free hosting service."
+    },
+    "creator": {
+      "title": "Meet the Creator",
+      "name": "Mads Heimdal Thy",
+      "description": "Heimdal Portal is created and maintained by Mads Heimdal Thy, a passionate software engineer with extensive experience in building apps, websites, and systems. With a deep love for both technology and storytelling, Mads combines technical expertise with an understanding of the LARP community's unique needs to provide this free hosting service."
+    }
   }
 }

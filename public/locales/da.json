@@ -7,10 +7,41 @@
     "dark_mode": "Mørk tilstand",
     "light_mode": "Lys tilstand"
   },
+  "navigation": {
+    "about": "Om Os"
+  },
   "landing": {
     "title": "Vogter af LARP Riger",
     "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",
     "request_hosting": "Anmod om Hosting",
     "view_projects": "Se Projekter"
+  },
+  "about": {
+    "title": "Om Heimdal Portal",
+    "subtitle": "Vogter af den digitale bro mellem LARP-arrangører og deres fællesskaber",
+    "mission": {
+      "title": "Vores Mission",
+      "description1": "Ligesom Heimdal vogter regnbuebroen Bifröst i nordisk mytologi, fungerer vi som vogter af det digitale rige for LARP-fællesskaber verden over. Vores mission er enkel: fjern barriererne, der forhindrer fantastiske historier i at nå deres publikum.",
+      "description2": "Alt for mange brillante LARP-arrangører tøver med at dele deres kreationer online på grund af teknisk kompleksitet eller hosting-omkostninger. Vi bygger bro over det hul og tilbyder gratis, professionel webhosting, så du kan fokusere på det, du er bedst til: at skabe uforglemmelige oplevelser.",
+      "description3": "Enhver LARP fortjener et digitalt hjem, hvor deltagere kan samles, forberede sig og mindes. Vi gør det muligt, ét subdomæne ad gangen."
+    },
+    "offer": {
+      "title": "Hvad Vi Tilbyder",
+      "hosting": "Gratis hosting uden skjulte omkostninger",
+      "subdomains": "Professionelle subdomæner på larps.dk",
+      "templates": "Smukke hjemmeside-skabeloner",
+      "support": "Teknisk support fra medspillere",
+      "ssl": "SSL-certifikater og sikkerhed",
+      "community": "Fællesskabs-showcase og netværk"
+    },
+    "team": {
+      "title": "Hvem Vi Er",
+      "description": "Vi er et passioneret kollektiv af LARP-entusiaster, webudviklere og historiefortællere, der forstår LARP-fællesskabets unikke behov. Efter selv at have arrangeret, deltaget i og støttet utallige LARP'er, kender vi de udfordringer, I står over for. Fra at administrere spillerkommunikation til at fremvise jeres kreative vision - vi har været der. Vores tekniske ekspertise kombineret med vores dybe forståelse af LARP-fællesskabets unikke behov gør det muligt for os at tilbyde denne gratis hosting-service."
+    },
+    "creator": {
+      "title": "Mød Skaberen",
+      "name": "Mads Heimdal Thy",
+      "description": "Heimdal Portal er skabt og vedligeholdt af Mads Heimdal Thy, en passioneret software-ingeniør med omfattende erfaring i at bygge apps, hjemmesider og systemer. Med en dyb kærlighed til både teknologi og historiefortælling kombinerer Mads teknisk ekspertise med en forståelse af LARP-fællesskabets unikke behov for at tilbyde denne gratis hosting-service."
+    }
   }
 }
