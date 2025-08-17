@@ -23,7 +23,7 @@ function getNested(obj: unknown, path: string): string | undefined {
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState<Locale>('en')
   const [translations, setTranslations] = useState<Translations>({})
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setLoading(true)

@@ -6,6 +6,14 @@
   --gradient-nordic: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 55%));
 }
 
+html,
+body,
+:root,
+[data-theme='dark'],
+[data-theme='light'] {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 /* Dark theme (default) */
 :root,
 [data-theme='dark'] {
@@ -26,10 +34,6 @@ body {
   color: hsl(var(--foreground));
   font-family: var(--font-sans);
   overflow-y: scroll;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 .text-accent {
@@ -62,6 +66,7 @@ button:hover {
 
 .bg-background {
   background-color: hsl(var(--background) / 0.95);
+  transition: background-color 0.3s ease;
 }
 
 .bg-muted {

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Button from '../components/Button'
 import ProjectCard from '../components/ProjectCard'
 import { currentProjects, previousProjects } from '../data/projects'
 import { useI18n } from '../lib/i18n'
@@ -44,20 +44,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-nordic text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300 font-semibold h-11 rounded-md px-8"
-              onClick={(e) => e.preventDefault()}
-            >
+            <Button href="#" variant="secondary">
               {t('landing.request_hosting')}
-            </Link>
-            <Link
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-muted border border-accent text-accent hover:bg-accent hover:border-accent hover:shadow-glow transition-all duration-300 h-11 rounded-md px-8"
-            >
+            </Button>
+            <Button href="#" variant="primary">
               {t('landing.view_projects')}
-            </Link>
+            </Button>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

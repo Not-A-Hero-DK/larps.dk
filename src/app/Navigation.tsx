@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Button from '../components/Button'
 import GlobeIcon from '../components/icons/GlobeIcon'
 import { useI18n } from '../lib/i18n'
 import { useTheme } from '../lib/theme'
@@ -43,21 +44,23 @@ export default function Navigation() {
               ))}
             </div>
             <div className="flex items-center space-x-2">
-              <button
+              <Button
+                variant="toggle"
+                className=""
                 aria-label={theme === 'dark' ? t('default.light_mode') : t('default.dark_mode')}
                 onClick={toggleTheme}
-                className="rounded-lg text-sm font-medium px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200"
               >
                 {theme === 'dark' ? '☀️' : '🌙'}
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="toggle"
+                className="flex items-center text-accent space-x-1"
                 aria-label={t('default.switch_language')}
                 onClick={handleLanguageSwitch}
-                className="flex items-center text-accent space-x-1 rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200"
               >
                 <GlobeIcon size={16} />
                 <span className="text-sm font-medium">{locale === 'en' ? 'DA' : 'EN'}</span>
-              </button>
+              </Button>
             </div>
           </div>
 

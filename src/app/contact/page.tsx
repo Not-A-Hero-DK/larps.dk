@@ -1,5 +1,6 @@
 'use client'
 
+import Button from '@/components/Button'
 import { useState } from 'react'
 import { useI18n } from '../../lib/i18n'
 
@@ -72,8 +73,6 @@ export default function ContactPage() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
     if (!validateForm()) {
       return
     }
@@ -133,7 +132,7 @@ export default function ContactPage() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6">
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">
@@ -235,49 +234,9 @@ export default function ContactPage() {
                 </div>
 
                 {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center justify-center">
-                      <svg
-                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        ></path>
-                      </svg>
-                      {t('contact.form_sending')}
-                    </span>
-                  ) : (
-                    <>
-                      <svg className="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                        />
-                      </svg>
-                      {t('contact.form_submit')}
-                    </>
-                  )}
-                </button>
+                <Button variant="secondary" disabled={isSubmitting} onClick={handleSubmit}>
+                  📧 {isSubmitting ? t('contact.form_sending') : <>{t('contact.form_submit')}</>}
+                </Button>
               </form>
             </div>
 
