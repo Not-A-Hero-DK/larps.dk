@@ -97,5 +97,11 @@
     "form_validation_larp_name_required": "LARP name is required",
     "form_validation_message_required": "Please tell us about your LARP",
     "form_validation_message_min_length": "Please provide more details (at least 20 characters)"
+  },
+  "notfound": {
+    "title": "Lost in the Nine Realms",
+    "description": "It seems you've wandered off the path to Valhalla. Even Heimdal's keen sight cannot locate this page in our digital realm.",
+    "return_home": "Return to Midgard",
+    "explore_projects": "Explore Projects"
   }
 }

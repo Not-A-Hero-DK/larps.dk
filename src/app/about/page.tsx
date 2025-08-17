@@ -1,5 +1,6 @@
 'use client'
 
+import Button from '../../components/Button'
 import { useI18n } from '../../lib/i18n'
 
 export default function AboutPage() {
@@ -108,12 +109,12 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold mb-6">{t('about.cta_title')}</h3>
             <p className="text-lg text-neutral-400 mb-8 leading-relaxed">{t('about.cta_description')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-nordic text-white hover:bg-accent transition-colors duration-300 h-11 rounded-md px-8">
+              <Button href="#" variant="secondary">
                 {t('about.cta_get_in_touch')}
-              </button>
-              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-muted border border-accent text-accent hover:bg-accent hover:border-accent hover:shadow-glow transition-all duration-300 h-11 rounded-md px-8">
+              </Button>
+              <Button href="#" variant="primary">
                 {t('about.cta_view_examples')}
-              </button>
+              </Button>
             </div>
             <p className="text-neutral-400 mt-6 text-sm">
               {t('about.cta_contact')}
