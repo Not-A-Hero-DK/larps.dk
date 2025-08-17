@@ -22,6 +22,9 @@
     "view_projects": "Se Projekter"
   },
   "projects": {
+    "host_cta_title": "Skal vi hoste din LARP hjemmeside?",
+    "learn_more": "Læs Mere",
+    "host_cta_subtitle": "Bliv en del af de legendariske arrangører. Få din LARP hjemmeside hostet gratis på vores platform.",
     "current_title": "Nuværende Projekter",
     "current_subtitle": "Kommende LARP-eventyr der i øjeblikket hostes på Heimdal Portal. Deltag i disse legendariske oplevelser eller bliv inspireret til din egen saga.",
     "previous_title": "Tidligere Projekter",
@@ -116,7 +119,6 @@
     "phone": "+45 30 23 81 12",
     "get_started": "Kom i Gang",
     "copyright": "© 2025 Heimdal Portal. Alle rettigheder forbeholdt.",
-    "crafted_by": "Skabt af Mads Heimdal Thy",
     "company_link": "Not A Hero ApS"
   }
 }

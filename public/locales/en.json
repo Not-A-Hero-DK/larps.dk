@@ -22,6 +22,9 @@
     "view_projects": "View Projects"
   },
   "projects": {
+    "host_cta_title": "Want a LARP website?",
+    "learn_more": "Learn More",
+    "host_cta_subtitle": "Join the ranks of legendary organizers. Get your LARP website hosted for free on our platform.",
     "current_title": "Current Projects",
     "current_subtitle": "Upcoming LARP adventures currently hosted on Heimdal Portal. Join these legendary experiences or get inspired for your own saga.",
     "previous_title": "Previous Projects",
@@ -116,7 +119,6 @@
     "phone": "+45 30 23 81 12",
     "get_started": "Get Started",
     "copyright": "© 2025 Heimdal Portal. All rights reserved.",
-    "crafted_by": "Crafted by Mads Heimdal Thy",
     "company_link": "Not A Hero ApS"
   }
 }

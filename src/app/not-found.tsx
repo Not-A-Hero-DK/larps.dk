@@ -1,7 +1,7 @@
 'use client'
 
-import Button from '../components/Button'
-import { useI18n } from '../lib/i18n'
+import Button from '@/components/Button'
+import { useI18n } from '@/lib/i18n'
 
 export default function NotFound() {
   const i18n = useI18n()

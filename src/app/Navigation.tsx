@@ -1,10 +1,10 @@
 'use client'
 
+import Button from '@/components/Button'
+import GlobeIcon from '@/components/icons/GlobeIcon'
+import { useI18n } from '@/lib/i18n'
+import { useTheme } from '@/lib/theme'
 import Link from 'next/link'
-import Button from '../components/Button'
-import GlobeIcon from '../components/icons/GlobeIcon'
-import { useI18n } from '../lib/i18n'
-import { useTheme } from '../lib/theme'
 
 export default function Navigation() {
   const { locale, setLocale, t } = useI18n()
