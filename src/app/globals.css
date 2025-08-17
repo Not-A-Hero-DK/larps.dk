@@ -1,19 +1,21 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --accent: 43 100% 58%;
+  --card: 215 25% 10%;
+  --gradient-nordic: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 55%));
 }
 
 /* Dark theme (default) */
 :root,
-[data-theme="dark"] {
+[data-theme='dark'] {
   --background: 215 25% 8%;
   --foreground: 197 100% 95%;
   --border: 215 25% 20%;
 }
 
 /* Light theme */
-[data-theme="light"] {
+[data-theme='light'] {
   --background: 0 0% 100%;
   --foreground: 0 0% 0%;
   --border: 0 0% 80%;
@@ -23,6 +25,7 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-sans);
+  overflow-y: scroll;
 }
 
 button:hover {
@@ -33,22 +36,30 @@ button:hover {
   color: hsl(var(--accent));
 }
 
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
 .border-accent {
-  border-color: hsl(var(--accent));
+  border-color: hsl(var(--accent) / 0.2);
+}
+
+.border-border {
+  border-color: hsl(var(--border));
 }
 
 .bg-accent {
   background-color: hsl(var(--accent));
 }
 
+.bg-gradient-nordic {
+  background-image: var(--gradient-nordic);
+}
+
+.bg-card {
+  background-color: hsl(var(--card));
+}
+
 .bg-background {
   background-color: hsl(var(--background) / 0.95);
-}
-
-.text-foreground {
-  color: hsl(var(--foreground));
-}
-
-.border-border {
-  border-color: hsl(var(--border));
 }

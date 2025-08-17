@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import ProjectCard from "../components/ProjectCard";
-import { currentProjects, previousProjects } from "../data/projects";
-import { useI18n } from "../lib/i18n";
+import Link from 'next/link'
+import ProjectCard from '../components/ProjectCard'
+import { currentProjects, previousProjects } from '../data/projects'
+import { useI18n } from '../lib/i18n'
 
 export default function Home() {
-  const { t } = useI18n();
+  const { t } = useI18n()
 
-  const totalProjects = currentProjects.length + previousProjects.length;
+  const totalProjects = currentProjects.length + previousProjects.length
   const totalParticipants = [...currentProjects, ...previousProjects].reduce(
     (sum, project) => sum + project.participants,
-    0
-  );
+    0,
+  )
 
   return (
     <div className="relative min-h-screen text-white overflow-hidden">
@@ -21,7 +21,7 @@ export default function Home() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url(/hero-nordic.jpg)",
+              backgroundImage: 'url(/hero-nordic.jpg)',
             }}
             aria-hidden="true"
           >
@@ -29,18 +29,18 @@ export default function Home() {
               className="absolute inset-0 bg-gradient-hero opacity-90"
               style={{
                 backgroundImage:
-                  "linear-gradient(135deg, hsl(215 25% 8%) 0%, hsl(215 35% 15%) 50%, hsl(215 25% 8%) 100%)",
+                  'linear-gradient(135deg, hsl(215 25% 8%) 0%, hsl(215 35% 15%) 50%, hsl(215 25% 8%) 100%)',
               }}
             />
           </div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
-            {t("landing.title")}
+            {t('landing.title')}
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {t("landing.subtitle")}
+            {t('landing.subtitle')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -49,14 +49,14 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-nordic text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300 font-semibold h-11 rounded-md px-8"
               onClick={(e) => e.preventDefault()}
             >
-              {t("landing.request_hosting")}
+              {t('landing.request_hosting')}
             </Link>
             <Link
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-muted/20 border border-accent/30 text-accent hover:bg-accent/10 hover:border-accent hover:shadow-glow transition-all duration-300 h-11 rounded-md px-8"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-muted border border-accent text-accent hover:bg-accent hover:border-accent hover:shadow-glow transition-all duration-300 h-11 rounded-md px-8"
             >
-              {t("landing.view_projects")}
+              {t('landing.view_projects')}
             </Link>
           </div>
         </div>
@@ -69,11 +69,9 @@ export default function Home() {
       <section className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t("projects.current_title")}
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('projects.current_title')}</h1>
             <p className="text-lg text-neutral-400 max-w-4xl mx-auto leading-relaxed">
-              {t("projects.current_subtitle")}
+              {t('projects.current_subtitle')}
             </p>
           </div>
 
@@ -87,11 +85,9 @@ export default function Home() {
       <section className="py-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {t("projects.previous_title")}
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('projects.previous_title')}</h2>
             <p className="text-lg text-neutral-400 max-w-4xl mx-auto leading-relaxed">
-              {t("projects.previous_subtitle")}
+              {t('projects.previous_subtitle')}
             </p>
           </div>
 
@@ -106,34 +102,22 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <span className="text-2xl mr-2">📚</span>
-            <h3 className="text-3xl font-bold inline">
-              {t("projects.archive_title")}
-            </h3>
+            <h3 className="text-3xl font-bold inline">{t('projects.archive_title')}</h3>
           </div>
-          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">
-            {t("projects.archive_subtitle")}
-          </p>
+          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">{t('projects.archive_subtitle')}</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">
-                {totalProjects}
-              </div>
-              <div className="text-neutral-400">
-                {t("projects.total_adventures")}
-              </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">{totalProjects}</div>
+              <div className="text-neutral-400">{t('projects.total_adventures')}</div>
             </div>
             <div className="hidden sm:block text-neutral-600 text-2xl">|</div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">
-                {totalParticipants}
-              </div>
-              <div className="text-neutral-400">
-                {t("projects.total_participants")}
-              </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">{totalParticipants}</div>
+              <div className="text-neutral-400">{t('projects.total_participants')}</div>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

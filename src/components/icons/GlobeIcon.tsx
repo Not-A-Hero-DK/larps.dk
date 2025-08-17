@@ -1,12 +1,9 @@
 interface GlobeIconProps {
-  className?: string;
-  size?: number;
+  className?: string
+  size?: number
 }
 
-export default function GlobeIcon({
-  className = "",
-  size = 16,
-}: Readonly<GlobeIconProps>) {
+export default function GlobeIcon({ className = '', size = 16 }: Readonly<GlobeIconProps>) {
   return (
     <svg
       width={size}
@@ -24,5 +21,5 @@ export default function GlobeIcon({
       <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
       <path d="M2 12h20" />
     </svg>
-  );
+  )
 }
