@@ -16,71 +16,74 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-card border-t border-border mt-16">
+    <footer className="bg-card border-t border-border mt-16" role="contentinfo">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <section className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <div className="text-2xl font-bold text-accent">⚡</div>
               <span className="text-xl font-bold text-foreground">{t('footer.brand_title')}</span>
             </Link>
             <p className="text-neutral-300 text-sm leading-relaxed">{t('footer.brand_description')}</p>
             <p className="text-neutral-400 text-sm leading-relaxed">{t('footer.brand_mission')}</p>
-            <div className="flex items-center space-x-6 pt-2">
+            <div className="flex items-center space-x-6 pt-2" role="group" aria-label="Service statistics">
               <div className="flex items-center space-x-2">
-                <span className="text-accent">🎲</span>
+                <span className="text-accent" aria-hidden="true">🎲</span>
                 <span className="text-neutral-300 text-sm">{t('footer.stats_projects')}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-accent">♥</span>
+                <span className="text-accent" aria-hidden="true">♥</span>
                 <span className="text-neutral-300 text-sm">{t('footer.stats_uptime')}</span>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Quick Links Section */}
-          <div className="space-y-4">
+          <section className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">{t('footer.quick_links')}</h3>
-            <nav className="space-y-2">
+            <nav className="space-y-2" aria-label="Footer navigation">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-neutral-300 hover:text-accent text-sm transition-colors"
+                  className="block text-neutral-300 hover:text-accent text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
-          </div>
+          </section>
 
           {/* Contact Section */}
-          <div className="space-y-4">
+          <section className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">{t('footer.contact')}</h3>
-            <div className="space-y-3">
+            <address className="space-y-3 not-italic">
               <div className="flex items-center space-x-2">
-                <span className="text-accent">📧</span>
+                <span className="text-accent" aria-hidden="true">📧</span>
                 <a
                   href="mailto:hosting@larps.dk"
-                  className="text-neutral-300 hover:text-accent text-sm transition-colors"
+                  className="text-neutral-300 hover:text-accent text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
                 >
                   {t('footer.email')}
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-accent">📞</span>
-                <a href="tel:+4530238112" className="text-neutral-300 hover:text-accent text-sm transition-colors">
+                <span className="text-accent" aria-hidden="true">📞</span>
+                <a 
+                  href="tel:+4530238112" 
+                  className="text-neutral-300 hover:text-accent text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+                >
                   {t('footer.phone')}
                 </a>
               </div>
-            </div>
+            </address>
             <div className="pt-2">
               <Button href="/contact" variant="secondary" className="text-sm px-6 py-2">
                 {t('footer.get_started')}
               </Button>
             </div>
-          </div>
+          </section>
         </div>
 
         {/* Bottom Section */}
@@ -93,7 +96,7 @@ export default function Footer() {
                   href="https://notahero.dk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent hover:underline"
+                  className="text-accent hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
                 >
                   {' ' + t('footer.company_link')}
                 </a>
