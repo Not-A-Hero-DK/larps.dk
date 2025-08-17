@@ -1,8 +1,8 @@
 'use client'
 
-import Button from '../../components/Button'
-import ProjectCard from '../../components/ProjectCard'
-import { currentProjects } from '../../data/projects'
+import Button from '@/components/Button'
+import ProjectCard from '@/components/ProjectCard'
+import { currentProjects } from '@/data/projects'
 import { useI18n } from '../../lib/i18n'
 
 export default function CurrentProjectsPage() {

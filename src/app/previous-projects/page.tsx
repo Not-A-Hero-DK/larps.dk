@@ -1,8 +1,8 @@
 'use client'
 
-import ProjectCard from '../../components/ProjectCard'
-import { currentProjects, previousProjects } from '../../data/projects'
-import { useI18n } from '../../lib/i18n'
+import ProjectCard from '@/components/ProjectCard'
+import { currentProjects, previousProjects } from '@/data/projects'
+import { useI18n } from '@/lib/i18n'
 
 export default function PreviousProjectsPage() {
   const { t } = useI18n()

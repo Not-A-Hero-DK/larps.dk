@@ -1,8 +1,8 @@
 'use client'
 
 import Button from '@/components/Button'
+import { useI18n } from '@/lib/i18n'
 import { useState } from 'react'
-import { useI18n } from '../../lib/i18n'
 
 interface FormData {
   name: string
