@@ -88,6 +88,7 @@
     "form_message_label": "Fortæl os om din LARP",
     "form_message_placeholder": "Fortæl os om din LARP, hvornår den foregår, forventet antal deltagere og eventuelle særlige krav...",
     "form_submit": "Send Besked",
+    "form_sending": "Sender...",
     "form_success": "Tak! Din besked er sendt med succes. Vi vender tilbage til dig inden for 24-48 timer.",
     "form_error": "Noget gik galt. Prøv venligst igen eller kontakt os direkte på hosting@larps.dk",
     "form_validation_name_required": "Navn er påkrævet",
