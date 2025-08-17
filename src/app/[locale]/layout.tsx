@@ -1,9 +1,9 @@
 import { ThemeProvider } from '@/lib/theme'
 import type { Metadata } from 'next'
-import { NextIntlClientProvider } from 'next-intl'
-import Footer from './[locale]/Footer'
-import Navigation from './[locale]/Navigation'
-import './globals.css'
+import { NextIntlClientProvider, useLocale } from 'next-intl'
+import '../globals.css'
+import Footer from './Footer'
+import Navigation from './Navigation'
 
 export const metadata: Metadata = {
   title: 'Heimdal Portal - Guardian of LARP Realms',
@@ -12,8 +12,9 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const locale = useLocale()
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
         <ThemeProvider>
           <NextIntlClientProvider>

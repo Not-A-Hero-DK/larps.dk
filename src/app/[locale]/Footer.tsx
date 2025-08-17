@@ -1,7 +1,8 @@
 'use client'
+
 import Button from '@/components/Button'
+import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 
 export default function Footer() {
   const t = useTranslations()

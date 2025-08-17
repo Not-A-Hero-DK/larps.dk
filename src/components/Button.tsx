@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import React from 'react'
 
 interface ButtonProps {
@@ -9,6 +9,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'toggle'
   className?: string
   disabled?: boolean
+  locale?: string
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -18,6 +19,7 @@ export default function Button({
   variant = 'primary',
   className = '',
   disabled = false,
+  locale = undefined,
   onClick = undefined,
 }: Readonly<ButtonProps>) {
   const base =
@@ -31,7 +33,7 @@ export default function Button({
   }
 
   return href ? (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`} aria-disabled={disabled}>
+    <Link href={href} locale={locale} className={`${base} ${variants[variant]} ${className}`} aria-disabled={disabled}>
       {children}
     </Link>
   ) : (

@@ -5,7 +5,7 @@ export default function NotFound() {
   const t = useTranslations()
 
   return (
-    <div className="flex items-center justify-center bg-background px-8">
+    <div className="flex items-center justify-center min-h-[calc(100vh-414px)]">
       <div className="text-center max-w-2xl mx-auto">
         <div className="text-6xl mb-8">⚔️</div>
         <h1 className="text-8xl md:text-9xl font-bold text-white mb-6">404</h1>

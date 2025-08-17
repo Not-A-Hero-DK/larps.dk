@@ -1,22 +1,23 @@
 'use client'
+
 import Button from '@/components/Button'
 import GlobeIcon from '@/components/icons/GlobeIcon'
+import { Link, usePathname } from '@/i18n/navigation'
 import { useTheme } from '@/lib/theme'
-import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 export default function Navigation() {
-  const t = useTranslations()
-  const { theme, toggleTheme } = useTheme()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const { theme, toggleTheme } = useTheme()
+  const t = useTranslations()
+  const locale = useLocale()
+  const pathname = usePathname()
+  const otherLocale = locale === 'en' ? 'da' : 'en'
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
-  const handleLanguageSwitch = () => {
-    console.log('test')
   }
 
   const closeMobileMenu = () => {
@@ -52,7 +53,6 @@ export default function Navigation() {
               <div className="text-2xl font-bold text-accent">⚡</div>
               <span className="text-xl font-bold text-foreground">Heimdal Portal</span>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <div className="flex items-center space-x-8">
@@ -79,14 +79,14 @@ export default function Navigation() {
                   variant="toggle"
                   className="flex items-center text-accent space-x-1"
                   aria-label={t('default.switch_language')}
-                  onClick={handleLanguageSwitch}
+                  href={pathname}
+                  locale={otherLocale}
                 >
                   <GlobeIcon size={16} />
-                  <span className="text-sm font-medium"> DA </span>
+                  <span className="text-sm font-medium"> {otherLocale.toUpperCase()} </span>
                 </Button>
               </div>
             </div>
-
             {/* Mobile Menu Button and Controls */}
             <div className="flex items-center space-x-2 md:hidden">
               <Button
@@ -101,10 +101,11 @@ export default function Navigation() {
                 variant="toggle"
                 className="flex items-center text-accent space-x-1"
                 aria-label={t('default.switch_language')}
-                onClick={handleLanguageSwitch}
+                href={pathname}
+                locale={otherLocale}
               >
                 <GlobeIcon size={16} />
-                <span className="text-sm font-medium"> DA </span>
+                <span className="text-sm font-medium"> {otherLocale.toUpperCase()} </span>
               </Button>
 
               {/* Hamburger Menu Button */}
