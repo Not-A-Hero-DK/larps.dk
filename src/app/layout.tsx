@@ -1,8 +1,8 @@
-import { I18nProvider } from '@/lib/i18n'
 import { ThemeProvider } from '@/lib/theme'
 import type { Metadata } from 'next'
-import Footer from './Footer'
-import Navigation from './Navigation'
+import { NextIntlClientProvider } from 'next-intl'
+import Footer from './[locale]/Footer'
+import Navigation from './[locale]/Navigation'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -16,13 +16,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <ThemeProvider>
-          <I18nProvider>
+          <NextIntlClientProvider>
             <Navigation />
             <main id="main-content" role="main">
               {children}
             </main>
             <Footer />
-          </I18nProvider>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

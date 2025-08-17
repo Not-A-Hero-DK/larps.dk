@@ -1,23 +1,22 @@
 'use client'
-
 import Button from '@/components/Button'
 import GlobeIcon from '@/components/icons/GlobeIcon'
-import { useI18n } from '@/lib/i18n'
 import { useTheme } from '@/lib/theme'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Navigation() {
-  const { locale, setLocale, t } = useI18n()
+  const t = useTranslations()
   const { theme, toggleTheme } = useTheme()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const handleLanguageSwitch = () => {
-    setLocale(locale === 'en' ? 'da' : 'en')
-  }
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleLanguageSwitch = () => {
+    console.log('test')
   }
 
   const closeMobileMenu = () => {
@@ -35,14 +34,18 @@ export default function Navigation() {
   return (
     <>
       {/* Skip to main content link for accessibility */}
-      <a 
-        href="#main-content" 
+      <a
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-white px-4 py-2 rounded-md z-[60] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
       >
         {t('nav.skip_to_content')}
       </a>
-      
-      <nav className="fixed top-0 w-full z-50 bg-background backdrop-blur-sm border-b border-border" role="navigation" aria-label={t('nav.main_navigation')}>
+
+      <nav
+        className="fixed top-0 w-full z-50 bg-background backdrop-blur-sm border-b border-border"
+        role="navigation"
+        aria-label={t('nav.main_navigation')}
+      >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
@@ -57,7 +60,7 @@ export default function Navigation() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm px-1 py-1"
+                    className="text-sm font-medium transition-colors hover:text-accent rounded-sm px-1 py-1"
                   >
                     {item.label}
                   </Link>
@@ -79,41 +82,55 @@ export default function Navigation() {
                   onClick={handleLanguageSwitch}
                 >
                   <GlobeIcon size={16} />
-                  <span className="text-sm font-medium">{locale === 'en' ? 'DA' : 'EN'}</span>
+                  <span className="text-sm font-medium"> DA </span>
                 </Button>
               </div>
             </div>
 
             {/* Mobile Menu Button and Controls */}
             <div className="flex items-center space-x-2 md:hidden">
-              <button
+              <Button
+                variant="toggle"
+                className=""
                 aria-label={theme === 'dark' ? t('default.light_mode') : t('default.dark_mode')}
                 onClick={toggleTheme}
-                className="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
               >
                 {theme === 'dark' ? '☀️' : '🌙'}
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="toggle"
+                className="flex items-center text-accent space-x-1"
                 aria-label={t('default.switch_language')}
                 onClick={handleLanguageSwitch}
-                className="flex items-center space-x-2 rounded-lg px-2 py-1 bg-neutral-800 text-accent hover:bg-accent hover:text-white border border-accent hover:border-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
               >
                 <GlobeIcon size={16} />
-                <span className="text-sm font-medium">{locale === 'en' ? 'DA' : 'EN'}</span>
-              </button>
-              
+                <span className="text-sm font-medium"> DA </span>
+              </Button>
+
               {/* Hamburger Menu Button */}
               <button
                 onClick={toggleMobileMenu}
                 aria-label={isMobileMenuOpen ? t('nav.close_menu') : t('nav.open_menu')}
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
-                className="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                className="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200"
               >
                 <div className="w-5 h-5 flex flex-col justify-center items-center space-y-1">
-                  <span className={`block w-4 h-0.5 bg-current transition-transform duration-200 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-                  <span className={`block w-4 h-0.5 bg-current transition-opacity duration-200 ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
-                  <span className={`block w-4 h-0.5 bg-current transition-transform duration-200 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+                  <span
+                    className={`block w-4 h-0.5 bg-current transition-transform duration-200 ${
+                      isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                    }`}
+                  />
+                  <span
+                    className={`block w-4 h-0.5 bg-current transition-opacity duration-200 ${
+                      isMobileMenuOpen ? 'opacity-0' : ''
+                    }`}
+                  />
+                  <span
+                    className={`block w-4 h-0.5 bg-current transition-transform duration-200 ${
+                      isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                    }`}
+                  />
                 </div>
               </button>
             </div>
@@ -121,7 +138,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div 
+        <div
           id="mobile-menu"
           className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -136,7 +153,7 @@ export default function Navigation() {
                     key={item.href}
                     href={item.href}
                     onClick={closeMobileMenu}
-                    className="block px-4 py-3 text-sm font-medium text-foreground hover:text-accent hover:bg-neutral-800 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                    className="block px-4 py-3 text-sm font-medium text-foreground hover:text-accent hover:bg-neutral-800 rounded-md transition-colors"
                   >
                     {item.label}
                   </Link>

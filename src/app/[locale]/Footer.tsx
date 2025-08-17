@@ -1,11 +1,10 @@
 'use client'
-
 import Button from '@/components/Button'
-import { useI18n } from '@/lib/i18n'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 export default function Footer() {
-  const { t } = useI18n()
+  const t = useTranslations()
 
   const navItems = [
     { href: '/', label: t('nav.home') },
@@ -27,13 +26,17 @@ export default function Footer() {
             </Link>
             <p className="text-neutral-300 text-sm leading-relaxed">{t('footer.brand_description')}</p>
             <p className="text-neutral-400 text-sm leading-relaxed">{t('footer.brand_mission')}</p>
-            <div className="flex items-center space-x-6 pt-2" role="group" aria-label="Service statistics">
+            <div className="flex items-center space-x-6 pt-2" aria-label="Service statistics">
               <div className="flex items-center space-x-2">
-                <span className="text-accent" aria-hidden="true">🎲</span>
+                <span className="text-accent" aria-hidden="true">
+                  🎲
+                </span>
                 <span className="text-neutral-300 text-sm">{t('footer.stats_projects')}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-accent" aria-hidden="true">♥</span>
+                <span className="text-accent" aria-hidden="true">
+                  ♥
+                </span>
                 <span className="text-neutral-300 text-sm">{t('footer.stats_uptime')}</span>
               </div>
             </div>
@@ -47,7 +50,7 @@ export default function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-neutral-300 hover:text-accent text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+                  className="block text-neutral-300 hover:text-accent text-sm transition-colors rounded-sm"
                 >
                   {item.label}
                 </Link>
@@ -60,19 +63,23 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-foreground">{t('footer.contact')}</h3>
             <address className="space-y-3 not-italic">
               <div className="flex items-center space-x-2">
-                <span className="text-accent" aria-hidden="true">📧</span>
+                <span className="text-accent" aria-hidden="true">
+                  📧
+                </span>
                 <a
                   href="mailto:hosting@larps.dk"
-                  className="text-neutral-300 hover:text-accent text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+                  className="text-neutral-300 hover:text-accent text-sm transition-colors rounded-sm"
                 >
                   {t('footer.email')}
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-accent" aria-hidden="true">📞</span>
-                <a 
-                  href="tel:+4530238112" 
-                  className="text-neutral-300 hover:text-accent text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+                <span className="text-accent" aria-hidden="true">
+                  📞
+                </span>
+                <a
+                  href="tel:+4530238112"
+                  className="text-neutral-300 hover:text-accent text-sm transition-colors rounded-sm"
                 >
                   {t('footer.phone')}
                 </a>
@@ -96,7 +103,7 @@ export default function Footer() {
                   href="https://notahero.dk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-sm"
+                  className="text-accent hover:underline rounded-sm"
                 >
                   {' ' + t('footer.company_link')}
                 </a>

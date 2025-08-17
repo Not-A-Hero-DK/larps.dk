@@ -1,10 +1,8 @@
-'use client'
-
-import Button from '../components/Button'
-import { useI18n } from '../lib/i18n'
+import Button from '@/components/Button'
+import { useTranslations } from 'next-intl'
 
 export default function Home() {
-  const { t } = useI18n()
+  const t = useTranslations()
 
   return (
     <div className="relative min-h-screen text-white overflow-hidden">
@@ -29,19 +27,19 @@ export default function Home() {
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
-            {t('landing.title')}
+            {t('home.title')}
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {t('landing.subtitle')}
+            {t('home.subtitle')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact" variant="secondary">
-              {t('landing.request_hosting')}
+              {t('home.request_hosting')}
             </Button>
             <Button href="/current-projects" variant="primary">
-              {t('landing.view_projects')}
+              {t('home.view_projects')}
             </Button>
           </div>
         </div>
@@ -56,35 +54,33 @@ export default function Home() {
       <section className="py-16 px-8" id="features">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('landing.features_title')}</h2>
-            <p className="text-lg text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-              {t('landing.features_subtitle')}
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('home.features_title')}</h2>
+            <p className="text-lg text-neutral-400 max-w-3xl mx-auto leading-relaxed">{t('home.features_subtitle')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center bg-card rounded-lg p-6 border border-neutral-700">
               <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold mb-3">{t('landing.feature_hosting_title')}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{t('landing.feature_hosting_description')}</p>
+              <h3 className="text-xl font-semibold mb-3">{t('home.feature_hosting_title')}</h3>
+              <p className="text-neutral-400 text-sm leading-relaxed">{t('home.feature_hosting_description')}</p>
             </div>
-            
+
             <div className="text-center bg-card rounded-lg p-6 border border-neutral-700">
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-3">{t('landing.feature_setup_title')}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{t('landing.feature_setup_description')}</p>
+              <h3 className="text-xl font-semibold mb-3">{t('home.feature_setup_title')}</h3>
+              <p className="text-neutral-400 text-sm leading-relaxed">{t('home.feature_setup_description')}</p>
             </div>
-            
+
             <div className="text-center bg-card rounded-lg p-6 border border-neutral-700">
               <div className="text-4xl mb-4">🌐</div>
-              <h3 className="text-xl font-semibold mb-3">{t('landing.feature_subdomain_title')}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{t('landing.feature_subdomain_description')}</p>
+              <h3 className="text-xl font-semibold mb-3">{t('home.feature_subdomain_title')}</h3>
+              <p className="text-neutral-400 text-sm leading-relaxed">{t('home.feature_subdomain_description')}</p>
             </div>
-            
+
             <div className="text-center bg-card rounded-lg p-6 border border-neutral-700">
               <div className="text-4xl mb-4">❤️</div>
-              <h3 className="text-xl font-semibold mb-3">{t('landing.feature_community_title')}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{t('landing.feature_community_description')}</p>
+              <h3 className="text-xl font-semibold mb-3">{t('home.feature_community_title')}</h3>
+              <p className="text-neutral-400 text-sm leading-relaxed">{t('home.feature_community_description')}</p>
             </div>
           </div>
         </div>
@@ -95,23 +91,23 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <span className="text-2xl mr-2">📚</span>
-            <h3 className="text-3xl font-bold inline">{t('landing.stats_title')}</h3>
+            <h3 className="text-3xl font-bold inline">{t('home.stats_title')}</h3>
           </div>
-          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">{t('landing.stats_subtitle')}</p>
+          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">{t('home.stats_subtitle')}</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-yellow-400 mb-2">100+</div>
-              <div className="text-neutral-400">{t('landing.stats_projects')}</div>
+              <div className="text-neutral-400">{t('home.stats_projects')}</div>
             </div>
             <div className="hidden sm:block text-neutral-600 text-2xl">|</div>
             <div>
               <div className="text-3xl font-bold text-yellow-400 mb-2">1000+</div>
-              <div className="text-neutral-400">{t('landing.stats_participants')}</div>
+              <div className="text-neutral-400">{t('home.stats_participants')}</div>
             </div>
             <div className="hidden sm:block text-neutral-600 text-2xl">|</div>
             <div>
               <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
-              <div className="text-neutral-400">{t('landing.stats_uptime')}</div>
+              <div className="text-neutral-400">{t('home.stats_uptime')}</div>
             </div>
           </div>
         </div>
@@ -121,19 +117,17 @@ export default function Home() {
       <section className="py-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-card rounded-lg p-8 border border-accent">
-            <h3 className="text-3xl font-bold mb-6">{t('landing.cta_title')}</h3>
-            <p className="text-lg text-neutral-400 mb-8 leading-relaxed">{t('landing.cta_description')}</p>
+            <h3 className="text-3xl font-bold mb-6">{t('home.cta_title')}</h3>
+            <p className="text-lg text-neutral-400 mb-8 leading-relaxed">{t('home.cta_description')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="secondary">
-                {t('landing.cta_get_started')}
+                {t('home.cta_get_started')}
               </Button>
               <Button href="/about" variant="primary">
-                {t('landing.cta_learn_more')}
+                {t('home.cta_learn_more')}
               </Button>
             </div>
-            <p className="text-neutral-400 mt-6 text-sm">
-              {t('landing.cta_contact')}
-            </p>
+            <p className="text-neutral-400 mt-6 text-sm">{t('home.cta_contact')}</p>
           </div>
         </div>
       </section>

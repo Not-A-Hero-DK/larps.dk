@@ -2,10 +2,10 @@
 
 import ProjectCard from '@/components/ProjectCard'
 import { currentProjects, previousProjects } from '@/data/projects'
-import { useI18n } from '@/lib/i18n'
+import { useTranslations } from 'next-intl'
 
 export default function PreviousProjectsPage() {
-  const { t } = useI18n()
+  const t = useTranslations()
 
   const totalProjects = currentProjects.length + previousProjects.length
   const totalParticipants = [...currentProjects, ...previousProjects].reduce(

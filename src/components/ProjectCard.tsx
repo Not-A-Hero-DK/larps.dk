@@ -1,6 +1,6 @@
 'use client'
 
-import { useI18n } from '../lib/i18n'
+import { useTranslations } from 'next-intl'
 import { Project } from '../types/project'
 
 interface ProjectCardProps {
@@ -8,7 +8,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
-  const { t } = useI18n()
+  const t = useTranslations()
 
   const statusColorClass =
     project.status === 'upcoming' ? 'bg-yellow-600 text-yellow-100' : 'bg-green-600 text-green-100'

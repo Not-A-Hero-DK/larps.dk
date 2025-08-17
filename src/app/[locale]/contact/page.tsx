@@ -1,7 +1,7 @@
 'use client'
 
 import Button from '@/components/Button'
-import { useI18n } from '@/lib/i18n'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 interface FormData {
@@ -19,7 +19,7 @@ interface FormErrors {
 }
 
 export default function ContactPage() {
-  const { t } = useI18n()
+  const t = useTranslations()
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -145,7 +145,8 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder={t('contact.form_name_placeholder')}
-                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-accent transition-colors ${
+                    autoComplete="name"
+                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 transition-colors ${
                       errors.name ? 'border-red-500' : 'border-neutral-600 focus:border-accent'
                     }`}
                     aria-describedby={errors.name ? 'name-error' : undefined}
@@ -167,10 +168,11 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
+                    autoComplete="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder={t('contact.form_email_placeholder')}
-                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-accent transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 transition-colors ${
                       errors.email ? 'border-red-500' : 'border-neutral-600 focus:border-accent'
                     }`}
                     aria-describedby={errors.email ? 'email-error' : undefined}
@@ -192,10 +194,11 @@ export default function ContactPage() {
                     type="text"
                     id="larpName"
                     name="larpName"
+                    autoComplete="off"
                     value={formData.larpName}
                     onChange={handleInputChange}
                     placeholder={t('contact.form_larp_name_placeholder')}
-                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-accent transition-colors ${
+                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 transition-colors ${
                       errors.larpName ? 'border-red-500' : 'border-neutral-600 focus:border-accent'
                     }`}
                     aria-describedby={errors.larpName ? 'larpName-error' : undefined}
@@ -217,10 +220,11 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={6}
+                    autoComplete="off"
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder={t('contact.form_message_placeholder')}
-                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-accent transition-colors resize-vertical ${
+                    className={`w-full px-4 py-3 border rounded-lg text-white placeholder-neutral-400 transition-colors resize-vertical ${
                       errors.message ? 'border-red-500' : 'border-neutral-600 focus:border-accent'
                     }`}
                     aria-describedby={errors.message ? 'message-error' : undefined}
