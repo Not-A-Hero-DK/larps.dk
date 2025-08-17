@@ -63,3 +63,11 @@ button:hover {
 .bg-background {
   background-color: hsl(var(--background) / 0.95);
 }
+
+.bg-muted {
+  background-color: hsl(var(--card) / 0.5);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+}

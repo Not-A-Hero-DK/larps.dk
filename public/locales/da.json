@@ -97,5 +97,11 @@
     "form_validation_larp_name_required": "LARP-navn er påkrævet",
     "form_validation_message_required": "Fortæl os venligst om din LARP",
     "form_validation_message_min_length": "Giv venligst flere detaljer (mindst 20 tegn)"
+  },
+  "notfound": {
+    "title": "Forsvundet i de Ni Verdener",
+    "description": "Det ser ud til, at du er vandret væk fra stien til Valhalla. Selv Heimdals skarpe syn kan ikke lokalisere denne side i vores digitale rige.",
+    "return_home": "Vend Tilbage til Midgård",
+    "explore_projects": "Udforsk Projekter"
   }
 }
