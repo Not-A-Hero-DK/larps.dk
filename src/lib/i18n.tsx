@@ -23,11 +23,20 @@ function getNested(obj: unknown, path: string): string | undefined {
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState<Locale>('en')
   const [translations, setTranslations] = useState<Translations>({})
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    setLoading(true)
     fetch(`/locales/${locale}.json`)
       .then((res) => res.json())
-      .then((data) => setTranslations(data))
+      .then((data) => {
+        setTranslations(data)
+        setLoading(false)
+      })
+      .catch(() => {
+        setTranslations({})
+        setLoading(false)
+      })
   }, [locale])
 
   const t = useCallback(
@@ -40,6 +49,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
 
   const contextValue = useMemo(() => ({ locale, setLocale, t }), [locale, setLocale, t])
 
+  if (loading) return null
   return <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>
 }
 
