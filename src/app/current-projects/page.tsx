@@ -3,7 +3,7 @@
 import Button from '@/components/Button'
 import ProjectCard from '@/components/ProjectCard'
 import { currentProjects } from '@/data/projects'
-import { useI18n } from '../../lib/i18n'
+import { useI18n } from '@/lib/i18n'
 
 export default function CurrentProjectsPage() {
   const { t } = useI18n()
@@ -31,16 +31,14 @@ export default function CurrentProjectsPage() {
       {/* Want to Host Your LARP section */}
       <section className="py-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Want to Host Your LARP?</h2>
-          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">
-            Join the ranks of legendary organizers. Get your LARP website hosted for free on our platform.
-          </p>
+          <h2 className="text-4xl font-bold mb-6">{t('projects.host_cta_title')}</h2>
+          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">{t('projects.host_cta_subtitle')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="#" variant="primary">
               {t('landing.request_hosting')}
             </Button>
             <Button href="#" variant="secondary">
-              Learn More
+              {t('projects.learn_more')}
             </Button>
           </div>
         </div>
