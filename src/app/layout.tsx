@@ -3,6 +3,7 @@ import { I18nProvider } from '../lib/i18n'
 import { ThemeProvider } from '../lib/theme'
 import './globals.css'
 import Navigation from './Navigation'
+import Footer from './Footer'
 
 export const metadata: Metadata = {
   title: 'Heimdal Portal - Guardian of LARP Realms',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <I18nProvider>
             <Navigation />
             {children}
+            <Footer />
           </I18nProvider>
         </ThemeProvider>
       </body>

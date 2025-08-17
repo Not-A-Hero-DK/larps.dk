@@ -103,5 +103,20 @@
     "description": "It seems you've wandered off the path to Valhalla. Even Heimdal's keen sight cannot locate this page in our digital realm.",
     "return_home": "Return to Midgard",
     "explore_projects": "Explore Projects"
+  },
+  "footer": {
+    "brand_title": "Heimdal Portal",
+    "brand_description": "Empowering the LARP community with free, professional hosting solutions.",
+    "brand_mission": "Building bridges between organizers and players across the Nordic realms.",
+    "stats_projects": "100+ Projects",
+    "stats_uptime": "99.9% Uptime",
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "email": "hosting@larps.dk",
+    "phone": "+45 30 23 81 12",
+    "get_started": "Get Started",
+    "copyright": "© 2025 Heimdal Portal. All rights reserved.",
+    "crafted_by": "Crafted by Mads Heimdal Thy",
+    "company_link": "Not A Hero ApS"
   }
 }

@@ -103,5 +103,20 @@
     "description": "Det ser ud til, at du er vandret væk fra stien til Valhalla. Selv Heimdals skarpe syn kan ikke lokalisere denne side i vores digitale rige.",
     "return_home": "Vend Tilbage til Midgård",
     "explore_projects": "Udforsk Projekter"
+  },
+  "footer": {
+    "brand_title": "Heimdal Portal",
+    "brand_description": "Styrker LARP-fællesskabet med gratis, professionelle hosting-løsninger.",
+    "brand_mission": "Bygger broer mellem organisatorer og spillere på tværs af de nordiske riger.",
+    "stats_projects": "100+ Projekter",
+    "stats_uptime": "99.9% Oppetid",
+    "quick_links": "Hurtige Links",
+    "contact": "Kontakt",
+    "email": "hosting@larps.dk",
+    "phone": "+45 30 23 81 12",
+    "get_started": "Kom i Gang",
+    "copyright": "© 2025 Heimdal Portal. Alle rettigheder forbeholdt.",
+    "crafted_by": "Skabt af Mads Heimdal Thy",
+    "company_link": "Not A Hero ApS"
   }
 }
