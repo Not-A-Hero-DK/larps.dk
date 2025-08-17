@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
-import { I18nProvider } from "../lib/i18n";
-import { ThemeProvider } from "../lib/theme";
-import "./globals.css";
-import Navigation from "./Navigation";
+import type { Metadata } from 'next'
+import { I18nProvider } from '../lib/i18n'
+import { ThemeProvider } from '../lib/theme'
+import './globals.css'
+import Navigation from './Navigation'
 
 export const metadata: Metadata = {
-  title: "Heimdal Portal - Guardian of LARP Realms",
+  title: 'Heimdal Portal - Guardian of LARP Realms',
   description:
-    "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
-};
+    'Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.',
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className="antialiased">
@@ -24,5 +22,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
