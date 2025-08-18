@@ -13,13 +13,38 @@
     "previous": "Tidligere Projekter",
     "about": "Om Os",
     "contact": "Kontakt",
-    "getHosted": "Få Hosting"
+    "getHosted": "Få Hosting",
+    "skip_to_content": "Spring til hovedindhold",
+    "main_navigation": "Hovednavigation",
+    "mobile_navigation": "Mobil navigation",
+    "open_menu": "Åbn navigationsmenuen",
+    "close_menu": "Luk navigationsmenuen"
   },
-  "landing": {
+  "home": {
     "title": "Vogter af LARP Riger",
     "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",
     "request_hosting": "Anmod om Hosting",
-    "view_projects": "Se Projekter"
+    "view_projects": "Se Projekter",
+    "features_title": "Hvorfor Vælge Heimdal Portal?",
+    "features_subtitle": "Alt hvad du behøver for at bringe dit LARP-fællesskab online, helt gratis.",
+    "feature_hosting_title": "Gratis Hosting",
+    "feature_hosting_description": "Komplet hosting-løsning uden omkostninger for LARP-organisatorer. Fokuser på dine historier, ikke server-omkostninger.",
+    "feature_setup_title": "Hurtig Opsætning",
+    "feature_setup_description": "Få din LARP-hjemmeside online på få minutter med vores strømlinede proces og smukke skabeloner.",
+    "feature_subdomain_title": "Subdomæne Magi",
+    "feature_subdomain_description": "Dit unikke subdomæne på larps.dk - professionelt, mindeværdigt og perfekt tilpasset din LARP.",
+    "feature_community_title": "Fællesskabsdrevet",
+    "feature_community_description": "Bygget af LARPere, til LARPere. Vi forstår LARP-fællesskabets unikke behov.",
+    "stats_title": "Voksende Fællesskab",
+    "stats_subtitle": "Tilslut dig et blomstrende økosystem af LARP-organisatorer og spillere fra hele verden.",
+    "stats_projects": "Projekter Hostet",
+    "stats_participants": "Aktive Deltagere",
+    "stats_uptime": "Service Oppetid",
+    "cta_title": "Klar til at Tilslutte dig Riget?",
+    "cta_description": "Uanset om du organiserer din første LARP eller er en erfaren historiefortæller, er vi her for at hjælpe din digitale tilstedeværelse med at blive lige så legendarisk som dine eventyr.",
+    "cta_get_started": "Kom i Gang i Dag",
+    "cta_learn_more": "Læs Mere",
+    "cta_contact": "Kontakt os på hosting@larps.dk for at komme i gang"
   },
   "projects": {
     "host_cta_title": "Skal vi hoste din LARP hjemmeside?",

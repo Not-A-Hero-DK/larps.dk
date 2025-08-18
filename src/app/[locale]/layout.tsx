@@ -1,9 +1,9 @@
-import { I18nProvider } from '@/lib/i18n'
 import { ThemeProvider } from '@/lib/theme'
 import type { Metadata } from 'next'
+import { NextIntlClientProvider, useLocale } from 'next-intl'
+import '../globals.css'
 import Footer from './Footer'
 import Navigation from './Navigation'
-import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Heimdal Portal - Guardian of LARP Realms',
@@ -12,15 +12,18 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const locale = useLocale()
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
         <ThemeProvider>
-          <I18nProvider>
+          <NextIntlClientProvider>
             <Navigation />
-            {children}
+            <main id="main-content" role="main">
+              {children}
+            </main>
             <Footer />
-          </I18nProvider>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

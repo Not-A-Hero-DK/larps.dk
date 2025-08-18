@@ -1,10 +1,10 @@
 'use client'
 
 import Button from '@/components/Button'
-import { useI18n } from '@/lib/i18n'
+import { useTranslations } from 'next-intl'
 
 export default function AboutPage() {
-  const { t } = useI18n()
+  const t = useTranslations()
 
   return (
     <div className="pt-16">

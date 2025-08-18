@@ -13,13 +13,38 @@
     "previous": "Previous Projects",
     "about": "About Us",
     "contact": "Contact",
-    "getHosted": "Get Hosted"
+    "getHosted": "Get Hosted",
+    "skip_to_content": "Skip to main content",
+    "main_navigation": "Main navigation",
+    "mobile_navigation": "Mobile navigation",
+    "open_menu": "Open navigation menu",
+    "close_menu": "Close navigation menu"
   },
-  "landing": {
+  "home": {
     "title": "Guardian of LARP Realms",
     "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
     "request_hosting": "Request Hosting",
-    "view_projects": "View Projects"
+    "view_projects": "View Projects",
+    "features_title": "Why Choose Heimdal Portal?",
+    "features_subtitle": "Everything you need to bring your LARP community online, completely free of charge.",
+    "feature_hosting_title": "Free Hosting",
+    "feature_hosting_description": "Complete hosting solution at no cost to LARP organizers. Focus your stories, not server costs.",
+    "feature_setup_title": "Quick Setup",
+    "feature_setup_description": "Get your LARP website online in minutes with our streamlined process and beautiful templates.",
+    "feature_subdomain_title": "Subdomain Magic",
+    "feature_subdomain_description": "Your unique subdomain on larps.dk - professional, memorable, and perfectly suited for your LARP.",
+    "feature_community_title": "Community Driven",
+    "feature_community_description": "Built by LARPers, for LARPers. We understand the unique needs of the LARP community.",
+    "stats_title": "Growing Community",
+    "stats_subtitle": "Join a thriving ecosystem of LARP organizers and players from around the world.",
+    "stats_projects": "Projects Hosted",
+    "stats_participants": "Active Participants",
+    "stats_uptime": "Service Uptime",
+    "cta_title": "Ready to Join the Realm?",
+    "cta_description": "Whether you're organizing your first LARP or you're a seasoned storyteller, we're here to help your digital presence become as legendary as your adventures.",
+    "cta_get_started": "Get Started Today",
+    "cta_learn_more": "Learn More",
+    "cta_contact": "Contact us at hosting@larps.dk to get started"
   },
   "projects": {
     "host_cta_title": "Want a LARP website?",
