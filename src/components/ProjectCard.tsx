@@ -16,20 +16,20 @@ export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
   const statusText = project.status === 'upcoming' ? t('projects.upcoming') : t('projects.completed')
 
   return (
-    <div className="bg-card rounded-lg p-6 border border-neutral-700 hover:border-neutral-600 transition-colors">
+    <div className="bg-card rounded-lg p-6 border border-border hover:border-accent transition-colors">
       {/* Status badge and title */}
       <div className="flex items-start justify-between mb-4">
-        <h3 className="text-xl font-bold text-white flex-1 mr-4">{project.title}</h3>
+        <h3 className="text-xl font-bold text-foreground flex-1 mr-4">{project.title}</h3>
         <span className={`px-3 py-1 rounded-full text-sm font-medium ${statusColorClass}`}>{statusText}</span>
       </div>
 
       {/* Description */}
-      <p className="text-neutral-300 mb-6 leading-relaxed">{project.description}</p>
+      <p className="text-muted mb-6 leading-relaxed">{project.description}</p>
 
       {/* Project details */}
       <div className="space-y-3 mb-6">
         {/* Date */}
-        <div className="flex items-center text-neutral-400">
+        <div className="flex items-center text-muted">
           <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
@@ -44,7 +44,7 @@ export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
         </div>
 
         {/* Participants */}
-        <div className="flex items-center text-neutral-400">
+        <div className="flex items-center text-muted">
           <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
@@ -59,7 +59,7 @@ export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
         </div>
 
         {/* Location */}
-        <div className="flex items-center text-neutral-400">
+        <div className="flex items-center text-muted">
           <svg className="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
@@ -75,7 +75,7 @@ export default function ProjectCard({ project }: Readonly<ProjectCardProps>) {
 
       {/* Organizer */}
       <div className="mb-6">
-        <span className="text-neutral-400 text-sm">{t('projects.organized_by')} </span>
+        <span className="text-muted text-sm">{t('projects.organized_by')} </span>
         <span className="text-yellow-400 font-medium text-sm">{project.organizer}</span>
       </div>
 

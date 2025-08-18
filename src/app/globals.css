@@ -2,7 +2,6 @@
 
 :root {
   --accent: 43 100% 58%;
-  --card: 215 25% 10%;
   --gradient-nordic: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 55%));
 }
 
@@ -20,6 +19,9 @@ body,
   --background: 215 25% 8%;
   --foreground: 197 100% 95%;
   --border: 215 25% 20%;
+  --card: 215 25% 10%;
+  --muted: 215 25% 12%;
+  --text-muted: 0 0% 60%;
 }
 
 /* Light theme */
@@ -27,6 +29,9 @@ body,
   --background: 0 0% 100%;
   --foreground: 0 0% 0%;
   --border: 0 0% 80%;
+  --card: 0 0% 98%;
+  --muted: 0 0% 96%;
+  --text-muted: 0 0% 40%;
 }
 
 body {
@@ -42,6 +47,10 @@ body {
 
 .text-foreground {
   color: hsl(var(--foreground));
+}
+
+.text-muted {
+  color: hsl(var(--text-muted));
 }
 
 .border-accent {
@@ -70,7 +79,15 @@ body {
 }
 
 .bg-muted {
-  background-color: hsl(var(--card) / 0.5);
+  background-color: hsl(var(--muted));
+}
+
+.bg-button-toggle {
+  background-color: hsl(var(--muted));
+}
+
+.bg-button-toggle:hover {
+  background-color: hsl(var(--card));
 }
 
 .shadow-glow {
