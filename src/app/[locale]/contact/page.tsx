@@ -72,9 +72,7 @@ export default function ContactPage() {
     }
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
+  const handleSubmit = async () => {
     if (!validateForm()) {
       return
     }
