@@ -10,6 +10,7 @@ interface ButtonProps {
   className?: string
   disabled?: boolean
   locale?: string
+  type?: 'button' | 'submit' | 'reset'
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -20,6 +21,7 @@ export default function Button({
   className = '',
   disabled = false,
   locale = undefined,
+  type = 'button',
   onClick = undefined,
 }: Readonly<ButtonProps>) {
   const base =
@@ -37,7 +39,7 @@ export default function Button({
       {children}
     </Link>
   ) : (
-    <button type="button" className={`${base} ${variants[variant]} ${className}`} disabled={disabled} onClick={onClick}>
+    <button type={type} className={`${base} ${variants[variant]} ${className}`} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   )

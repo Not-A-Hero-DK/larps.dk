@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="pt-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
             {t('about.title')}
           </h1>
           <p className="text-xl md:text-2xl text-muted max-w-3xl mx-auto leading-relaxed">{t('about.subtitle')}</p>

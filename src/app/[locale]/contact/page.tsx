@@ -73,6 +73,8 @@ export default function ContactPage() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
     if (!validateForm()) {
       return
     }
@@ -99,7 +101,7 @@ export default function ContactPage() {
       {/* Header Section */}
       <section className="pt-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
             {t('contact.title')}
           </h1>
           <p className="text-xl md:text-2xl text-muted mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -116,7 +118,7 @@ export default function ContactPage() {
             <div className="bg-card rounded-lg p-8 border border-border">
               <div className="text-center mb-8">
                 <span className="text-4xl">💬</span>
-                <h2 className="text-2xl font-bold mt-4 text-yellow-400">{t('contact.send_message')}</h2>
+                <h2 className="text-2xl font-bold mt-4 text-foreground">{t('contact.send_message')}</h2>
                 <p className="text-muted mt-2">{t('contact.send_message_description')}</p>
               </div>
 
@@ -132,7 +134,7 @@ export default function ContactPage() {
                 </div>
               )}
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -238,7 +240,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Submit Button */}
-                <Button variant="secondary" disabled={isSubmitting} onClick={handleSubmit}>
+                <Button variant="secondary" type="submit" disabled={isSubmitting}>
                   📧 {isSubmitting ? t('contact.form_sending') : <>{t('contact.form_submit')}</>}
                 </Button>
               </form>
@@ -250,7 +252,7 @@ export default function ContactPage() {
               <div className="bg-card rounded-lg p-8 border border-border">
                 <div className="text-center mb-8">
                   <span className="text-4xl">📧</span>
-                  <h2 className="text-2xl font-bold mt-4 text-yellow-400">{t('contact.direct_contact')}</h2>
+                  <h2 className="text-2xl font-bold mt-4 text-foreground">{t('contact.direct_contact')}</h2>
                 </div>
 
                 <div className="space-y-6">
@@ -270,7 +272,7 @@ export default function ContactPage() {
               <div className="bg-card rounded-lg p-8 border border-border">
                 <div className="text-center mb-8">
                   <span className="text-4xl">🛡️</span>
-                  <h2 className="text-2xl font-bold mt-4 text-yellow-400">{t('contact.what_we_need')}</h2>
+                  <h2 className="text-2xl font-bold mt-4 text-foreground">{t('contact.what_we_need')}</h2>
                 </div>
 
                 <div className="space-y-4">
