@@ -10,6 +10,7 @@ interface ButtonProps {
   className?: string
   disabled?: boolean
   locale?: string
+  type?: 'button' | 'submit' | 'reset'
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -20,6 +21,7 @@ export default function Button({
   className = '',
   disabled = false,
   locale = undefined,
+  type = 'button',
   onClick = undefined,
 }: Readonly<ButtonProps>) {
   const base =
@@ -29,7 +31,7 @@ export default function Button({
     primary: 'bg-muted px-8 py-3 border border-accent text-accent hover:bg-accent hover:border-accent hover:text-white',
     secondary: 'bg-gradient-nordic px-8 py-3 text-white hover:shadow-glow transform',
     toggle:
-      'rounded-lg text-sm font-medium px-2 py-1 bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200',
+      'rounded-lg text-sm font-medium px-2 py-1 bg-button-toggle hover:bg-button-toggle transition-colors duration-200 text-foreground',
   }
 
   return href ? (
@@ -37,7 +39,7 @@ export default function Button({
       {children}
     </Link>
   ) : (
-    <button type="button" className={`${base} ${variants[variant]} ${className}`} disabled={disabled} onClick={onClick}>
+    <button type={type} className={`${base} ${variants[variant]} ${className}`} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   )

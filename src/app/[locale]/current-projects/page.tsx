@@ -9,13 +9,13 @@ export default function CurrentProjectsPage() {
   const t = useTranslations()
 
   return (
-    <div className="relative min-h-screen text-white overflow-hidden">
+    <div className="relative min-h-screen text-foreground overflow-hidden">
       {/* Main projects section */}
       <section className="pt-32 pb-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('projects.current_title')}</h1>
-            <p className="text-lg text-neutral-400 max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">{t('projects.current_title')}</h1>
+            <p className="text-lg text-muted max-w-4xl mx-auto leading-relaxed">
               {t('projects.current_subtitle')}
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function CurrentProjectsPage() {
       <section className="py-16 px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">{t('projects.host_cta_title')}</h2>
-          <p className="text-lg text-neutral-400 mb-12 leading-relaxed">{t('projects.host_cta_subtitle')}</p>
+          <p className="text-lg text-muted mb-12 leading-relaxed">{t('projects.host_cta_subtitle')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="#" variant="primary">
               {t('home.request_hosting')}

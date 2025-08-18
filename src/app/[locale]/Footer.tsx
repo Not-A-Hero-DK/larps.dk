@@ -25,20 +25,20 @@ export default function Footer() {
               <div className="text-2xl font-bold text-accent">⚡</div>
               <span className="text-xl font-bold text-foreground">{t('footer.brand_title')}</span>
             </Link>
-            <p className="text-neutral-300 text-sm leading-relaxed">{t('footer.brand_description')}</p>
-            <p className="text-neutral-400 text-sm leading-relaxed">{t('footer.brand_mission')}</p>
+            <p className="text-muted text-sm leading-relaxed">{t('footer.brand_description')}</p>
+            <p className="text-muted text-sm leading-relaxed">{t('footer.brand_mission')}</p>
             <div className="flex items-center space-x-6 pt-2" aria-label="Service statistics">
               <div className="flex items-center space-x-2">
                 <span className="text-accent" aria-hidden="true">
                   🎲
                 </span>
-                <span className="text-neutral-300 text-sm">{t('footer.stats_projects')}</span>
+                <span className="text-muted text-sm">{t('footer.stats_projects')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-accent" aria-hidden="true">
                   ♥
                 </span>
-                <span className="text-neutral-300 text-sm">{t('footer.stats_uptime')}</span>
+                <span className="text-muted text-sm">{t('footer.stats_uptime')}</span>
               </div>
             </div>
           </section>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-neutral-300 hover:text-accent text-sm transition-colors rounded-sm"
+                  className="block text-muted hover:text-accent text-sm transition-colors rounded-sm"
                 >
                   {item.label}
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="mailto:hosting@larps.dk"
-                  className="text-neutral-300 hover:text-accent text-sm transition-colors rounded-sm"
+                  className="text-muted hover:text-accent text-sm transition-colors rounded-sm"
                 >
                   {t('footer.email')}
                 </a>
@@ -80,7 +80,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="tel:+4530238112"
-                  className="text-neutral-300 hover:text-accent text-sm transition-colors rounded-sm"
+                  className="text-muted hover:text-accent text-sm transition-colors rounded-sm"
                 >
                   {t('footer.phone')}
                 </a>
