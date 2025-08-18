@@ -14,7 +14,7 @@ export default function CurrentProjectsPage() {
       <section className="pt-32 pb-16 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('projects.current_title')}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">{t('projects.current_title')}</h1>
             <p className="text-lg text-muted max-w-4xl mx-auto leading-relaxed">
               {t('projects.current_subtitle')}
             </p>

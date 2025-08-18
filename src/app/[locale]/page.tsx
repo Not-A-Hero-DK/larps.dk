@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-blue-200 via-white to-slate-300 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
             {t('home.title')}
           </h1>
 
