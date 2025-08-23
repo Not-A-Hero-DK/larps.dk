@@ -1,7 +1,7 @@
-import { AboutComponent } from './about.component';
+import { FooterComponent } from './footer.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
+describe('FooterComponent', () => {
+  let component: FooterComponent;
 
   beforeEach(() => {
     // Mock LocaleService
@@ -9,7 +9,7 @@ describe('AboutComponent', () => {
       translate: vi.fn((key: string) => key)
     };
 
-    component = new AboutComponent();
+    component = new FooterComponent();
     component.localeService = mockLocaleService as any;
   });
 
@@ -22,8 +22,8 @@ describe('AboutComponent', () => {
   });
 
   it('should have translate method', () => {
-    const result = component.t('about.title');
-    expect(result).toBe('about.title');
-    expect(component.localeService.translate).toHaveBeenCalledWith('about.title');
+    const result = component.t('footer.brand_title');
+    expect(result).toBe('footer.brand_title');
+    expect(component.localeService.translate).toHaveBeenCalledWith('footer.brand_title');
   });
 });

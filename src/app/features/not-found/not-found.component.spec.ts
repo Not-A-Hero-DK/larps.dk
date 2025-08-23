@@ -1,7 +1,7 @@
-import { AboutComponent } from './about.component';
+import { NotFoundComponent } from './not-found.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
+describe('NotFoundComponent', () => {
+  let component: NotFoundComponent;
 
   beforeEach(() => {
     // Mock LocaleService
@@ -9,7 +9,7 @@ describe('AboutComponent', () => {
       translate: vi.fn((key: string) => key)
     };
 
-    component = new AboutComponent();
+    component = new NotFoundComponent();
     component.localeService = mockLocaleService as any;
   });
 
@@ -22,8 +22,8 @@ describe('AboutComponent', () => {
   });
 
   it('should have translate method', () => {
-    const result = component.t('about.title');
-    expect(result).toBe('about.title');
-    expect(component.localeService.translate).toHaveBeenCalledWith('about.title');
+    const result = component.t('not_found.title');
+    expect(result).toBe('not_found.title');
+    expect(component.localeService.translate).toHaveBeenCalledWith('not_found.title');
   });
 });

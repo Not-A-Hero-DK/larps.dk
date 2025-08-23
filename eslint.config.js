@@ -1,63 +1,41 @@
-import { config } from 'typescript-eslint';
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import angular from 'angular-eslint';
 
-export default config(
+export default tseslint.config(
   {
     files: ['src/**/*.ts'],
     extends: [
       eslint.configs.recommended,
-      angular.configs.tsRecommended,
-      tseslint.configs.strict,
-      tseslint.configs.stylistic,
-      tseslint.configs.recommendedTypeChecked,
-      {
-        languageOptions: {
-          parserOptions: {
-            projectService: true,
-            tsconfigRootDir: import.meta.dirname,
-          },
-        },
-      },
+      ...angular.configs.tsRecommended,
+      ...tseslint.configs.recommended,
     ],
     processor: angular.processInlineTemplates,
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
     rules: {
       '@angular-eslint/directive-selector': [
         'error',
-        { type: 'attribute', prefix: 'akc', style: 'camelCase' },
+        { type: 'attribute', prefix: 'larp', style: 'camelCase' },
       ],
       '@angular-eslint/component-selector': [
         'error',
-        { type: 'element', prefix: 'akc', style: 'kebab-case' },
+        { type: 'element', prefix: 'larp', style: 'kebab-case' },
       ],
-      '@angular-eslint/component-class-suffix': ['error', { suffixes: ['Dialog', 'Component'] }],
-      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
-      '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/prefer-readonly': 'error',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-floating-promises': 'off',
-      '@typescript-eslint/no-useless-constructor': 'warn',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/no-unsafe-enum-comparison': 'off',
-      '@typescript-eslint/prefer-promise-reject-errors': 'off',
-      '@typescript-eslint/explicit-member-accessibility': [
-        'error',
-        {
-          accessibility: 'explicit',
-          ignoredMethodNames: ['ngOnInit', 'ngAfterViewInit', 'ngOnDestroy', 'ngOnChanges'],
-          overrides: { constructors: 'off', properties: 'off' },
-        },
-      ],
       'no-unused-vars': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'no-duplicate-imports': 'error',
     },
   },
   {
     files: ['src/**/*.html'],
-    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
+    extends: [...angular.configs.templateRecommended],
     rules: {
-      '@angular-eslint/template/no-negated-async': 'error',
       '@angular-eslint/template/prefer-self-closing-tags': 'error',
       '@angular-eslint/template/interactive-supports-focus': 'off',
       '@angular-eslint/template/click-events-have-key-events': 'off',

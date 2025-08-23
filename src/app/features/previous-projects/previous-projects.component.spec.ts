@@ -1,7 +1,7 @@
-import { AboutComponent } from './about.component';
+import { PreviousProjectsComponent } from './previous-projects.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
+describe('PreviousProjectsComponent', () => {
+  let component: PreviousProjectsComponent;
 
   beforeEach(() => {
     // Mock LocaleService
@@ -9,7 +9,7 @@ describe('AboutComponent', () => {
       translate: vi.fn((key: string) => key)
     };
 
-    component = new AboutComponent();
+    component = new PreviousProjectsComponent();
     component.localeService = mockLocaleService as any;
   });
 
@@ -22,8 +22,8 @@ describe('AboutComponent', () => {
   });
 
   it('should have translate method', () => {
-    const result = component.t('about.title');
-    expect(result).toBe('about.title');
-    expect(component.localeService.translate).toHaveBeenCalledWith('about.title');
+    const result = component.t('previous.title');
+    expect(result).toBe('previous.title');
+    expect(component.localeService.translate).toHaveBeenCalledWith('previous.title');
   });
 });

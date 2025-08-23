@@ -1,59 +1,179 @@
-# Larpsdk
+# LARPS.dk - Heimdal Portal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+**Guardian of LARP Realms** - Free hosting platform for LARP communities worldwide.
 
-## Development server
+This project is built with Angular 20.2 and provides a modern, responsive web application for connecting LARP organizers with their communities. The site features comprehensive project showcases, contact forms, and multilingual support (English/Danish).
 
-To start a local development server, run:
+## 🏗️ Project Status
+
+This Angular application replaces the previous Next.js version, providing standalone static file deployment capability while maintaining all original functionality:
+
+- ✅ **Internationalization**: English ↔ Danish language switching
+- ✅ **Theme System**: Dark/light mode toggle with localStorage persistence  
+- ✅ **Responsive Design**: Mobile navigation with hamburger menu
+- ✅ **All Pages**: Home, Current Projects, Previous Projects, About, Contact, 404
+- ✅ **Visual Design**: Tailwind CSS v3 styling with Nordic/LARP themed design
+- ✅ **Static Deployment**: Pure HTML/CSS/JS output - works anywhere
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm 9+
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Not-A-Hero-DK/larps.dk.git
+cd larps.dk
+
+# Install dependencies
+npm install
+```
+
+### Development Server
+
+```bash
+# Start development server
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/`. The app will automatically reload when you change source files.
 
-## Code scaffolding
+## 🛠️ Available Scripts
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Development
+- `npm start` - Start development server
+- `npm run watch` - Build in watch mode
 
-```bash
-ng generate component component-name
-```
+### Building
+- `npm run build` - Build for production (outputs to `dist/`)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Testing
+- `npm test` - Run tests in watch mode
+- `npm run test:run` - Run tests once
+- `npm run test:coverage` - Run tests with coverage report
+- `npm run test:ui` - Open Vitest UI
 
-```bash
-ng generate --help
-```
+### Code Quality
+- `npm run lint` - Run ESLint
 
-## Building
+## 🧪 Testing
 
-To build the project run:
+The project uses **Vitest** for testing with the following features:
 
-```bash
-ng build
-```
+- **100% Code Coverage** target
+- **Component Testing** for all Angular components
+- **Service Testing** for all services
+- **Coverage Reports** in multiple formats (HTML, LCOV, JSON)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Running Tests
 
 ```bash
-ng e2e
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Open test UI
+npm run test:ui
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🏗️ Building for Production
 
-## Additional Resources
+```bash
+npm run build
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The build artifacts will be stored in the `dist/` directory. These are static files that can be deployed to any web server:
+
+- **Apache/Nginx**: Direct file serving
+- **CDN**: Cloudflare, AWS CloudFront, etc.
+- **Static Hosting**: Netlify, Vercel, GitHub Pages, etc.
+
+## 🌍 Internationalization
+
+The app supports two languages:
+- **English** (default)
+- **Danish**
+
+Translation files are located in `/public/assets/locales/`:
+- `en.json` - English translations
+- `da.json` - Danish translations
+
+## 🎨 Styling
+
+- **Tailwind CSS v3** for utility-first styling
+- **CSS Custom Properties** for theming
+- **Dark/Light Mode** support
+- **Responsive Design** with mobile-first approach
+
+## 📂 Project Structure
+
+```
+src/
+├── app/
+│   ├── features/          # Feature modules (pages)
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── current-projects/
+│   │   ├── previous-projects/
+│   │   └── not-found/
+│   ├── shared/            # Shared components and services
+│   │   ├── components/    # Reusable UI components
+│   │   ├── services/      # Application services
+│   │   └── locales/       # Translation files
+│   ├── app.config.ts      # App configuration
+│   ├── app.routes.ts      # Routing configuration
+│   └── app.ts             # Root component
+├── assets/                # Static assets
+└── styles.scss           # Global styles
+```
+
+## 🚀 CI/CD
+
+The project includes GitHub Actions workflow for:
+
+- **Building** - Ensures the project compiles successfully
+- **Linting** - Code quality checks with ESLint
+- **Testing** - Unit tests with coverage reporting
+- **Deployment** - Automatic deployment to GitHub Pages
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow Angular style guide
+- Use TypeScript strict mode
+- Write tests for new features
+- Maintain 100% code coverage
+- Use conventional commit messages
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🎮 About LARPS.dk
+
+LARPS.dk provides free hosting solutions for LARP (Live Action Role Playing) communities. We believe every LARP deserves a professional online presence, and our mission is to support organizers with the tools they need to connect with players and showcase their events.
+
+- **150+ Projects** hosted
+- **99.9% Uptime** guarantee
+- **25,000+ Players** served
+- **15 Countries** supported
+
+---
+
+Built with ❤️ for the LARP community by [Not A Hero ApS](https://github.com/Not-A-Hero-DK)
