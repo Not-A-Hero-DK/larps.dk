@@ -24,7 +24,29 @@ import { LocaleService } from '../../services/locale.service';
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
           <a routerLink="/" class="flex items-center space-x-2" (click)="closeMobileMenu()">
-            <div class="text-2xl font-bold text-accent">⚡</div>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-accent">
+              <path d="M16 2L27 7V18C27 25 16 30 16 30C16 30 5 25 5 18V7L16 2Z" 
+                    fill="currentColor" 
+                    opacity="0.1"/>
+              <path d="M16 3L26 7.5V18C26 23.5 16 28 16 28C16 28 6 23.5 6 18V7.5L16 3Z" 
+                    stroke="currentColor" 
+                    stroke-width="1.5" 
+                    fill="none"/>
+              <g transform="translate(16, 16)">
+                <line x1="0" y1="-8" x2="0" y2="8" 
+                      stroke="currentColor" 
+                      stroke-width="2"/>
+                <line x1="-3" y1="-5" x2="3" y2="-5" 
+                      stroke="currentColor" 
+                      stroke-width="1.5"/>
+                <line x1="-4" y1="0" x2="4" y2="0" 
+                      stroke="currentColor" 
+                      stroke-width="1.5"/>
+                <line x1="-3" y1="5" x2="3" y2="5" 
+                      stroke="currentColor" 
+                      stroke-width="1.5"/>
+              </g>
+            </svg>
             <span class="text-xl font-bold text-foreground">Heimdal Portal</span>
           </a>
           
