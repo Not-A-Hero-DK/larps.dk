@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavigationComponent } from './components/navigation/navigation.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent, NavigationComponent } from '@shared/components';
 
 @Component({
-  selector: 'app-root',
+  selector: 'larp-root',
   imports: [RouterOutlet, NavigationComponent, FooterComponent],
+  styleUrls: ['./app.scss'],
   template: `
-    <app-navigation></app-navigation>
+    <larp-navigation />
     <main id="main-content" role="main">
       <router-outlet></router-outlet>
     </main>
-    <app-footer></app-footer>
+    <larp-footer />
   `,
-  styleUrl: './app.css'
 })
 export class App {
   title = 'Heimdal Portal - Guardian of LARP Realms';

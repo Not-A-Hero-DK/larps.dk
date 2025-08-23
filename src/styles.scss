@@ -1,0 +1,148 @@
+@use 'tailwindcss';
+
+:root {
+  --gradient-nordic: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 55%));
+}
+
+/* Nordic pattern overlay for light theme */
+[data-theme='light']::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 25% 25%, hsl(44 40% 95%) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, hsl(215 40% 95%) 1px, transparent 1px);
+  background-size: 60px 60px, 40px 40px;
+  background-position: 0 0, 30px 30px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+html,
+body,
+:root,
+[data-theme='dark'],
+[data-theme='light'] {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark theme (default) */
+:root,
+[data-theme='dark'] {
+  --background: 215 25% 8%;
+  --foreground: 197 100% 95%;
+  --border: 215 25% 20%;
+  --card: 215 25% 10%;
+  --muted: 215 25% 12%;
+  --text-muted: 0 0% 60%;
+  --accent: 43 100% 58%;
+  --header-gradient: linear-gradient(135deg, hsl(215 85% 65%), hsl(197 100% 85%), hsl(215 25% 80%));
+}
+
+/* Light theme */
+[data-theme='light'] {
+  --background: 44 30% 97%;
+  --foreground: 215 25% 15%;
+  --border: 44 20% 85%;
+  --card: 44 35% 95%;
+  --muted: 44 25% 90%;
+  --text-muted: 215 15% 45%;
+  --accent: 43 85% 35%;
+  --header-gradient: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 25%), hsl(215 25% 20%));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-y: scroll;
+}
+
+.text-accent {
+  color: hsl(var(--accent));
+}
+
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+.text-muted {
+  color: hsl(var(--text-muted));
+}
+
+.border-accent {
+  border-color: hsl(var(--accent) / 0.2);
+}
+
+.border-border {
+  border-color: hsl(var(--border));
+}
+
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+
+.bg-gradient-nordic {
+  background-image: var(--gradient-nordic);
+}
+
+.bg-gradient-header {
+  background-image: var(--header-gradient);
+}
+
+.bg-card {
+  background-color: hsl(var(--card));
+}
+
+/* Enhanced card styling for light theme */
+[data-theme='light'] .bg-card {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(44 30% 92%));
+  box-shadow: 0 2px 4px hsl(215 25% 15% / 0.1), 0 1px 2px hsl(215 25% 15% / 0.06);
+}
+
+[data-theme='dark'] .bg-card {
+  background-color: hsl(var(--card));
+}
+
+.bg-background {
+  background-color: hsl(var(--background) / 0.95);
+  transition: background-color 0.3s ease;
+}
+
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+
+.bg-button-toggle {
+  background-color: hsl(var(--muted));
+}
+
+.bg-button-toggle:hover {
+  background-color: hsl(var(--card));
+}
+
+/* Enhanced button styling for light theme */
+[data-theme='light'] .bg-button-toggle {
+  background: linear-gradient(145deg, hsl(var(--muted)), hsl(44 25% 88%));
+  border: 1px solid hsl(var(--border));
+}
+
+[data-theme='light'] .bg-button-toggle:hover {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(44 30% 90%));
+  box-shadow: 0 1px 3px hsl(215 25% 15% / 0.1);
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

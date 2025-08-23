@@ -1,0 +1,35 @@
+<div class="relative min-h-screen text-foreground overflow-hidden">
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 px-8 text-center">
+    <div class="max-w-6xl mx-auto">
+      <h1
+        class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent"
+      >
+        {{ t('home.title') }}
+      </h1>
+      <p class="text-xl md:text-2xl text-muted mb-12 max-w-4xl mx-auto leading-relaxed">
+        {{ t('home.subtitle') }}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a
+          routerLink="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+        >
+          {{ t('home.request_hosting') }}
+        </a>
+        <a
+          routerLink="/current-projects"
+          class="inline-flex items-center justify-center px-8 py-4 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition-colors"
+        >
+          {{ t('home.view_projects') }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 pointer-events-none opacity-20">
+    <div class="absolute top-0 left-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+  </div>
+</div>

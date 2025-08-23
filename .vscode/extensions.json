@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "angular.ng-template",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions",
+    "idered.npm",
+    "christian-kohler.npm-intellisense",
+    "sonarsource.sonarlint-vscode",
+    "redhat.vscode-yaml"
+  ]
+}

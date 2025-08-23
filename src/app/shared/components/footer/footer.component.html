@@ -1,0 +1,115 @@
+<footer class="bg-card border-t border-border py-12 px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand Section -->
+      <div class="md:col-span-2">
+        <div class="flex items-center space-x-2 mb-4">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-accent"
+          >
+            <path
+              d="M16 2L27 7V18C27 25 16 30 16 30C16 30 5 25 5 18V7L16 2Z"
+              fill="currentColor"
+              opacity="0.1"
+            />
+            <path
+              d="M16 3L26 7.5V18C26 23.5 16 28 16 28C16 28 6 23.5 6 18V7.5L16 3Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              fill="none"
+            />
+            <g transform="translate(16, 16)">
+              <line x1="0" y1="-8" x2="0" y2="8" stroke="currentColor" stroke-width="2" />
+              <line x1="-3" y1="-5" x2="3" y2="-5" stroke="currentColor" stroke-width="1.5" />
+              <line x1="-4" y1="0" x2="4" y2="0" stroke="currentColor" stroke-width="1.5" />
+              <line x1="-3" y1="5" x2="3" y2="5" stroke="currentColor" stroke-width="1.5" />
+            </g>
+          </svg>
+          <span class="text-xl font-bold text-foreground">Heimdal Portal</span>
+        </div>
+        <p class="text-muted mb-4 max-w-md">
+          {{ t('footer.brand_description') }}
+        </p>
+        <p class="text-muted text-sm">
+          {{ t('footer.brand_mission') }}
+        </p>
+        <div class="flex items-center space-x-6 mt-6 text-sm text-muted">
+          <span>{{ t('footer.stats_projects') }}</span>
+          <span>{{ t('footer.stats_uptime') }}</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold text-foreground mb-4">{{ t('footer.quick_links') }}</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a routerLink="/" class="text-muted hover:text-accent transition-colors">{{
+              t('nav.home')
+            }}</a>
+          </li>
+          <li>
+            <a
+              routerLink="/current-projects"
+              class="text-muted hover:text-accent transition-colors"
+              >{{ t('nav.current') }}</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/previous-projects"
+              class="text-muted hover:text-accent transition-colors"
+              >{{ t('nav.previous') }}</a
+            >
+          </li>
+          <li>
+            <a routerLink="/about" class="text-muted hover:text-accent transition-colors">{{
+              t('nav.about')
+            }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-semibold text-foreground mb-4">{{ t('footer.contact') }}</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href="mailto:hosting@larps.dk"
+              class="text-muted hover:text-accent transition-colors"
+            >
+              {{ t('footer.email') }}
+            </a>
+          </li>
+          <li>
+            <a href="tel:+4530238112" class="text-muted hover:text-accent transition-colors">
+              {{ t('footer.phone') }}
+            </a>
+          </li>
+        </ul>
+        <a
+          routerLink="/contact"
+          class="inline-block mt-4 px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors text-sm font-medium"
+        >
+          {{ t('footer.get_started') }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div
+      class="border-t border-border pt-8 mt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-muted"
+    >
+      <p>{{ t('footer.copyright') }}</p>
+      <a href="#" class="text-muted hover:text-accent transition-colors mt-2 sm:mt-0">
+        {{ t('footer.company_link') }}
+      </a>
+    </div>
+  </div>
+</footer>
