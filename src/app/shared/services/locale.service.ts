@@ -59,15 +59,15 @@ export class LocaleService {
     }
   }
 
-  toggleLocale() {
+  public toggleLocale() {
     this.currentLocale.update(current => (current === 'en' ? 'da' : 'en'));
   }
 
-  setLocale(locale: Locale) {
+  public setLocale(locale: Locale) {
     this.currentLocale.set(locale);
   }
 
-  translate(key: string): string {
+  public translate(key: string): string {
     const keys = key.split('.');
     let value: string | Translations = this.translations()[this.currentLocale()];
 

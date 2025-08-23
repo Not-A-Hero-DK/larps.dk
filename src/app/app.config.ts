@@ -8,8 +8,8 @@ import {
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { TranslatePipe } from '@shared/pipes/tr.pipe';
+import { LocaleService } from '@shared/services';
 import { routes } from './app.routes';
-import { LocaleService } from './shared/services/locale.service';
 
 function initializeApp(localeService: LocaleService): Promise<void> {
   return localeService.loadTranslations();

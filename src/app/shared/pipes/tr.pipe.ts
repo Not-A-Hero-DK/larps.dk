@@ -5,7 +5,7 @@ import { LocaleService } from '../services/locale.service';
 export class TranslatePipe implements PipeTransform {
   private readonly localeService = inject(LocaleService);
 
-  transform(key: string): string {
+  public transform(key: string): string {
     return this.localeService.translate(key);
   }
 }

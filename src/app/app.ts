@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent, NavigationComponent } from '@shared/components';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'larp-root',
   imports: [RouterOutlet, NavigationComponent, FooterComponent],
   styleUrls: ['./app.scss'],

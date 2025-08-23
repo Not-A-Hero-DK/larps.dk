@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ProjectCard } from '@shared/components';
 import { TranslatePipe } from '@shared/pipes';
 import { Project } from '@shared/types';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './current-projects.component.html',
   styleUrls: ['./current-projects.component.scss'],
   imports: [TranslatePipe, ProjectCard],

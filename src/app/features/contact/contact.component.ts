@@ -1,8 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslatePipe } from '@shared/pipes';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   imports: [ReactiveFormsModule, TranslatePipe],
@@ -19,7 +20,7 @@ export class ContactComponent {
     message: this.fb.control<string | null>(null, [Validators.required, Validators.minLength(10)]),
   });
 
-  onSubmit() {
+  public onSubmit() {
     if (this.contactForm.valid) {
       this.isSubmitting = true;
       // In a real implementation, this would send the form data to a server

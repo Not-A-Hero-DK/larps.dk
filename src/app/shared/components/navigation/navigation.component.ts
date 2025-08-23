@@ -19,11 +19,11 @@ export class NavigationComponent {
   public toggleTheme = inject(ThemeService).toggleTheme;
   public navItems = inject(LocaleService).navItems;
 
-  toggleMobileMenu() {
+  public toggleMobileMenu() {
     this.isMobileMenuOpen.update(value => !value);
   }
 
-  closeMobileMenu() {
+  public closeMobileMenu() {
     this.isMobileMenuOpen.set(false);
   }
 }

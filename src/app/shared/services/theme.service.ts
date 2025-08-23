@@ -22,11 +22,7 @@ export class ThemeService {
     });
   }
 
-  toggleTheme() {
+  public toggleTheme() {
     this.currentTheme.update(current => (current === 'light' ? 'dark' : 'light'));
-  }
-
-  setTheme(theme: Theme) {
-    this.currentTheme.set(theme);
   }
 }

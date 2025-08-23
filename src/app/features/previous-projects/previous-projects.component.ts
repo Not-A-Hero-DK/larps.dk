@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ProjectCard } from '@shared/components';
 import { TranslatePipe } from '@shared/pipes';
 import { Project } from '@shared/types';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './previous-projects.component.html',
   styleUrls: ['./previous-projects.component.scss'],
   imports: [TranslatePipe, ProjectCard],
@@ -82,9 +83,6 @@ export class PreviousProjectsComponent {
       status: 'completed',
     },
   ];
-  public totalProjects = this.previousProjects.length + this.previousProjects.length;
-  public totalParticipants = [...this.previousProjects, ...this.previousProjects].reduce(
-    (sum, project) => sum + project.participants,
-    0,
-  );
+  public totalProjects = this.previousProjects.length;
+  public totalParticipants = this.previousProjects.reduce((sum, project) => sum + project.participants, 0);
 }
