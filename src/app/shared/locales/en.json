@@ -1,0 +1,238 @@
+{
+  "default": {
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "language": "English",
+    "switch_language": "Switch to Danish",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode"
+  },
+  "nav": {
+    "home": "Home",
+    "current": "Current Projects",
+    "previous": "Previous Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "getHosted": "Get Hosted",
+    "skip_to_content": "Skip to main content",
+    "main_navigation": "Main navigation",
+    "mobile_navigation": "Mobile navigation",
+    "open_menu": "Open navigation menu",
+    "close_menu": "Close navigation menu"
+  },
+  "home": {
+    "title": "Guardian of LARP Realms",
+    "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
+    "request_hosting": "Request Hosting",
+    "view_projects": "View Projects"
+  },
+  "about": {
+    "title": "About Heimdal Portal",
+    "subtitle": "Guardian of the digital bridge between LARP organizers and their communities.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe every LARP deserves a professional online presence. Our mission is to provide free, high-quality hosting solutions that enable LARP organizers to focus on what they do best: creating unforgettable experiences.",
+      "vision": "From small local gatherings to international events, we support the entire spectrum of Live Action Role Playing communities across the Nordic regions and beyond."
+    },
+    "stats": {
+      "title": "Our Impact",
+      "projects": "Active Projects",
+      "uptime": "Uptime Guarantee",
+      "players": "Players Served",
+      "countries": "Countries"
+    },
+    "services": {
+      "title": "What We Offer",
+      "hosting": {
+        "title": "Free Hosting",
+        "description": "Professional web hosting with no hidden costs. Custom domains, SSL certificates, and 99.9% uptime guarantee."
+      },
+      "customization": {
+        "title": "Custom Design",
+        "description": "Tailored website designs that capture your LARP's unique atmosphere and aesthetic."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Our team of LARP enthusiasts provides technical support and guidance whenever you need it."
+      }
+    },
+    "team": {
+      "title": "Meet the Guardians",
+      "description": "We're a passionate team of developers, designers, and LARP veterans dedicated to supporting the community that gave us so much joy.",
+      "contact_cta": "Get to Know Us"
+    }
+  },
+  "current": {
+    "title": "Current Projects",
+    "subtitle": "Upcoming LARP adventures currently hosted on Heimdal Portal.",
+    "featured": "Featured",
+    "status": {
+      "open": "Open Registration",
+      "soon": "Coming Soon",
+      "full": "Full"
+    },
+    "projects": {
+      "chronicles": {
+        "title": "Chronicles of Aethermoor",
+        "description": "An epic high-fantasy campaign set in a world where magic and technology intertwine. Join noble houses, arcane guilds, or forge your own destiny in this immersive political intrigue LARP.",
+        "date": "April 15-17, 2025",
+        "location": "Vejle, Denmark",
+        "players": "120/150 players"
+      },
+      "shadowrun": {
+        "title": "Shadowrun: Copenhagen 2080",
+        "description": "Cyberpunk meets fantasy in this gritty urban adventure through future Copenhagen.",
+        "date": "May 22-24, 2025",
+        "location": "Copenhagen, Denmark"
+      },
+      "nordic": {
+        "title": "Nordic Sagas",
+        "description": "Experience authentic Viking-age adventures based on historical research and Norse mythology.",
+        "date": "June 12-14, 2025",
+        "location": "Roskilde, Denmark"
+      },
+      "wasteland": {
+        "title": "Wasteland Warriors",
+        "description": "Post-apocalyptic survival in a world reclaimed by nature and ruled by tribal law.",
+        "date": "July 8-10, 2025",
+        "location": "Jutland, Denmark"
+      }
+    },
+    "view_details": "View Details",
+    "learn_more": "Learn More",
+    "cta": {
+      "title": "Ready to Host Your LARP?",
+      "description": "Join the growing community of LARP organizers who trust Heimdal Portal with their digital presence.",
+      "button": "Get Started Today"
+    }
+  },
+  "previous": {
+    "title": "Previous Projects",
+    "subtitle": "Legendary adventures that have concluded, leaving behind memories and stories that will last a lifetime.",
+    "filters": {
+      "all": "All Projects",
+      "fantasy": "Fantasy",
+      "scifi": "Sci-Fi",
+      "horror": "Horror",
+      "historical": "Historical"
+    },
+    "status": {
+      "completed": "Completed"
+    },
+    "projects": {
+      "vampire": {
+        "title": "Vampire: The Masquerade - Copenhagen by Night",
+        "description": "Political intrigue and supernatural horror in modern Copenhagen's vampire society.",
+        "date": "October 2024",
+        "participants": "85 participants"
+      },
+      "medieval": {
+        "title": "The Crown of Avalon",
+        "description": "Medieval court politics and knightly adventures in the legendary kingdom of Avalon.",
+        "date": "September 2024",
+        "participants": "120 participants"
+      },
+      "cyberpunk": {
+        "title": "Neon Dreams",
+        "description": "High-tech, low-life adventures in a dystopian future where corporations rule the world.",
+        "date": "August 2024",
+        "participants": "65 participants"
+      },
+      "steampunk": {
+        "title": "Clockwork Empire",
+        "description": "Victorian-era adventures with steam-powered technology and industrial revolution intrigue.",
+        "date": "July 2024",
+        "participants": "90 participants"
+      },
+      "space": {
+        "title": "Starfall Station",
+        "description": "Space exploration and alien encounters aboard a frontier space station.",
+        "date": "June 2024",
+        "participants": "75 participants"
+      },
+      "postapoc": {
+        "title": "After the Fall",
+        "description": "Survival and rebuilding in a world devastated by nuclear war.",
+        "date": "May 2024",
+        "participants": "110 participants"
+      }
+    },
+    "view_gallery": "View Gallery",
+    "load_more": "Load More Projects"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to bring your LARP to the digital realm? Get in touch with our team of passionate developers and LARP enthusiasts.",
+    "form": {
+      "title": "Get Your Project Started",
+      "name": "Full Name",
+      "name_placeholder": "Enter your full name",
+      "name_required": "Name is required",
+      "email": "Email Address",
+      "email_placeholder": "Enter your email address",
+      "email_required": "Valid email is required",
+      "organization": "Organization/Group",
+      "organization_placeholder": "LARP group, organization, or event name",
+      "project_type": "Project Type",
+      "project_type_placeholder": "Select project type",
+      "project_types": {
+        "fantasy": "Fantasy",
+        "scifi": "Science Fiction",
+        "horror": "Horror",
+        "historical": "Historical",
+        "modern": "Modern",
+        "other": "Other"
+      },
+      "message": "Project Description",
+      "message_placeholder": "Tell us about your LARP project, timeline, and specific hosting needs...",
+      "message_required": "Please describe your project",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! We'll get back to you within 24 hours."
+    },
+    "info": {
+      "title": "Get in Touch",
+      "email": {
+        "title": "Email Us",
+        "description": "For hosting requests and general inquiries"
+      },
+      "phone": {
+        "title": "Call Us",
+        "description": "Available Monday-Friday, 9AM-5PM CET"
+      },
+      "hours": {
+        "title": "Response Time",
+        "description": "We typically respond within 24 hours"
+      }
+    },
+    "faq": {
+      "title": "Quick Questions",
+      "hosting": {
+        "question": "Is hosting really free?",
+        "answer": "Yes! We provide free hosting with custom domains, SSL certificates, and professional support."
+      },
+      "requirements": {
+        "question": "What do you need from us?",
+        "answer": "Just basic information about your LARP, desired features, and any specific design preferences."
+      },
+      "timeline": {
+        "question": "How long does setup take?",
+        "answer": "Most projects are live within 1-2 weeks, depending on complexity and customization needs."
+      }
+    }
+  },
+  "footer": {
+    "brand_title": "Heimdal Portal",
+    "brand_description": "Empowering the LARP community with free, professional hosting solutions.",
+    "brand_mission": "Building bridges between organizers and players across the Nordic realms.",
+    "stats_projects": "100+ Projects",
+    "stats_uptime": "99.9% Uptime",
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "email": "hosting@larps.dk",
+    "phone": "+45 30 23 81 12",
+    "get_started": "Get Started",
+    "copyright": "© 2025 Heimdal Portal. All rights reserved.",
+    "company_link": "Not A Hero ApS"
+  }
+}
