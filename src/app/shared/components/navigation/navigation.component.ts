@@ -1,39 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslatePipe } from '@shared/pipes/tr.pipe';
 import { LocaleService, ThemeService } from '@shared/services';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'larp-navigation',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe],
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-  themeService = inject(ThemeService);
-  localeService = inject(LocaleService);
-
-  isMobileMenuOpen = signal(false);
-
-  navItems = [
-    { href: '/', label: this.t('nav.home') },
-    { href: '/current-projects', label: this.t('nav.current') },
-    { href: '/previous-projects', label: this.t('nav.previous') },
-    { href: '/about', label: this.t('nav.about') },
-    { href: '/contact', label: this.t('nav.contact') },
-  ];
+  public isMobileMenuOpen = signal(false);
+  public currentLocale = inject(LocaleService).currentLocale;
+  public currentTheme = inject(ThemeService).currentTheme;
+  public toggleLocale = inject(LocaleService).toggleLocale;
+  public toggleTheme = inject(ThemeService).toggleTheme;
+  public navItems = inject(LocaleService).navItems;
 
   toggleMobileMenu() {
-    this.isMobileMenuOpen.update((value) => !value);
+    this.isMobileMenuOpen.update(value => !value);
   }
 
   closeMobileMenu() {
     this.isMobileMenuOpen.set(false);
-  }
-
-  t(key: string): string {
-    // This will be replaced with proper i18n once we implement it
-    // For now, using basic translation lookup
-    return this.localeService.translate(key);
   }
 }

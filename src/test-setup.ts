@@ -1,6 +1,8 @@
 // Basic test setup without Zone.js for now
 // We'll add Angular-specific testing later
 
+import { vi } from 'vitest';
+
 // Mock DOM APIs not available in jsdom
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -24,7 +26,7 @@ Object.defineProperty(window, 'localStorage', {
     setItem: vi.fn(),
     removeItem: vi.fn(),
     clear: vi.fn(),
-  }
+  },
 });
 
 // Global test configuration

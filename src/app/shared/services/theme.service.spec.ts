@@ -1,3 +1,5 @@
+import { TestBed } from '@angular/core/testing';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ThemeService } from './theme.service';
 
 describe('ThemeService', () => {
@@ -5,19 +7,22 @@ describe('ThemeService', () => {
 
   beforeEach(() => {
     // Mock localStorage
-    global.localStorage = {
-      getItem: vi.fn(),
+    window.localStorage = {
+      getItem: vi.fn().mockReturnValue(null),
       setItem: vi.fn(),
       removeItem: vi.fn(),
-      clear: vi.fn()
+      clear: vi.fn(),
     } as any;
 
-    // Create service with minimal setup
-    service = {
-      theme: vi.fn().mockReturnValue('dark'),
-      toggleTheme: vi.fn(),
-      setTheme: vi.fn()
-    } as any;
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockReturnValue({ matches: false }),
+    });
+
+    document.documentElement.setAttribute = vi.fn();
+
+    TestBed.configureTestingModule({ providers: [ThemeService] });
+    service = TestBed.inject(ThemeService);
   });
 
   afterEach(() => {
@@ -28,15 +33,24 @@ describe('ThemeService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should have theme method', () => {
-    expect(service.theme).toBeDefined();
-    expect(service.theme()).toBe('dark');
+  it('should have currentTheme signal', () => {
+    expect(service.currentTheme).toBeDefined();
+    expect(service.currentTheme()).toBe('dark');
   });
 
-  it('should have toggleTheme method', () => {
-    expect(service.toggleTheme).toBeDefined();
+  it('should toggle theme', () => {
+    expect(service.currentTheme()).toBe('dark');
     service.toggleTheme();
-    expect(service.toggleTheme).toHaveBeenCalled();
+    expect(service.currentTheme()).toBe('light');
+    service.toggleTheme();
+    expect(service.currentTheme()).toBe('dark');
+  });
+
+  it('should set theme', () => {
+    service.setTheme('light');
+    expect(service.currentTheme()).toBe('light');
+    service.setTheme('dark');
+    expect(service.currentTheme()).toBe('dark');
   });
 
   it('should have setTheme method', () => {

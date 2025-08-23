@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { NavigationComponent } from './navigation.component';
 
 describe('NavigationComponent', () => {
@@ -7,13 +8,13 @@ describe('NavigationComponent', () => {
     // Mock services
     const mockThemeService = {
       theme: vi.fn().mockReturnValue('dark'),
-      toggleTheme: vi.fn()
+      toggleTheme: vi.fn(),
     };
 
     const mockLocaleService = {
       currentLocale: vi.fn().mockReturnValue('en'),
       translate: vi.fn((key: string) => key),
-      toggleLocale: vi.fn()
+      toggleLocale: vi.fn(),
     };
 
     component = new NavigationComponent();

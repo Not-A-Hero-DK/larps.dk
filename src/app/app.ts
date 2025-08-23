@@ -9,7 +9,7 @@ import { FooterComponent, NavigationComponent } from '@shared/components';
   template: `
     <larp-navigation />
     <main id="main-content" role="main">
-      <router-outlet></router-outlet>
+      <router-outlet />
     </main>
     <larp-footer />
   `,

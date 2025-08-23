@@ -1,15 +1,9 @@
-import { Component, inject } from '@angular/core';
-import { LocaleService } from '@shared/services';
+import { Component } from '@angular/core';
+import { TranslatePipe } from '@shared/pipes';
 
 @Component({
-  selector: 'larp-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  imports: [TranslatePipe],
 })
-export class HomeComponent {
-  localeService = inject(LocaleService);
-
-  t(key: string): string {
-    return this.localeService.translate(key);
-  }
-}
+export class HomeComponent {}

@@ -1,17 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LocaleService } from '@shared/services/index';
+import { TranslatePipe } from '@shared/pipes/tr.pipe';
+import { LocaleService } from '@shared/services';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'larp-footer',
-  imports: [RouterModule],
+  imports: [RouterModule, TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  localeService = inject(LocaleService);
-
-  t(key: string): string {
-    return this.localeService.translate(key);
-  }
+  public navItems = inject(LocaleService).navItems;
 }

@@ -1,5 +1,5 @@
-import { effect, inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { effect, inject, Injectable, signal } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
 export type Locale = 'en' | 'da';
@@ -10,19 +10,24 @@ interface Translations {
 
 @Injectable({ providedIn: 'root' })
 export class LocaleService {
-  private http = inject(HttpClient);
-
-  currentLocale = signal<Locale>('en');
-  private translations = signal<Record<Locale, Translations>>({
+  private readonly http = inject(HttpClient);
+  private readonly translations = signal<Record<Locale, Translations>>({
     en: {},
-    da: {}
+    da: {},
   });
+
+  public currentLocale = signal<Locale>('en');
+  public navItems = [
+    { href: '/', label: 'nav.home' },
+    { href: '/current-projects', label: 'nav.current' },
+    { href: '/previous-projects', label: 'nav.previous' },
+    { href: '/about', label: 'nav.about' },
+    { href: '/contact', label: 'nav.contact' },
+  ];
 
   constructor() {
     this.initializeLocale();
-    this.loadTranslations();
 
-    // Apply locale to document when locale changes
     effect(() => {
       if (typeof window !== 'undefined') {
         document.documentElement.lang = this.currentLocale();
@@ -32,33 +37,30 @@ export class LocaleService {
   }
 
   private initializeLocale() {
-    // Load locale from localStorage or default to English
-    const savedLocale = (typeof window !== 'undefined' &&
-      localStorage.getItem('locale')) as Locale | null;
+    const savedLocale = (typeof window !== 'undefined' && localStorage.getItem('locale')) as Locale | null;
     if (savedLocale && (savedLocale === 'en' || savedLocale === 'da')) {
       this.currentLocale.set(savedLocale);
     }
   }
 
-  private async loadTranslations() {
+  public async loadTranslations() {
     try {
       const [enTranslations, daTranslations] = await Promise.all([
         firstValueFrom(this.http.get<Translations>('/assets/locales/en.json')),
-        firstValueFrom(this.http.get<Translations>('/assets/locales/da.json'))
+        firstValueFrom(this.http.get<Translations>('/assets/locales/da.json')),
       ]);
 
       this.translations.set({
         en: enTranslations,
-        da: daTranslations
+        da: daTranslations,
       });
     } catch (error) {
       console.error('Failed to load translations:', error);
-      // Fallback to empty translations - could load from embedded fallback
     }
   }
 
   toggleLocale() {
-    this.currentLocale.update((current) => (current === 'en' ? 'da' : 'en'));
+    this.currentLocale.update(current => (current === 'en' ? 'da' : 'en'));
   }
 
   setLocale(locale: Locale) {

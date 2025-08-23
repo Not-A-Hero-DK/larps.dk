@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -6,7 +7,7 @@ describe('FooterComponent', () => {
   beforeEach(() => {
     // Mock LocaleService
     const mockLocaleService = {
-      translate: vi.fn((key: string) => key)
+      translate: vi.fn((key: string) => key),
     };
 
     component = new FooterComponent();

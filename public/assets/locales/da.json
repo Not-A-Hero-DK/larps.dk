@@ -9,230 +9,195 @@
   },
   "nav": {
     "home": "Hjem",
-    "current": "Nuværende Projekter",
-    "previous": "Tidligere Projekter",
-    "about": "Om Os",
+    "current": "Nuværende projekter",
+    "previous": "Tidligere projekter",
+    "about": "Om os",
     "contact": "Kontakt",
-    "getHosted": "Få Hosting",
+    "getHosted": "Få hosting",
     "skip_to_content": "Spring til hovedindhold",
     "main_navigation": "Hovednavigation",
-    "mobile_navigation": "Mobil navigation",
-    "open_menu": "Åbn navigationsmenuen",
-    "close_menu": "Luk navigationsmenuen"
+    "mobile_navigation": "Mobilnavigation",
+    "open_menu": "Åbn navigationsmenu",
+    "close_menu": "Luk navigationsmenu"
   },
   "home": {
-    "title": "Vogter af LARP Riger",
+    "title": "Vogter af LARP-riger",
     "subtitle": "Gratis hosting til LARP-fællesskaber verden over. Del dine eventyr, forbind med spillere og bring dine historier til live.",
-    "request_hosting": "Anmod om Hosting",
-    "view_projects": "Se Projekter"
+    "request_hosting": "Anmod om hosting",
+    "view_projects": "Se projekter",
+    "features": {
+      "title": "Hvorfor vælge Heimdal Portal?",
+      "subtitle": "Alt hvad du behøver for at bringe dit LARP-fællesskab online, helt gratis.",
+      "hosting": {
+        "title": "Gratis hosting",
+        "description": "Komplet hosting-løsning uden omkostninger for LARP-organisatorer. Fokuser på dine historier, ikke server-omkostninger."
+      },
+      "setup": {
+        "title": "Hurtig opsætning",
+        "description": "Få din LARP-hjemmeside online på få minutter med vores strømlinede proces og smukke skabeloner."
+      },
+      "subdomain": {
+        "title": "Subdomæne-magi",
+        "description": "Dit unikke subdomæne på larps.dk – professionelt, mindeværdigt og perfekt tilpasset din LARP."
+      },
+      "community": {
+        "title": "Fællesskabsdrevet",
+        "description": "Bygget af LARPere, til LARPere. Vi forstår LARP-fællesskabets unikke behov."
+      }
+    },
+    "stats": {
+      "title": "Voksende fællesskab",
+      "subtitle": "Bliv en del af et blomstrende økosystem af LARP-organisatorer og spillere fra hele verden.",
+      "projects": "Projekter hostet",
+      "participants": "Aktive deltagere",
+      "uptime": "Service oppetid"
+    },
+    "cta": {
+      "title": "Klar til at tilslutte dig riget?",
+      "description": "Uanset om du organiserer din første LARP eller er en erfaren historiefortæller, er vi her for at hjælpe din digitale tilstedeværelse med at blive lige så legendarisk som dine eventyr.",
+      "get_started": "Kom i gang i dag",
+      "learn_more": "Læs mere",
+      "contact": "Kontakt os på hosting@larps.dk for at komme i gang"
+    }
+  },
+  "projects": {
+    "host_cta": {
+      "title": "Vil du have en LARP-hjemmeside?",
+      "subtitle": "Bliv en del af de legendariske arrangører. Få din LARP-hjemmeside hostet gratis på vores platform."
+    },
+    "learn_more": "Læs mere",
+    "current": {
+      "title": "Nuværende projekter",
+      "subtitle": "Kommende LARP-eventyr der i øjeblikket hostes på Heimdal Portal. Deltag i disse legendariske oplevelser eller bliv inspireret til din egen saga."
+    },
+    "previous": {
+      "title": "Tidligere projekter",
+      "subtitle": "Legendariske eventyr der allerede er afsluttet. Disse sagaer lever videre i deres deltageres minder og inspirerer fremtidige fortællinger."
+    },
+    "upcoming": "Kommende",
+    "completed": "Afsluttet",
+    "participants": "deltagere",
+    "organized_by": "Organiseret af:",
+    "visit_project_site": "Besøg projektside",
+    "archive": {
+      "title": "Arkiv af legender",
+      "subtitle": "Hver afsluttet LARP tilføjer til det rige væv af nordisk historiefortælling. Disse eventyr har formet vores fællesskab og fortsætter med at inspirere nye fortællinger."
+    },
+    "total_adventures": "Samlede eventyr hostet",
+    "total_participants": "Samlede deltagere"
   },
   "about": {
     "title": "Om Heimdal Portal",
-    "subtitle": "Vogter af den digitale bro mellem LARP-arrangører og deres fællesskaber.",
+    "subtitle": "Vogter af den digitale bro mellem LARP-organisatorer og deres fællesskaber",
     "mission": {
-      "title": "Vores Mission",
-      "description": "Vi tror på, at alle LARP-arrangementer fortjener en professionel online tilstedeværelse. Vores mission er at levere gratis, høj-kvalitets hosting-løsninger, der gør det muligt for LARP-arrangører at fokusere på det, de gør bedst: at skabe uforglemmelige oplevelser.",
-      "vision": "Fra små lokale sammenkomster til internationale begivenheder støtter vi hele spektret af Live Action Role Playing-fællesskaber på tværs af de nordiske regioner og videre."
+      "title": "Vores mission",
+      "description": "Ligesom Heimdal vogter regnbuens bro Bifröst i nordisk mytologi, tjener vi som vogtere af det digitale rige for LARP-fællesskaber verden over. Vores mission er enkel: fjerne barriererne der forhindrer fantastiske historier i at nå deres publikum.",
+      "challenges": "Alt for mange brillante LARP-organisatorer tøver med at dele deres kreationer online på grund af teknisk kompleksitet eller hosting-omkostninger. Vi bygger bro over det hul ved at tilbyde gratis, professionel webhosting, så du kan fokusere på det du gør bedst: skabe uforglemmelige oplevelser.",
+      "vision": "Hver LARP fortjener et digitalt hjem hvor deltagere kan samles, forberede sig og mindes. Vi gør det muligt, ét subdomæne ad gangen."
     },
-    "stats": {
-      "title": "Vores Påvirkning",
-      "projects": "Aktive Projekter",
-      "uptime": "Oppetids Garanti",
-      "players": "Spillere Betjent",
-      "countries": "Lande"
+    "offer": {
+      "title": "Hvad vi tilbyder",
+      "hosting": "Gratis hosting uden skjulte omkostninger",
+      "subdomains": "Professionelle subdomæner på larps.dk",
+      "templates": "Smukke hjemmeside-skabeloner",
+      "support": "Teknisk support fra andre LARPere",
+      "security": "SSL-certifikater og sikkerhed",
+      "community": "Fællesskabs-showcase og netværk"
     },
-    "services": {
-      "title": "Hvad Vi Tilbyder",
-      "hosting": {
-        "title": "Gratis Hosting",
-        "description": "Professionel web hosting uden skjulte omkostninger. Tilpassede domæner, SSL-certifikater og 99,9% oppetids garanti."
-      },
-      "customization": {
-        "title": "Tilpasset Design",
-        "description": "Skræddersyede website designs, der fanger din LARPs unikke atmosfære og æstetik."
-      },
-      "support": {
-        "title": "24/7 Support",
-        "description": "Vores team af LARP-entusiaster yder teknisk support og vejledning, når du har brug for det."
-      }
+    "who": {
+      "title": "Hvem vi er",
+      "description": "Vi er et passioneret kollektiv af LARP-entusiaster, webudviklere og historiefortællere, der forstår LARP-fællesskabets unikke behov. Efter selv at have organiseret, deltaget i og støttet utallige LARPs, kender vi udfordringerne du står overfor. Fra at håndtere spillerkommunikation til at vise dit kreative syn, har vi været der. Vores tekniske ekspertise kombineret med vores forståelse af LARP-fællesskabets unikke behov gør det muligt for os at tilbyde denne gratis hosting-service."
     },
-    "team": {
-      "title": "Mød Vogterne",
-      "description": "Vi er et passioneret team af udviklere, designere og LARP-veteraner dedikeret til at støtte det fællesskab, der gav os så meget glæde.",
-      "contact_cta": "Lær Os at Kende"
-    }
-  },
-  "current": {
-    "title": "Nuværende Projekter",
-    "subtitle": "Kommende LARP-eventyr, der i øjeblikket hostes på Heimdal Portal.",
-    "featured": "Fremhævet",
-    "status": {
-      "open": "Åben Tilmelding",
-      "soon": "Kommer Snart",
-      "full": "Fuldt"
+    "creator": {
+      "title": "Mød skaberen",
+      "description": "Heimdal Portal er skabt og vedligeholdt af Mads Heimdal Thy, en passioneret softwareingeniør med omfattende erfaring i at bygge apps, hjemmesider og systemer. Med en dyb kærlighed til både teknologi og historiefortælling kombinerer Mads teknisk ekspertise med en forståelse af LARP-fællesskabets unikke behov for at tilbyde denne gratis hosting-service.",
+      "background": "Som både softwareingeniør og historiefortællingsentusiast forstår Mads udfordringerne som LARP-organisatorer står overfor i den digitale tidsalder. Hans vision for Heimdal Portal stammer fra et ønske om at demokratisere adgangen til professionel webhosting og sikre, at ethvert LARP-fællesskab kan have en digital tilstedeværelse, der er værdig deres kreative bestræbelser.",
+      "mission": "Gennem Heimdal Portal sigter Mads mod at styrke det globale LARP-fællesskab ved at tilbyde det tekniske fundament, der gør det muligt for organisatorer at fokusere på det de gør bedst: skabe immersive, transformative oplevelser for spillere verden over."
     },
-    "projects": {
-      "chronicles": {
-        "title": "Krøniker af Aethermoor",
-        "description": "En episk high-fantasy kampagne sat i en verden, hvor magi og teknologi flettes sammen. Tilslut dig adelshuse, mystiske gilder, eller smede din egen skæbne i denne fordybende politiske intriger LARP.",
-        "date": "15.-17. april 2025",
-        "location": "Vejle, Danmark",
-        "players": "120/150 spillere"
-      },
-      "shadowrun": {
-        "title": "Shadowrun: København 2080",
-        "description": "Cyberpunk møder fantasy i dette gritty urbane eventyr gennem fremtidens København.",
-        "date": "22.-24. maj 2025",
-        "location": "København, Danmark"
-      },
-      "nordic": {
-        "title": "Nordiske Sagaer",
-        "description": "Oplev autentiske vikingetidsæventyr baseret på historisk forskning og nordisk mytologi.",
-        "date": "12.-14. juni 2025",
-        "location": "Roskilde, Danmark"
-      },
-      "wasteland": {
-        "title": "Ødemark Krigere",
-        "description": "Post-apokalyptisk overlevelse i en verden generobret af naturen og styret af stammelov.",
-        "date": "8.-10. juli 2025",
-        "location": "Jylland, Danmark"
-      }
-    },
-    "view_details": "Se Detaljer",
-    "learn_more": "Lær Mere",
     "cta": {
-      "title": "Klar til at Hoste din LARP?",
-      "description": "Tilslut dig det voksende fællesskab af LARP-arrangører, der stoler på Heimdal Portal med deres digitale tilstedeværelse.",
-      "button": "Kom i Gang i Dag"
+      "title": "Klar til at tilslutte dig riget?",
+      "description": "Uanset om du organiserer din første LARP eller er en erfaren historiefortæller, er vi her for at hjælpe din digitale tilstedeværelse med at blive lige så legendarisk som dine eventyr.",
+      "get_in_touch": "📧 Kom i kontakt",
+      "view_examples": "🏆 Se eksempler",
+      "contact": "Kontakt os: hosting@larps.dk",
+      "join": "Tilslut dig vores fællesskab og hjælp os med at vogte det digitale rige sammen."
     }
-  },
-  "previous": {
-    "title": "Tidligere Projekter",
-    "subtitle": "Legendariske eventyr, der er afsluttet og efterlader minder og historier, der varer livet ud.",
-    "filters": {
-      "all": "Alle Projekter",
-      "fantasy": "Fantasy",
-      "scifi": "Sci-Fi",
-      "horror": "Horror",
-      "historical": "Historisk"
-    },
-    "status": {
-      "completed": "Afsluttet"
-    },
-    "projects": {
-      "vampire": {
-        "title": "Vampire: The Masquerade - København by Night",
-        "description": "Politiske intriger og overnaturlig horror i det moderne Københavns vampyrsamfund.",
-        "date": "Oktober 2024",
-        "participants": "85 deltagere"
-      },
-      "medieval": {
-        "title": "Avalons Krone",
-        "description": "Middelalderlig hofpolitik og ridderlige eventyr i det legendariske kongerige Avalon.",
-        "date": "September 2024",
-        "participants": "120 deltagere"
-      },
-      "cyberpunk": {
-        "title": "Neon Drømme",
-        "description": "High-tech, low-life eventyr i en dystopisk fremtid, hvor virksomheder styrer verden.",
-        "date": "August 2024",
-        "participants": "65 deltagere"
-      },
-      "steampunk": {
-        "title": "Urverk Imperium",
-        "description": "Victorianske eventyr med dampdrevet teknologi og industriel revolution intriger.",
-        "date": "Juli 2024",
-        "participants": "90 deltagere"
-      },
-      "space": {
-        "title": "Stjernefald Station",
-        "description": "Rumudforskning og fremmede møder ombord på en grænseland rumstation.",
-        "date": "Juni 2024",
-        "participants": "75 deltagere"
-      },
-      "postapoc": {
-        "title": "Efter Faldet",
-        "description": "Overlevelse og genopbygning i en verden ødelagt af atomkrig.",
-        "date": "Maj 2024",
-        "participants": "110 deltagere"
-      }
-    },
-    "view_gallery": "Se Galleri",
-    "load_more": "Indlæs Flere Projekter"
   },
   "contact": {
-    "title": "Kontakt Os",
-    "subtitle": "Klar til at bringe din LARP til det digitale rige? Kom i kontakt med vores team af passionerede udviklere og LARP-entusiaster.",
+    "title": "Kontakt os",
+    "subtitle": "Klar til at bringe din LARP til det digitale rige? Kom i kontakt med os.",
+    "send_message": "Send besked",
+    "send_message_description": "Fortæl os om din LARP, og vi hjælper dig med at komme i gang med gratis hosting.",
+    "direct_contact": "Direkte kontakt",
+    "email": {
+      "label": "Email",
+      "address": "hosting@larps.dk"
+    },
+    "response_time": {
+      "label": "Svartid",
+      "value": "Normalt inden for 24-48 timer"
+    },
+    "what_we_need": "Hvad vi har brug for",
+    "need": {
+      "larp_name": "Dit LARP-navn og grundlæggende information",
+      "subdomain": "Foretrukket subdomæne (ditnavn.larps.dk)",
+      "participants": "Forventet antal deltagere",
+      "requirements": "Eventuelle særlige hosting-krav",
+      "content": "Indhold du gerne vil inkludere"
+    },
     "form": {
-      "title": "Få Dit Projekt i Gang",
-      "name": "Fulde Navn",
-      "name_placeholder": "Indtast dit fulde navn",
-      "name_required": "Navn er påkrævet",
-      "email": "Email Adresse",
-      "email_placeholder": "Indtast din email adresse",
-      "email_required": "Gyldig email er påkrævet",
-      "organization": "Organisation/Gruppe",
-      "organization_placeholder": "LARP gruppe, organisation eller event navn",
-      "project_type": "Projekt Type",
-      "project_type_placeholder": "Vælg projekt type",
-      "project_types": {
-        "fantasy": "Fantasy",
-        "scifi": "Science Fiction",
-        "horror": "Horror",
-        "historical": "Historisk",
-        "modern": "Moderne",
-        "other": "Andet"
+      "name": {
+        "label": "Dit navn",
+        "placeholder": "Indtast dit fulde navn"
       },
-      "message": "Projekt Beskrivelse",
-      "message_placeholder": "Fortæl os om dit LARP projekt, tidsplan og specifikke hosting behov...",
-      "message_required": "Beskriv venligst dit projekt",
-      "submit": "Send Besked",
-      "submitting": "Sender...",
-      "success": "Tak! Vi vender tilbage til dig inden for 24 timer."
-    },
-    "info": {
-      "title": "Kom i Kontakt",
       "email": {
-        "title": "Email Os",
-        "description": "For hosting anmodninger og generelle forespørgsler"
+        "label": "Din email",
+        "placeholder": "Indtast din email-adresse"
       },
-      "phone": {
-        "title": "Ring til Os",
-        "description": "Tilgængelig mandag-fredag, 9-17 CET"
+      "larp_name": {
+        "label": "LARP-navn",
+        "placeholder": "Indtast dit LARP-navn"
       },
-      "hours": {
-        "title": "Svartid",
-        "description": "Vi svarer typisk inden for 24 timer"
-      }
-    },
-    "faq": {
-      "title": "Hurtige Spørgsmål",
-      "hosting": {
-        "question": "Er hosting virkelig gratis?",
-        "answer": "Ja! Vi leverer gratis hosting med tilpassede domæner, SSL-certifikater og professionel support."
+      "message": {
+        "label": "Fortæl os om din LARP",
+        "placeholder": "Fortæl os om din LARP, hvornår den foregår, forventet antal deltagere og eventuelle særlige krav..."
       },
-      "requirements": {
-        "question": "Hvad har I brug for fra os?",
-        "answer": "Bare grundlæggende information om din LARP, ønskede funktioner og eventuelle specifikke design præferencer."
-      },
-      "timeline": {
-        "question": "Hvor lang tid tager opsætning?",
-        "answer": "De fleste projekter er live inden for 1-2 uger, afhængig af kompleksitet og tilpasningsbehov."
+      "submit": "Send besked",
+      "sending": "Sender...",
+      "success": "Tak! Din besked er sendt med succes. Vi vender tilbage til dig inden for 24-48 timer.",
+      "error": "Noget gik galt. Prøv venligst igen eller kontakt os direkte på hosting@larps.dk",
+      "validation": {
+        "name_required": "Navn er påkrævet",
+        "email_required": "Email er påkrævet",
+        "email_invalid": "Indtast venligst en gyldig email-adresse",
+        "larp_name_required": "LARP-navn er påkrævet",
+        "message_required": "Fortæl os venligst om din LARP",
+        "message_min_length": "Giv venligst flere detaljer (mindst 20 tegn)"
       }
     }
   },
+  "notfound": {
+    "title": "Forsvundet i de ni verdener",
+    "description": "Det ser ud til, at du er vandret væk fra stien til Valhalla. Selv Heimdals skarpe syn kan ikke lokalisere denne side i vores digitale rige.",
+    "return_home": "Vend tilbage til Midgård",
+    "explore_projects": "Udforsk projekter"
+  },
   "footer": {
-    "brand_title": "Heimdal Portal",
-    "brand_description": "Styrker LARP-fællesskabet med gratis, professionelle hosting-løsninger.",
-    "brand_mission": "Bygger broer mellem arrangører og spillere på tværs af de nordiske riger.",
-    "stats_projects": "100+ Projekter",
-    "stats_uptime": "99.9% Oppetid",
-    "quick_links": "Hurtige Links",
+    "brand": {
+      "title": "Heimdal Portal",
+      "description": "Styrker LARP-fællesskabet med gratis, professionelle hosting-løsninger.",
+      "mission": "Bygger broer mellem organisatorer og spillere på tværs af de nordiske riger."
+    },
+    "stats": {
+      "projects": "100+ projekter",
+      "uptime": "99.9% oppetid"
+    },
+    "quick_links": "Hurtige links",
     "contact": "Kontakt",
     "email": "hosting@larps.dk",
     "phone": "+45 30 23 81 12",
-    "get_started": "Kom i Gang",
-    "copyright": "© 2025 Heimdal Portal. Alle rettigheder forbeholdes.",
+    "get_started": "Kom i gang",
+    "copyright": "© 2025 Heimdal Portal. Alle rettigheder forbeholdt.",
     "company_link": "Not A Hero ApS"
   }
 }

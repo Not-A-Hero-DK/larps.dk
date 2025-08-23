@@ -3,13 +3,13 @@
   href="#main-content"
   class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-white px-4 py-2 rounded-md z-[60] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
 >
-  {{ t('nav.skip_to_content') }}
+  {{ 'nav.skip_to_content' | tr }}
 </a>
 
 <nav
   class="fixed top-0 w-full z-50 bg-background backdrop-blur-sm border-b border-border"
   role="navigation"
-  [attr.aria-label]="t('nav.main_navigation')"
+  [attr.aria-label]="'nav.main_navigation' | tr"
 >
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16">
@@ -22,11 +22,7 @@
           xmlns="http://www.w3.org/2000/svg"
           class="text-accent"
         >
-          <path
-            d="M16 2L27 7V18C27 25 16 30 16 30C16 30 5 25 5 18V7L16 2Z"
-            fill="currentColor"
-            opacity="0.1"
-          />
+          <path d="M16 2L27 7V18C27 25 16 30 16 30C16 30 5 25 5 18V7L16 2Z" fill="currentColor" opacity="0.1" />
           <path
             d="M16 3L26 7.5V18C26 23.5 16 28 16 28C16 28 6 23.5 6 18V7.5L16 3Z"
             stroke="currentColor"
@@ -45,41 +41,35 @@
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <nav class="flex space-x-6" role="navigation" [attr.aria-label]="t('nav.main_navigation')">
+        <nav class="flex space-x-6" role="navigation" [attr.aria-label]="'nav.main_navigation' | tr">
+          @for(item of navItems; track item.label){
           <a
-            *ngFor="let item of navItems"
             [routerLink]="item.href"
             class="text-sm font-medium text-foreground hover:text-accent transition-colors"
             routerLinkActive="text-accent"
           >
-            {{ item.label }}
-          </a>
+            {{ item.label | tr }} </a
+          >}
         </nav>
 
         <!-- Desktop Controls -->
         <div class="flex items-center space-x-2">
           <!-- Theme Toggle -->
           <button
-            (click)="themeService.toggleTheme()"
-            [attr.aria-label]="
-              themeService.theme() === 'dark' ? t('default.light_mode') : t('default.dark_mode')
-            "
+            (click)="toggleTheme()"
+            [attr.aria-label]="currentTheme() === 'dark' ? ('default.light_mode' | tr) : ('default.dark_mode' | tr)"
             class="rounded-lg px-2 py-1 bg-button-toggle hover:bg-card transition-colors duration-200"
           >
-            <span class="text-sm">{{ themeService.theme() === 'dark' ? '☀️' : '🌙' }}</span>
+            <span class="text-sm">{{ currentTheme() === 'dark' ? '☀️' : '🌙' }}</span>
           </button>
 
           <!-- Language Toggle -->
           <button
-            (click)="localeService.toggleLocale()"
-            [attr.aria-label]="
-              localeService.currentLocale() === 'en'
-                ? t('default.switch_language')
-                : 'Switch to English'
-            "
+            (click)="toggleLocale()"
+            [attr.aria-label]="'default.switch_language' | tr"
             class="rounded-lg px-3 py-1 bg-button-toggle hover:bg-card transition-colors duration-200 text-sm font-medium"
           >
-            {{ localeService.currentLocale() === 'en' ? 'DA' : 'EN' }}
+            {{ currentLocale() === 'en' ? 'DA' : 'EN' }}
           </button>
         </div>
       </div>
@@ -88,32 +78,26 @@
       <div class="md:hidden flex items-center space-x-2">
         <!-- Mobile Theme Toggle -->
         <button
-          (click)="themeService.toggleTheme()"
-          [attr.aria-label]="
-            themeService.theme() === 'dark' ? t('default.light_mode') : t('default.dark_mode')
-          "
+          (click)="toggleTheme()"
+          [attr.aria-label]="currentTheme() === 'dark' ? ('default.light_mode' | tr) : ('default.dark_mode' | tr)"
           class="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200"
         >
-          <span class="text-sm">{{ themeService.theme() === 'dark' ? '☀️' : '🌙' }}</span>
+          <span class="text-sm">{{ currentTheme() === 'dark' ? '☀️' : '🌙' }}</span>
         </button>
 
         <!-- Mobile Language Toggle -->
         <button
-          (click)="localeService.toggleLocale()"
-          [attr.aria-label]="
-            localeService.currentLocale() === 'en'
-              ? t('default.switch_language')
-              : 'Switch to English'
-          "
+          (click)="toggleLocale()"
+          [attr.aria-label]="'default.switch_language' | tr"
           class="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200 text-sm font-medium"
         >
-          {{ localeService.currentLocale() === 'en' ? 'DA' : 'EN' }}
+          {{ currentLocale() === 'en' ? 'DA' : 'EN' }}
         </button>
 
         <!-- Hamburger Menu -->
         <button
           (click)="toggleMobileMenu()"
-          [attr.aria-label]="isMobileMenuOpen() ? t('nav.close_menu') : t('nav.open_menu')"
+          [attr.aria-label]="isMobileMenuOpen() ? ('nav.close_menu' | tr) : ('nav.open_menu' | tr)"
           [attr.aria-expanded]="isMobileMenuOpen()"
           aria-controls="mobile-menu"
           class="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200"
@@ -151,16 +135,16 @@
   >
     <div class="bg-card border-t border-border">
       <div class="container mx-auto px-4 py-4">
-        <nav class="space-y-2" role="navigation" [attr.aria-label]="t('nav.mobile_navigation')">
+        <nav class="space-y-2" role="navigation" [attr.aria-label]="'nav.mobile_navigation' | tr">
+          @for(item of navItems; track item.label){
           <a
-            *ngFor="let item of navItems"
             [routerLink]="item.href"
             (click)="closeMobileMenu()"
             class="block px-4 py-3 text-sm font-medium text-foreground hover:text-accent hover:bg-neutral-800 rounded-md transition-colors"
             routerLinkActive="text-accent"
           >
-            {{ item.label }}
-          </a>
+            {{ item.label | tr }} </a
+          >}
         </nav>
       </div>
     </div>

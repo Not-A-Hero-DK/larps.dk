@@ -1,11 +1,12 @@
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { LocaleService } from './locale.service';
 
 // Mock HttpClient
 const mockHttpClient = {
   get: vi.fn().mockReturnValue({
     pipe: vi.fn(),
-    subscribe: vi.fn()
-  })
+    subscribe: vi.fn(),
+  }),
 };
 
 describe('LocaleService', () => {
@@ -25,7 +26,7 @@ describe('LocaleService', () => {
       currentLocale: vi.fn().mockReturnValue('en'),
       toggleLocale: vi.fn(),
       setLocale: vi.fn(),
-      translate: vi.fn((key: string) => key)
+      translate: vi.fn((key: string) => key),
     } as any;
   });
 
