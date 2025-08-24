@@ -45,7 +45,7 @@
           @for(item of navItems; track item.label){
           <a
             [routerLink]="item.href"
-            class="text-sm font-medium text-foreground hover:text-accent transition-colors"
+            class="text-sm text-muted hover:text-accent font-medium text-foreground hover:text-accent transition-colors"
             routerLinkActive="text-accent"
           >
             {{ item.label | tr }} </a
@@ -54,45 +54,15 @@
 
         <!-- Desktop Controls -->
         <div class="flex items-center space-x-2">
-          <!-- Theme Toggle -->
-          <button
-            (click)="toggleTheme()"
-            [attr.aria-label]="currentTheme() === 'dark' ? ('default.light_mode' | tr) : ('default.dark_mode' | tr)"
-            class="rounded-lg px-2 py-1 bg-button-toggle hover:bg-card transition-colors duration-200"
-          >
-            <span class="text-sm">{{ currentTheme() === 'dark' ? '☀️' : '🌙' }}</span>
-          </button>
-
-          <!-- Language Toggle -->
-          <button
-            (click)="toggleLocale()"
-            [attr.aria-label]="'default.switch_language' | tr"
-            class="rounded-lg px-3 py-1 bg-button-toggle hover:bg-card transition-colors duration-200 text-sm font-medium"
-          >
-            {{ currentLocale() === 'en' ? 'DA' : 'EN' }}
-          </button>
+          <larp-button [variant]="'toggle'" (click)="toggleTheme()" [label]="isDark() ? '☀️' : '🌙'" />
+          <larp-button [variant]="'toggle'" (click)="toggleLocale()" [label]="isDanish() ? 'DA' : 'EN'" />
         </div>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden flex items-center space-x-2">
-        <!-- Mobile Theme Toggle -->
-        <button
-          (click)="toggleTheme()"
-          [attr.aria-label]="currentTheme() === 'dark' ? ('default.light_mode' | tr) : ('default.dark_mode' | tr)"
-          class="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200"
-        >
-          <span class="text-sm">{{ currentTheme() === 'dark' ? '☀️' : '🌙' }}</span>
-        </button>
-
-        <!-- Mobile Language Toggle -->
-        <button
-          (click)="toggleLocale()"
-          [attr.aria-label]="'default.switch_language' | tr"
-          class="rounded-lg px-2 py-1 bg-neutral-800 hover:bg-neutral-700 text-white transition-colors duration-200 text-sm font-medium"
-        >
-          {{ currentLocale() === 'en' ? 'DA' : 'EN' }}
-        </button>
+        <larp-button [variant]="'toggle'" (click)="toggleTheme()" label="{{ isDark() ? '☀️' : '🌙' }}" />
+        <larp-button [variant]="'toggle'" (click)="toggleLocale()" [label]="isDanish() ? 'DA' : 'EN'" />
 
         <!-- Hamburger Menu -->
         <button

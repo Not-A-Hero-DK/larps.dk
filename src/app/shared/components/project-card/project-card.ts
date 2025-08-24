@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { TranslatePipe } from '@shared/pipes';
 import { LocaleService } from '@shared/services';
 import { Project } from '@shared/types';
@@ -15,11 +15,9 @@ export class ProjectCard {
 
   readonly project = input<Project>();
 
-  public statusColorClass =
-    this.project()?.status === 'upcoming' ? 'bg-yellow-600 text-yellow-100' : 'bg-green-600 text-green-100';
+  public statusColorClass = computed(() =>
+    this.project()?.status === 'upcoming' ? 'bg-yellow-600 text-yellow-100' : 'bg-green-600 text-green-100',
+  );
 
-  public statusText =
-    this.project()?.status === 'upcoming'
-      ? this.tr.translate('projects.upcoming')
-      : this.tr.translate('projects.completed');
+  public statusText = computed(() => this.tr.translate(`projects.${this.project()?.status}`));
 }

@@ -2,8 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { effect, inject, Injectable, signal } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
-export type Locale = 'en' | 'da';
-
 interface Translations {
   [key: string]: string | Translations;
 }
@@ -11,12 +9,9 @@ interface Translations {
 @Injectable({ providedIn: 'root' })
 export class LocaleService {
   private readonly http = inject(HttpClient);
-  private readonly translations = signal<Record<Locale, Translations>>({
-    en: {},
-    da: {},
-  });
+  private readonly translations = signal<Record<'en' | 'da', Translations>>({ en: {}, da: {} });
 
-  public currentLocale = signal<Locale>('en');
+  public isDanish = signal<boolean>(true);
   public navItems = [
     { href: '/', label: 'nav.home' },
     { href: '/current-projects', label: 'nav.current' },
@@ -29,17 +24,15 @@ export class LocaleService {
     this.initializeLocale();
 
     effect(() => {
-      if (typeof window !== 'undefined') {
-        document.documentElement.lang = this.currentLocale();
-        localStorage.setItem('locale', this.currentLocale());
-      }
+      document.documentElement.lang = this.isDanish() ? 'da' : 'en';
+      localStorage.setItem('locale', this.isDanish() ? 'true' : 'false');
     });
   }
 
   private initializeLocale() {
-    const savedLocale = (typeof window !== 'undefined' && localStorage.getItem('locale')) as Locale | null;
-    if (savedLocale && (savedLocale === 'en' || savedLocale === 'da')) {
-      this.currentLocale.set(savedLocale);
+    const isDanish = localStorage.getItem('locale');
+    if (isDanish) {
+      this.isDanish.set(isDanish === 'true');
     }
   }
 
@@ -50,26 +43,23 @@ export class LocaleService {
         firstValueFrom(this.http.get<Translations>('/assets/locales/da.json')),
       ]);
 
-      this.translations.set({
-        en: enTranslations,
-        da: daTranslations,
-      });
+      this.translations.set({ en: enTranslations, da: daTranslations });
     } catch (error) {
       console.error('Failed to load translations:', error);
     }
   }
 
   public toggleLocale() {
-    this.currentLocale.update(current => (current === 'en' ? 'da' : 'en'));
+    this.isDanish.update(current => !current);
   }
 
-  public setLocale(locale: Locale) {
-    this.currentLocale.set(locale);
+  public setDanishLocale(locale: boolean) {
+    this.isDanish.set(locale);
   }
 
   public translate(key: string): string {
     const keys = key.split('.');
-    let value: string | Translations = this.translations()[this.currentLocale()];
+    let value: string | Translations = this.translations()[this.isDanish() ? 'da' : 'en'];
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {

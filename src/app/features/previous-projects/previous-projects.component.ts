@@ -4,6 +4,7 @@ import { TranslatePipe } from '@shared/pipes';
 import { Project } from '@shared/types';
 
 @Component({
+  selector: 'larp-previous-projects',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './previous-projects.component.html',
   styleUrls: ['./previous-projects.component.scss'],

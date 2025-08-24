@@ -6,12 +6,8 @@
           ><div class="text-2xl font-bold text-accent">⚡</div>
           <span class="text-xl font-bold text-foreground">{{ 'footer.brand.title' | tr }}</span></a
         >
-        <p class="text-muted text-sm leading-relaxed">
-          {{ 'footer.brand.description' | tr }}
-        </p>
-        <p class="text-muted text-sm leading-relaxed">
-          {{ 'footer.brand.mission' | tr }}
-        </p>
+        <p class="text-muted text-sm leading-relaxed">{{ 'footer.brand.description' | tr }}</p>
+        <p class="text-muted text-sm leading-relaxed">{{ 'footer.brand.mission' | tr }}</p>
         <div class="flex items-center space-x-6 pt-2" aria-label="Service statistics">
           <div class="flex items-center space-x-2">
             <span class="text-accent" aria-hidden="true">🎲</span
@@ -27,7 +23,7 @@
         <h3 class="text-lg font-semibold text-foreground">{{ 'footer.quick_links' | tr }}</h3>
         <nav class="space-y-2" aria-label="Footer navigation">
           @for(item of navItems; track item.label){
-          <a class="block text-muted hover:text-accent text-sm transition-colors rounded-sm" [routerLink]="item.href">
+          <a class="block hover:text-accent text-sm transition-colors rounded-sm" [routerLink]="item.href">
             {{ item.label | tr }}
           </a>
           }
@@ -53,14 +49,7 @@
             >
           </div>
         </address>
-        <div class="pt-2">
-          <a
-            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background disabled:pointer-events-none disabled:opacity-50 rounded-md transition-all duration-300 cursor-pointer bg-gradient-nordic px-8 py-3 text-white hover:shadow-glow transform text-sm px-6 py-2"
-            aria-disabled="false"
-            [routerLink]="['/contact']"
-            >{{ 'footer.get_started' | tr }}</a
-          >
-        </div>
+        <larp-button [label]="'footer.get_started' | tr" [variant]="'secondary'" [routerLink]="['/contact']" />
       </section>
     </div>
     <div class="border-t border-border pt-6 text-center text-neutral-400 text-sm">

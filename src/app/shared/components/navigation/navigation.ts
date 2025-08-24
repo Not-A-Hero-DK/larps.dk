@@ -1,20 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslatePipe } from '@shared/pipes/tr.pipe';
+import { TranslatePipe } from '@shared/pipes';
 import { LocaleService, ThemeService } from '@shared/services';
+import { Button } from '../button/button';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'larp-navigation',
-  imports: [CommonModule, RouterModule, TranslatePipe],
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
+  imports: [CommonModule, RouterModule, TranslatePipe, Button],
+  templateUrl: './navigation.html',
+  styleUrls: ['./navigation.scss'],
 })
-export class NavigationComponent {
+export class Navigation {
   public isMobileMenuOpen = signal(false);
-  public currentLocale = inject(LocaleService).currentLocale;
-  public currentTheme = inject(ThemeService).currentTheme;
+  public isDanish = inject(LocaleService).isDanish;
+  public isDark = inject(ThemeService).isDark;
   public toggleLocale = inject(LocaleService).toggleLocale;
   public toggleTheme = inject(ThemeService).toggleTheme;
   public navItems = inject(LocaleService).navItems;
