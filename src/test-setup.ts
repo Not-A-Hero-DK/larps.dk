@@ -1,4 +1,14 @@
+import 'zone.js';
+import 'zone.js/testing';
+import { getTestBed } from '@angular/core/testing';
+import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { vi } from 'vitest';
+
+// Setup Angular test environment
+getTestBed().initTestEnvironment(
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting()
+);
 
 // Mock DOM APIs not available in jsdom
 Object.defineProperty(window, 'matchMedia', {
@@ -24,4 +34,10 @@ Object.defineProperty(window, 'localStorage', {
     removeItem: vi.fn(),
     clear: vi.fn(),
   },
+});
+
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  writable: true,
+  value: vi.fn(),
 });

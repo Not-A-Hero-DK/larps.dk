@@ -6,7 +6,9 @@ export class ThemeService {
 
   constructor() {
     const isDarkModeEnabled = localStorage.getItem('isDarkTheme');
-    if (isDarkModeEnabled === 'true') {
+    if (isDarkModeEnabled === 'false') {
+      this.isDark.set(false);
+    } else if (isDarkModeEnabled === 'true') {
       this.isDark.set(true);
     } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
       this.isDark.set(false);
