@@ -1,0 +1,109 @@
+<div class="relative min-h-screen text-foreground overflow-hidden">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div>
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        [style.backgroundImage]="'url(/hero-nordic.jpg)'"
+        aria-hidden="true"
+      >
+        <div class="absolute inset-0 bg-gradient-hero opacity-90 bg-background"></div>
+      </div>
+    </div>
+    <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
+        {{ 'home.title' | tr }}
+      </h1>
+
+      <p class="text-xl md:text-2xl text-muted mb-12 max-w-3xl mx-auto leading-relaxed">{{ 'home.subtitle' | tr }}</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <larp-button [routerLink]="['/contact']" variant="secondary" [label]="'home.request_hosting' | tr" />
+        <larp-button [routerLink]="['/current-projects']" variant="primary" [label]="'home.view_projects' | tr" />
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer Section -->
+  <section class="py-16 px-8" id="features">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">{{ 'home.features.title' | tr }}</h2>
+        <p class="text-lg text-muted max-w-3xl mx-auto leading-relaxed">{{ 'home.features.subtitle' | tr }}</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center bg-card rounded-lg p-6 border border-border">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="text-xl font-semibold mb-3">{{ 'home.features.hosting.title' | tr }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ 'home.features.hosting.description' | tr }}</p>
+        </div>
+
+        <div class="text-center bg-card rounded-lg p-6 border border-border">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold mb-3">{{ 'home.features.setup.title' | tr }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ 'home.features.setup.description' | tr }}</p>
+        </div>
+
+        <div class="text-center bg-card rounded-lg p-6 border border-border">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-xl font-semibold mb-3">{{ 'home.features.subdomain.title' | tr }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ 'home.features.subdomain.description' | tr }}</p>
+        </div>
+
+        <div class="text-center bg-card rounded-lg p-6 border border-border">
+          <div class="text-4xl mb-4">❤️</div>
+          <h3 class="text-xl font-semibold mb-3">{{ 'home.features.community.title' | tr }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ 'home.features.community.description' | tr }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Stats Section -->
+  <section class="py-16 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8">
+        <span class="text-2xl mr-2">📚</span>
+        <h3 class="text-3xl font-bold inline">{{ 'home.stats.title' | tr }}</h3>
+      </div>
+      <p class="text-lg text-muted mb-12 leading-relaxed">{{ 'home.stats.subtitle' | tr }}</p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-yellow-400 mb-2">100+</div>
+          <div class="text-muted">{{ 'home.stats.projects' | tr }}</div>
+        </div>
+        <div class="hidden sm:block text-muted text-2xl">|</div>
+        <div>
+          <div class="text-3xl font-bold text-yellow-400 mb-2">1000+</div>
+          <div class="text-muted">{{ 'home.stats.participants' | tr }}</div>
+        </div>
+        <div class="hidden sm:block text-muted text-2xl">|</div>
+        <div>
+          <div class="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+          <div class="text-muted">{{ 'home.stats.uptime' | tr }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-16 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="bg-card rounded-lg p-8 border border-accent">
+        <h3 class="text-3xl font-bold mb-6">{{ 'home.cta.title' | tr }}</h3>
+        <p class="text-lg text-muted mb-8 leading-relaxed">{{ 'home.cta.description' | tr }}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <larp-button [routerLink]="['/contact']" variant="secondary" [label]="'home.cta.get_started' | tr" />
+          <larp-button [routerLink]="['/about']" variant="primary" [label]="'home.cta.learn_more' | tr" />
+        </div>
+        <p class="text-muted mt-6 text-sm">{{ 'home.cta.contact' | tr }}</p>
+      </div>
+    </div>
+  </section>
+</div>

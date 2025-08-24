@@ -1,0 +1,114 @@
+<div class="relative min-h-screen text-foreground overflow-hidden">
+  <!-- Hero Section -->
+  <section class="pt-32 px-8">
+    <div class="block max-w-5xl mx-auto pb-7 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
+        {{ 'about.title' | tr }}
+      </h1>
+      <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">{{ 'about.subtitle' | tr }}</p>
+    </div>
+    <div class="max-w-5xl mx-auto bg-card rounded-lg p-6 mt-12 border border-border">
+      <div class="text-center mb-12">
+        <div class="mb-8">
+          <span class="text-4xl mr-3">🌉</span>
+          <h2 class="text-3xl md:text-4xl font-bold inline">{{ 'about.mission.title' | tr }}</h2>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-lg text-muted leading-relaxed">
+        <p>{{ 'about.mission.description' | tr }}</p>
+        <p>{{ 'about.mission.challenges' | tr }}</p>
+        <p>{{ 'about.mission.vision' | tr }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer, Who We Are, Meet the Creator Grid -->
+  <section class="pt-16 px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- What We Offer -->
+        <div class="bg-card rounded-lg p-6 border border-border">
+          <div class="text-center mb-8">
+            <span class="text-4xl">🌐</span>
+            <h3 class="text-2xl font-bold mt-4">{{ 'about.offer.title' | tr }}</h3>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <span class="text-accent mr-3 mt-1">⚡</span>
+              <span class="text-muted">{{ 'about.offer.hosting' | tr }}</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-accent mr-3 mt-1">⚡</span>
+              <span class="text-muted">{{ 'about.offer.subdomains' | tr }}</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-accent mr-3 mt-1">⚡</span>
+              <span class="text-muted">{{ 'about.offer.templates' | tr }}</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-accent mr-3 mt-1">⚡</span>
+              <span class="text-muted">{{ 'about.offer.support' | tr }}</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-accent mr-3 mt-1">⚡</span>
+              <span class="text-muted">{{ 'about.offer.security' | tr }}</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-accent mr-3 mt-1">⚡</span>
+              <span class="text-muted">{{ 'about.offer.community' | tr }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Who We Are -->
+        <div class="bg-card rounded-lg p-6 border border-border">
+          <div class="text-center mb-8">
+            <span class="text-4xl">👥</span>
+            <h3 class="text-2xl font-bold mt-4">{{ 'about.who.title' | tr }}</h3>
+          </div>
+
+          <p class="text-muted leading-relaxed">{{ 'about.who.description' | tr }}</p>
+        </div>
+
+        <!-- Meet the Creator -->
+        <div class="bg-card rounded-lg p-6 border border-border">
+          <div class="text-center mb-8">
+            <span class="text-4xl">👨‍💻</span>
+            <h3 class="text-2xl font-bold mt-4">{{ 'about.creator.title' | tr }}</h3>
+          </div>
+
+          <div class="space-y-4">
+            <p class="text-muted leading-relaxed text-sm">{{ 'about.creator.description' | tr }}</p>
+            <p class="text-muted leading-relaxed text-sm">{{ 'about.creator.background' | tr }}</p>
+            <p class="text-muted leading-relaxed text-sm">{{ 'about.creator.mission' | tr }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="pt-16 px-8">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="bg-card rounded-lg p-6 border border-accent">
+        <h3 class="text-3xl font-bold mb-6">{{ 'about.cta.title' | tr }}</h3>
+        <p class="text-lg text-muted mb-8 leading-relaxed">{{ 'about.cta.description' | tr }}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <larp-button [routerLink]="['/contact']" variant="secondary" [label]="'about.cta.get_in_touch' | tr" />
+          <larp-button
+            [routerLink]="['/previous-projects']"
+            variant="primary"
+            [label]="'about.cta.view_examples' | tr"
+          />
+        </div>
+        <p class="text-muted mt-6 text-sm">
+          {{ 'about.cta.contact' | tr }}
+          <br />
+          {{ 'about.cta.join' | tr }}
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
