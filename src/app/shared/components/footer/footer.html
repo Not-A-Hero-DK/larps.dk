@@ -1,5 +1,5 @@
 <footer class="bg-card border-t border-border mt-16" role="contentinfo">
-  <div class="container mx-auto px-4 py-12">
+  <div class="container mx-auto px-4 py-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <section class="space-y-4">
         <a class="flex items-center space-x-2" [routerLink]="['/']"
@@ -33,18 +33,18 @@
         <h3 class="text-lg font-semibold text-foreground">{{ 'footer.contact' | tr }}</h3>
         <address class="space-y-3 not-italic">
           <div class="flex items-center space-x-2">
-            <span class="text-accent" aria-hidden="true">📧</span
-            ><a
+            <span class="text-accent" aria-hidden="true">📧</span>
+            <a
               [href]="'mailto:' + ('footer.email' | tr)"
-              class="text-muted hover:text-accent text-sm transition-colors rounded-sm"
+              class="text-muted hover:text-accent text-sm transition-colors hover:underline"
               >{{ 'footer.email' | tr }}</a
             >
           </div>
           <div class="flex items-center space-x-2">
-            <span class="text-accent" aria-hidden="true">📞</span
-            ><a
-              [href]="'tel:' + ('footer.phone' | tr)"
-              class="text-muted hover:text-accent text-sm transition-colors rounded-sm"
+            <span class="text-accent" aria-hidden="true">📞</span>
+            <a
+              [href]="'tel:' + ('footer.phone' | tr).replaceAll(' ', '')"
+              class="text-muted hover:text-accent text-sm transition-colors hover:underline"
               >{{ 'footer.phone' | tr }}</a
             >
           </div>
@@ -54,13 +54,13 @@
     </div>
     <div class="border-t border-border pt-6 text-center text-neutral-400 text-sm">
       <span>{{ 'footer.copyright' | tr }}</span>
+
       <a
         [href]="'https://notahero.dk'"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-accent hover:underline rounded-sm"
-      >
-        {{ 'footer.company_link' | tr }}
+        class="text-accent hover:underline ms-1"
+        >{{ 'footer.company_link' | tr }}
       </a>
     </div>
   </div>

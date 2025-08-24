@@ -1,6 +1,3 @@
-// Basic test setup without Zone.js for now
-// We'll add Angular-specific testing later
-
 import { vi } from 'vitest';
 
 // Mock DOM APIs not available in jsdom
@@ -28,10 +25,3 @@ Object.defineProperty(window, 'localStorage', {
     clear: vi.fn(),
   },
 });
-
-// Global test configuration
-global.ResizeObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}));

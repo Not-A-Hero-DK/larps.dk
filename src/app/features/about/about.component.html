@@ -1,17 +1,13 @@
-<div class="pt-16">
+<div class="relative min-h-screen text-foreground overflow-hidden">
   <!-- Hero Section -->
-  <section class="pt-16 px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
+  <section class="pt-32 px-8">
+    <div class="block max-w-5xl mx-auto pb-7 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
         {{ 'about.title' | tr }}
       </h1>
-      <p class="text-xl md:text-2xl text-muted max-w-3xl mx-auto leading-relaxed">{{ 'about.subtitle' | tr }}</p>
+      <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">{{ 'about.subtitle' | tr }}</p>
     </div>
-  </section>
-
-  <!-- Our Mission Section -->
-  <section class="pt-16 px-8">
-    <div class="max-w-5xl mx-auto bg-card rounded-lg p-6 border border-border">
+    <div class="max-w-5xl mx-auto bg-card rounded-lg p-6 mt-12 border border-border">
       <div class="text-center mb-12">
         <div class="mb-8">
           <span class="text-4xl mr-3">🌉</span>
@@ -100,8 +96,12 @@
         <h3 class="text-3xl font-bold mb-6">{{ 'about.cta.title' | tr }}</h3>
         <p class="text-lg text-muted mb-8 leading-relaxed">{{ 'about.cta.description' | tr }}</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button href="#" variant="secondary">{{ 'about.cta.get_in_touch' | tr }}</button>
-          <button href="#" variant="primary">{{ 'about.cta.view_examples' | tr }}</button>
+          <larp-button [routerLink]="['/contact']" variant="secondary" [label]="'about.cta.get_in_touch' | tr" />
+          <larp-button
+            [routerLink]="['/previous-projects']"
+            variant="primary"
+            [label]="'about.cta.view_examples' | tr"
+          />
         </div>
         <p class="text-muted mt-6 text-sm">
           {{ 'about.cta.contact' | tr }}

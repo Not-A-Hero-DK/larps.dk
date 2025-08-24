@@ -39,6 +39,7 @@ body,
   --muted: 215 25% 12%;
   --text-muted: 0 0% 60%;
   --accent: 43 100% 58%;
+  --black: 0 0% 0%;
   --header-gradient: linear-gradient(135deg, hsl(215 85% 65%), hsl(197 100% 85%), hsl(215 25% 80%));
 }
 
@@ -51,6 +52,7 @@ body,
   --muted: 44 25% 90%;
   --text-muted: 215 15% 45%;
   --accent: 43 85% 35%;
+  --black: 255 100% 100%;
   --header-gradient: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 25%), hsl(215 25% 20%));
 }
 
@@ -60,6 +62,7 @@ body {
   overflow-y: scroll;
 }
 
+.hover\:text-accent:hover,
 .text-accent {
   color: hsl(var(--accent));
 }
@@ -72,6 +75,11 @@ body {
   color: hsl(var(--text-muted));
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: hsl(var(--text-muted));
+}
+
 .border-accent {
   border-color: hsl(var(--accent) / 0.2);
 }
@@ -80,6 +88,7 @@ body {
   border-color: hsl(var(--border));
 }
 
+.hover\:bg-accent:hover,
 .bg-accent {
   background-color: hsl(var(--accent));
 }
@@ -96,19 +105,33 @@ body {
   background-color: hsl(var(--card));
 }
 
-/* Enhanced card styling for light theme */
 [data-theme='light'] .bg-card {
   background: linear-gradient(145deg, hsl(var(--card)), hsl(44 30% 92%));
   box-shadow: 0 2px 4px hsl(215 25% 15% / 0.1), 0 1px 2px hsl(215 25% 15% / 0.06);
 }
 
-[data-theme='dark'] .bg-card {
-  background-color: hsl(var(--card));
+.hover\:text-black:hover,
+.text-black {
+  color: hsl(var(--black));
+}
+
+.hover\:shadow-glow:hover,
+.shadow-glow {
+  box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+}
+
+.nav-background {
+  background-color: hsl(var(--background) / 0.9);
+  transition: background-color 0.3s ease;
 }
 
 .bg-background {
-  background-color: hsl(var(--background) / 0.95);
+  background-color: hsl(var(--background) / 0.9);
   transition: background-color 0.3s ease;
+}
+
+[data-theme='light'] .bg-background {
+  background-color: hsl(var(--background) / 0.1);
 }
 
 .bg-muted {
@@ -119,7 +142,7 @@ body {
   background-color: hsl(var(--muted));
 }
 
-.bg-button-toggle:hover {
+.hover\:bg-button-toggle:hover {
   background-color: hsl(var(--card));
 }
 
@@ -134,7 +157,6 @@ body {
   box-shadow: 0 1px 3px hsl(215 25% 15% / 0.1);
 }
 
-/* Utility classes */
 .sr-only {
   position: absolute;
   width: 1px;

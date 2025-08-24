@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Button } from '@shared/components';
 import { TranslatePipe } from '@shared/pipes';
 
 @Component({
@@ -7,7 +8,7 @@ import { TranslatePipe } from '@shared/pipes';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  imports: [ReactiveFormsModule, TranslatePipe],
+  imports: [ReactiveFormsModule, TranslatePipe, Button],
 })
 export class ContactComponent {
   private readonly fb = inject(FormBuilder);

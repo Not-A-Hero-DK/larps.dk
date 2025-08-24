@@ -25,12 +25,12 @@ export class LocaleService {
 
     effect(() => {
       document.documentElement.lang = this.isDanish() ? 'da' : 'en';
-      localStorage.setItem('locale', this.isDanish() ? 'true' : 'false');
+      localStorage.setItem('isDanish', this.isDanish() ? 'true' : 'false');
     });
   }
 
   private initializeLocale() {
-    const isDanish = localStorage.getItem('locale');
+    const isDanish = localStorage.getItem('isDanish');
     if (isDanish) {
       this.isDanish.set(isDanish === 'true');
     }

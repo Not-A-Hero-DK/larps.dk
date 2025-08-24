@@ -1,25 +1,21 @@
-<div class="pt-16">
+<div class="text-foreground overflow-hidden">
   <!-- Header Section -->
-  <section class="pt-16 px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
+  <section class="pt-32 pb-16 px-8">
+    <div class="block max-w-5xl mx-auto pb-7 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
         {{ 'contact.title' | tr }}
       </h1>
-      <p class="text-xl md:text-2xl text-muted mb-12 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
         {{ 'contact.subtitle' | tr }}
       </p>
     </div>
-  </section>
 
-  <!-- Contact Form Section -->
-  <section class="pt-16 px-8">
-    <div class="max-w-5xl mx-auto">
+    <div class="block max-w-5xl mx-auto mt-12">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Send Message Form -->
         <div class="bg-card rounded-lg p-8 border border-border">
           <div class="text-center mb-8">
-            <span class="text-4xl">💬</span>
-            <h2 class="text-2xl font-bold mt-4 text-foreground">{{ 'contact.send_message' | tr }}</h2>
+            <h2 class="text-2xl font-bold mt-4 text-foreground">💬 {{ 'contact.send_message' | tr }}</h2>
             <p class="text-muted mt-2">{{ 'contact.send_message_description' | tr }}</p>
           </div>
 
@@ -36,7 +32,7 @@
           <form class="space-y-6" [formGroup]="contactForm">
             <!-- Name Field -->
             <div>
-              <label htmlFor="name" class="block text-sm font-medium text-foreground mb-2">
+              <label for="name" class="block text-sm font-medium text-foreground mb-2">
                 {{ 'contact.form.name.label' | tr }}
               </label>
               <input
@@ -46,7 +42,7 @@
                 name="name"
                 [placeholder]="'contact.form.name.placeholder' | tr"
                 autoComplete="name"
-                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground placeholder-muted transition-colors ${contactForm.controls.name.dirty && contactForm.controls.name.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
+                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground transition-colors ${contactForm.controls.name.dirty && contactForm.controls.name.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
               />
               @if(contactForm.controls.name.errors && contactForm.controls.name.dirty){
               <p id="name-error" class="mt-1 text-sm text-red-400" role="alert">
@@ -57,7 +53,7 @@
 
             <!-- Email Field -->
             <div>
-              <label htmlFor="email" class="block text-sm font-medium text-foreground mb-2">
+              <label for="email" class="block text-sm font-medium text-foreground mb-2">
                 {{ 'contact.form.email.label' | tr }}
               </label>
               <input
@@ -67,7 +63,7 @@
                 name="email"
                 autoComplete="email"
                 [placeholder]="'contact.form.email.placeholder' | tr"
-                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground placeholder-muted transition-colors ${contactForm.controls.email.dirty && contactForm.controls.email.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
+                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground transition-colors ${contactForm.controls.email.dirty && contactForm.controls.email.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
               />
               @if(contactForm.controls.email.errors && contactForm.controls.email.dirty){
               <p id="email-error" class="mt-1 text-sm text-red-400" role="alert">
@@ -78,7 +74,7 @@
 
             <!-- LARP Name Field -->
             <div>
-              <label htmlFor="larpName" class="block text-sm font-medium text-foreground mb-2">
+              <label for="larpName" class="block text-sm font-medium text-foreground mb-2">
                 {{ 'contact.form.larp_name.label' | tr }}
               </label>
               <input
@@ -88,7 +84,7 @@
                 name="larpName"
                 autoComplete="off"
                 [placeholder]="'contact.form.larp_name.placeholder' | tr"
-                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground placeholder-muted transition-colors ${contactForm.controls.larpName.dirty && contactForm.controls.larpName.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
+                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground  transition-colors ${contactForm.controls.larpName.dirty && contactForm.controls.larpName.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
               />
               @if(contactForm.controls.larpName.errors && contactForm.controls.larpName.dirty){
               <p id="larpName-error" class="mt-1 text-sm text-red-400" role="alert">
@@ -99,7 +95,7 @@
 
             <!-- Message Field -->
             <div>
-              <label htmlFor="message" class="block text-sm font-medium text-foreground mb-2">
+              <label for="message" class="block text-sm font-medium text-foreground mb-2">
                 {{ 'contact.form.message.label' | tr }}
               </label>
               <textarea
@@ -109,7 +105,7 @@
                 rows="6"
                 autoComplete="off"
                 [placeholder]="'contact.form.message.placeholder' | tr"
-                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground placeholder-muted transition-colors resize-vertical ${contactForm.controls.message.dirty && contactForm.controls.message.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
+                [class]="`w-full px-4 py-3 border rounded-lg bg-background text-foreground transition-colors resize-vertical ${contactForm.controls.message.dirty && contactForm.controls.message.invalid ? 'border-red-500' : 'border-border focus:border-accent' }`"
               ></textarea>
               @if(contactForm.controls.message.errors && contactForm.controls.message.dirty){
               <p id="message-error" class="mt-1 text-sm text-red-400" role="alert">
@@ -119,25 +115,37 @@
             </div>
 
             <!-- Submit Button -->
-            <button variant="secondary" type="submit" [disabled]="isSubmitting" (click)="onSubmit()">
-              📧 {{ (isSubmitting ? 'contact.form.sending' : 'contact.form.submit') | tr }}
-            </button>
+            <larp-button
+              [label]="isSubmitting ? 'contact.form.sending' : ('contact.form.submit' | tr)"
+              [disabled]="isSubmitting"
+              (click)="onSubmit()"
+            />
           </form>
         </div>
 
         <!-- Direct Contact & What We Need -->
         <div class="space-y-8">
-          <!-- Direct Contact -->
           <div class="bg-card rounded-lg p-8 border border-border">
             <div class="text-center mb-8">
-              <span class="text-4xl">📧</span>
-              <h2 class="text-2xl font-bold mt-4 text-foreground">{{ 'contact.direct_contact' | tr }}</h2>
+              <h2 class="text-2xl font-bold mt-4 text-foreground">📧 {{ 'contact.direct_contact' | tr }}</h2>
             </div>
-
             <div class="space-y-6">
               <div>
                 <h3 class="text-lg font-semibold text-foreground mb-2">{{ 'contact.email.label' | tr }}</h3>
-                <p class="text-accent text-lg">{{ 'contact.email.address' | tr }}</p>
+                <a
+                  [href]="'mailto:' + ('contact.email.address' | tr)"
+                  class="text-muted hover:text-accent transition-colors hover:underline"
+                  >{{ 'contact.email.address' | tr }}</a
+                >
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold text-foreground mb-2">{{ 'contact.tel.label' | tr }}</h3>
+                <a
+                  class="text-muted hover:text-accent transition-colors hover:underline"
+                  [href]="'tel:' + ('contact.tel.number' | tr).replaceAll(' ', '')"
+                  >{{ 'contact.tel.number' | tr }}</a
+                >
               </div>
 
               <div>
@@ -150,8 +158,7 @@
           <!-- What We Need -->
           <div class="bg-card rounded-lg p-8 border border-border">
             <div class="text-center mb-8">
-              <span class="text-4xl">🛡️</span>
-              <h2 class="text-2xl font-bold mt-4 text-foreground">{{ 'contact.what_we_need' | tr }}</h2>
+              <h2 class="text-2xl font-bold mt-4 text-foreground">🛡️ {{ 'contact.what_we_need' | tr }}</h2>
             </div>
 
             <div class="space-y-4">

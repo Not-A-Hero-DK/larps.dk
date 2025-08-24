@@ -4,8 +4,8 @@ import { Footer, Navigation } from '@shared/components';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'larp-root',
   imports: [RouterOutlet, Navigation, Footer],
+  selector: 'larp-root',
   styleUrls: ['./app.scss'],
   template: `
     <larp-navigation />
@@ -15,6 +15,5 @@ import { Footer, Navigation } from '@shared/components';
     <larp-footer />
   `,
 })
-export class App {
-  title = 'Heimdal Portal - Guardian of LARP Realms';
-}
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
+export class App {}

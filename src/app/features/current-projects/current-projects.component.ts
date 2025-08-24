@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ProjectCard } from '@shared/components';
+import { RouterModule } from '@angular/router';
+import { Button, ProjectCard } from '@shared/components';
 import { TranslatePipe } from '@shared/pipes';
 import { Project } from '@shared/types';
 
@@ -8,7 +9,7 @@ import { Project } from '@shared/types';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './current-projects.component.html',
   styleUrls: ['./current-projects.component.scss'],
-  imports: [TranslatePipe, ProjectCard],
+  imports: [TranslatePipe, ProjectCard, Button, RouterModule],
 })
 export class CurrentProjectsComponent {
   public currentProjects: Project[] = [

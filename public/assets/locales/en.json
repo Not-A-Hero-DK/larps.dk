@@ -129,6 +129,10 @@
     "send_message": "Send Message",
     "send_message_description": "Tell us about your LARP and we'll help you get started with free hosting.",
     "direct_contact": "Direct Contact",
+    "tel": {
+      "label": "Telephone",
+      "number": "+45 30 23 81 12"
+    },
     "email": {
       "label": "Email",
       "address": "hosting@larps.dk"
