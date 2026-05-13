@@ -1,0 +1,31 @@
+<div class="text-foreground overflow-hidden">
+  <!-- Main projects section -->
+  <section class="pt-32 pb-16 px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
+          {{ 'projects.current.title' | tr }}
+        </h1>
+        <p class="text-lg text-muted max-w-2xl mx-auto leading-relaxed">{{ 'projects.current.subtitle' | tr }}</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for(item of currentProjects; track item.id){
+        <larp-project-card [project]="item" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Want to Host Your LARP section -->
+  <section class="py-16 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">{{ 'projects.host_cta.title' | tr }}</h2>
+      <p class="text-lg text-muted mb-12 leading-relaxed">{{ 'projects.host_cta.subtitle' | tr }}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <larp-button [routerLink]="['/contact']" variant="primary" [label]="'home.request_hosting' | tr" />
+        <larp-button [routerLink]="['/about']" variant="secondary" [label]="'projects.learn_more' | tr" />
+      </div>
+    </div>
+  </section>
+</div>

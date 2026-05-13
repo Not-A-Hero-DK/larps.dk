@@ -1,0 +1,207 @@
+{
+  "default": {
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "language": "English",
+    "switch_language": "Switch to Danish",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode"
+  },
+  "nav": {
+    "home": "Home",
+    "current": "Current Projects",
+    "previous": "Previous Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "getHosted": "Get Hosted",
+    "skip_to_content": "Skip to main content",
+    "main_navigation": "Main navigation",
+    "mobile_navigation": "Mobile navigation",
+    "open_menu": "Open navigation menu",
+    "close_menu": "Close navigation menu"
+  },
+  "home": {
+    "title": "Guardian of LARP Realms",
+    "subtitle": "Free hosting for LARP communities worldwide. Share your adventures, connect with players, and bring your stories to life.",
+    "request_hosting": "Request Hosting",
+    "view_projects": "View Projects",
+    "features": {
+      "title": "Why Choose Heimdal Portal?",
+      "subtitle": "Everything you need to bring your LARP community online, completely free of charge.",
+      "hosting": {
+        "title": "Free Hosting",
+        "description": "Complete hosting solution at no cost to LARP organizers. Focus your stories, not server costs."
+      },
+      "setup": {
+        "title": "Quick Setup",
+        "description": "Get your LARP website online in minutes with our streamlined process and beautiful templates."
+      },
+      "subdomain": {
+        "title": "Subdomain Magic",
+        "description": "Your unique subdomain on larps.dk - professional, memorable, and perfectly suited for your LARP."
+      },
+      "community": {
+        "title": "Community Driven",
+        "description": "Built by LARPers, for LARPers. We understand the unique needs of the LARP community."
+      }
+    },
+    "stats": {
+      "title": "Growing Community",
+      "subtitle": "Join a thriving ecosystem of LARP organizers and players from around the world.",
+      "projects": "Projects Hosted",
+      "participants": "Active Participants",
+      "uptime": "Service Uptime"
+    },
+    "cta": {
+      "title": "Ready to Join the Realm?",
+      "description": "Whether you're organizing your first LARP or you're a seasoned storyteller, we're here to help your digital presence become as legendary as your adventures.",
+      "get_started": "Get Started Today",
+      "learn_more": "Learn More",
+      "contact": "Contact us at hosting@larps.dk to get started"
+    }
+  },
+  "projects": {
+    "host_cta": {
+      "title": "Want a LARP website?",
+      "subtitle": "Join the ranks of legendary organizers. Get your LARP website hosted for free on our platform."
+    },
+    "learn_more": "Learn More",
+    "current": {
+      "title": "Current Projects",
+      "subtitle": "Upcoming LARP adventures currently hosted on Heimdal Portal. Join these legendary experiences or get inspired for your own saga."
+    },
+    "previous": {
+      "title": "Previous Projects",
+      "subtitle": "Legendary adventures that have already concluded. These sagas live on in the memories of their participants and inspire future tales."
+    },
+    "upcoming": "Upcoming",
+    "completed": "Completed",
+    "participants": "participants",
+    "organized_by": "Organized by:",
+    "visit_project_site": "Visit Project Site",
+    "archive": {
+      "title": "Archive of Legends",
+      "subtitle": "Each completed LARP adds to the rich tapestry of Nordic storytelling. These adventures have shaped our community and continue to inspire new tales."
+    },
+    "total_adventures": "Total Adventures Hosted",
+    "total_participants": "Total Participants"
+  },
+  "about": {
+    "title": "About Heimdal Portal",
+    "subtitle": "Guardian of the digital bridge between LARP organizers and their communities",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Just as Heimdal guards the rainbow bridge Bifröst in Norse mythology, we serve as the guardian of the digital realm for LARP communities worldwide. Our mission is simple: remove the barriers that prevent amazing stories from reaching their audiences.",
+      "challenges": "Too many brilliant LARP organizers hesitate to share their creations online due to technical complexity or hosting costs. We bridge that gap, providing free, professional web hosting so you can focus on what you do best: creating unforgettable experiences.",
+      "vision": "Every LARP deserves a digital home where participants can gather, prepare, and reminisce. We make that possible, one subdomain at a time."
+    },
+    "offer": {
+      "title": "What We Offer",
+      "hosting": "Free hosting with zero hidden costs",
+      "subdomains": "Professional subdomains on larps.dk",
+      "templates": "Beautiful website templates",
+      "support": "Technical support from fellow LARPers",
+      "security": "SSL certificates and security",
+      "community": "Community showcase and networking"
+    },
+    "who": {
+      "title": "Who We Are",
+      "description": "We are a passionate collective of LARP enthusiasts, web developers, and storytellers who understand the unique needs of the LARP community. Having organized, participated in, and supported countless LARPs ourselves, we know the challenges you face. From managing player communications to showcasing your creative vision, we've been there. Our technical expertise combined with our understanding of the LARP community's unique needs allows us to provide this free hosting service."
+    },
+    "creator": {
+      "title": "Meet the Creator",
+      "description": "Heimdal Portal is created and maintained by Mads Heimdal Thy, a passionate software engineer with extensive experience in building apps, websites, and systems. With a deep love for both technology and storytelling, Mads combines technical expertise with an understanding of the LARP community's unique needs to provide this free hosting service.",
+      "background": "As both a software engineer and storytelling enthusiast, Mads understands the challenges facing LARP organizers in the digital age. His vision for Heimdal Portal stems from a desire to democratize access to professional web hosting, ensuring that every LARP community can have a digital presence worthy of their creative endeavors.",
+      "mission": "Through Heimdal Portal, Mads aims to strengthen the global LARP community by providing the technical foundation that allows organizers to focus on what they do best: creating immersive, transformative experiences for players around the world."
+    },
+    "cta": {
+      "title": "Ready to Join the Realm?",
+      "description": "Whether you're organizing your first LARP or you're a seasoned storyteller, we're here to help your digital presence become as legendary as your adventures.",
+      "get_in_touch": "📧 Get in Touch",
+      "view_examples": "🏆 View Examples",
+      "contact": "Contact us: hosting@larps.dk",
+      "join": "Join our community and help us guard the digital realm together."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to bring your LARP to the digital realm? Get in touch with us.",
+    "send_message": "Send Message",
+    "send_message_description": "Tell us about your LARP and we'll help you get started with free hosting.",
+    "direct_contact": "Direct Contact",
+    "tel": {
+      "label": "Telephone",
+      "number": "+45 30 23 81 12"
+    },
+    "email": {
+      "label": "Email",
+      "address": "hosting@larps.dk"
+    },
+    "response_time": {
+      "label": "Response Time",
+      "value": "Usually within 24-48 hours"
+    },
+    "what_we_need": "What We Need",
+    "need": {
+      "larp_name": "Your LARP name and basic information",
+      "subdomain": "Preferred subdomain (yourname.larps.dk)",
+      "participants": "Expected number of participants",
+      "requirements": "Any special hosting requirements",
+      "content": "Content you'd like to include"
+    },
+    "form": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Your Email",
+        "placeholder": "Enter your email address"
+      },
+      "larp_name": {
+        "label": "LARP Name",
+        "placeholder": "Enter your LARP name"
+      },
+      "message": {
+        "label": "Tell us about your LARP",
+        "placeholder": "Tell us about your LARP, when it's happening, expected number of participants, and any special requirements..."
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully. We'll get back to you within 24-48 hours.",
+      "error": "Something went wrong. Please try again or contact us directly at hosting@larps.dk",
+      "validation": {
+        "name_required": "Name is required",
+        "email_required": "Email is required",
+        "email_invalid": "Please enter a valid email address",
+        "larp_name_required": "LARP name is required",
+        "message_required": "Please tell us about your LARP",
+        "message_min_length": "Please provide more details (at least 20 characters)"
+      }
+    }
+  },
+  "notfound": {
+    "title": "Lost in the Nine Realms",
+    "description": "It seems you've wandered off the path to Valhalla. Even Heimdal's keen sight cannot locate this page in our digital realm.",
+    "return_home": "Return to Midgard",
+    "explore_projects": "Explore Projects"
+  },
+  "footer": {
+    "brand": {
+      "title": "Heimdal Portal",
+      "description": "Empowering the LARP community with free, professional hosting solutions.",
+      "mission": "Building bridges between organizers and players across the Nordic realms."
+    },
+    "stats": {
+      "projects": "100+ Projects",
+      "uptime": "99.9% Uptime"
+    },
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "email": "hosting@larps.dk",
+    "phone": "+45 30 23 81 12",
+    "get_started": "Get Started",
+    "copyright": "© 2025 Heimdal Portal. All rights reserved.",
+    "company_link": "Not A Hero ApS"
+  }
+}

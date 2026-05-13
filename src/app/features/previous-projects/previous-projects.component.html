@@ -1,0 +1,41 @@
+<div class="relative min-h-screen text-foreground overflow-hidden">
+  <!-- Main projects section -->
+  <section class="pt-32 pb-16 px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-header bg-clip-text text-transparent">
+          {{ 'projects.previous.title' | tr }}
+        </h1>
+        <p class="text-lg text-muted max-w-4xl mx-auto leading-relaxed">{{ 'projects.previous.subtitle' | tr }}</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for(item of previousProjects; track item.id){
+        <larp-project-card [project]="item" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Archive of Legends section -->
+  <section class="py-16 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8">
+        <span class="text-2xl mr-2">📚</span>
+        <h2 class="text-3xl font-bold inline">{{ 'projects.archive.title' | tr }}</h2>
+      </div>
+      <p class="text-lg text-muted mb-12 leading-relaxed">{{ 'projects.archive.subtitle' | tr }}</p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-yellow-400 mb-2">{{ totalProjects }}</div>
+          <div class="text-muted">{{ 'projects.total_adventures' | tr }}</div>
+        </div>
+        <div class="hidden sm:block text-muted text-2xl">|</div>
+        <div>
+          <div class="text-3xl font-bold text-yellow-400 mb-2">{{ totalParticipants }}</div>
+          <div class="text-muted">{{ 'projects.total_participants' | tr }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

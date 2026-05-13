@@ -1,0 +1,7 @@
+<button
+  [class]="`inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background
+  disabled:pointer-events-none disabled:opacity-50 rounded-md transition-all duration-300 cursor-pointer ${class()} ${variants[variant()]}`"
+  [disabled]="disabled()"
+>
+  {{ label() }}
+</button>
